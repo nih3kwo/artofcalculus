@@ -7,13 +7,16 @@ project:
   authors: []
   # github:
   # bibliography: []
+  math:
+    '\m': '\mathbf'
 site:
   template: book-theme
   # title:
   # options:
-  #   logo: site_logo.png
+  logo: images/site_logo.png
   nav: []
   actions:
     - title: Learn More
       url: https://mystmd.org/guide
   domains: []
+
