@@ -1,9 +1,3 @@
----
-math:
-  # Note the 'single quotes'
-  '\m': '\mathbf'
----
-
 # Многомерные пространства
 
 :::{prf:definition}
@@ -18,7 +12,6 @@ $$
  \alpha \mathbf{x} + \beta \mathbf{y}: = (\alpha x_1 + \beta y_1, \ldots, \alpha x_n + \beta y_n). 
 $$
 :::
-
 
 Таким образом, $\mathbb{R}^n$ -- это линейное пространство или векторное пространство над $\mathbb{R}$.
 
