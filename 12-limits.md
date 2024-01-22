@@ -4,7 +4,7 @@
 
 :::{prf:definition}
 :name: the_main_def_of_limit
-Пусть $a \notin A$. Мы будем говорить, что $f(x)$ **имеет предел $a' \in E'$ при $x \in A$, стремящемся к $a$ (или $a'$ есть предел отображения $f$ в точке $a\in \overline{A**$ по множеству $A$}), если отображение $\overline{f}:A \cup \{a\} \to E$, определённое условиями
+Пусть $a \notin A$. Мы будем говорить, что $f(x)$ **имеет предел $a' \in E'$ при $x \in A$, стремящемся к $a$ (или $a'$ есть предел отображения $f$ в точке $a\in \overline{A}$ по множеству $A$)**, если отображение $\overline{f}:A \cup \{a\} \to E$, определённое условиями
 $$
 \overline{f}(x) = \begin{cases}
 f(x), & x \in A, \\
@@ -169,7 +169,7 @@ $$
 :::
 
 :::{prf:remark}
-Пусть $E = \overline{\mathbb{R}}$ — расширенная прямая, рассмотрим выражение $\lim_{x \to +\infty, x \in \mathbb{{R}}}f(x) = a'$, где $f:\mathbb{R} \to E' $ - некоторое отображение. Мы знаем, что $B(+\infty, \delta) = (\frac{1-\delta}{\delta}, \infty]$. Тогда непрерывность в точке $+\infty$ означает, что для любого $r >0$ найдётся такой $\delta>0$, что $f((\frac{1-\delta}{\delta}, \infty]) \subseteq B(a',r)$. Другими словами, если $\lim_{x \to + \infty} f(x) = a'$, то для любого шара $B(a',r)$ найдётся такое число $\alpha \in \mathbb{R}$ что $f(\beta) \in B(a',r)$ для всех $\beta > \alpha.$ **Именно так мы и будем понимать запись $\lim_{x \to +\infty**f(x) = a'$};
+Пусть $E = \overline{\mathbb{R}}$ — расширенная прямая, рассмотрим выражение $\lim_{x \to +\infty, x \in \mathbb{{R}}}f(x) = a'$, где $f:\mathbb{R} \to E' $ - некоторое отображение. Мы знаем, что $B(+\infty, \delta) = (\frac{1-\delta}{\delta}, \infty]$. Тогда непрерывность в точке $+\infty$ означает, что для любого $r >0$ найдётся такой $\delta>0$, что $f((\frac{1-\delta}{\delta}, \infty]) \subseteq B(a',r)$. Другими словами, если $\lim_{x \to + \infty} f(x) = a'$, то для любого шара $B(a',r)$ найдётся такое число $\alpha \in \mathbb{R}$ что $f(\beta) \in B(a',r)$ для всех $\beta > \alpha.$ **Именно так мы и будем понимать запись $\lim_{x \to +\infty}f(x) = a'$**;
 $$
 \boxed{ 
 \boxed{
