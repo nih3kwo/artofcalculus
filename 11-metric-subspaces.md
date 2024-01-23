@@ -2,12 +2,7 @@
 
 Пусть $F \subseteq E$ — непустое подмножество метрического пространства $E$ с расстоянием $d$, тогда $F \times F \subseteq E \times E$ — непустое подмножество, тогда мы имеем следующую коммутативную диаграмму
 
-$$
-\begin{tikzcd}
-F \times F \arrow[hook]{d}[left]{\mathrm{in}} \arrow{dr}{d|_{F \times F}} &  \\
-E \times E \arrow{r}[below]{d} & \mathbb{R}
-\end{tikzcd}
-$$
+![](image.png)
 
 т. е., **сужая** метрику $d$ на $F$, мы получаем метрическое пространство $(F,d|_{F \times F})$, которое мы будем для простоты обозначать $(F, d_F)$.
 

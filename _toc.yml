@@ -1,0 +1,42 @@
+format: jb-book
+root: README
+parts:
+  - caption: Введение
+    chapters:
+      - file: 00-initial-knowledge
+      - file: 01-real-numbers
+  - caption: Последовательности
+    chapters:
+      - file: 02-limit-of-a-sequence
+      - file: 03-some-limit-properties
+      - file: 04-ascending-sequences-and-weierstrass-theorem
+      - file: 05-fundamental-sequences-and-a-new-look-at-real-numbers
+      - file: 06-subsequences-and-partial-limits
+  - caption: Отображения, множества, пространства, сходимость
+    chapters:
+      - file: 07-mappings
+      - file: 08-multidimensional-spaces
+      - file: 09-metric-spaces
+      - file: 10-closed-sets
+      - file: 11-metric-subspaces
+      - file: 12-limits
+      - file: 13-convergence-in-multidimensional space
+      - file: 14-product-of-metric-spaces-and-limit-arithmetic
+      - file: 15-normed-spaces
+      - file: 16-o-notation
+  - caption: Дифференцирование
+    chapters: 
+      - file: 17-differentiation
+      - file: 18-geometric-understanding-of-differentiation
+      - file: 19-partial-derivatives-and-an-explicit-formula-for-the-differential
+      - file: 20-functions-differentiable-on-an-interval
+      - file: 21-l-hopital-rule
+      - file: 22-necessary-and-sufficient-conditions-of-differentiation
+      - file: 23-continuity-of-linear-mappings
+      - file: 24-differential-of-a-composition
+      - file: 25-higher-order-differentiation
+      - file: 26-single-variable-taylor-polynomial
+      - file: 27-higher-order-derivatives
+      - file: 28-multivariable-taylor-polynomial
+      - file: 29-compact-spaces
+      - file: 30-taylor-polynomial-in-matrix-form
