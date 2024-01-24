@@ -4,8 +4,12 @@ project:
   # title:
   # description:
   keywords: []
-  authors: []
-  # github:
+  authors:
+  - name: Viktor Lopatkin
+    affiliations:
+      - Higher School of Economics
+  license: CC-BY-4.0
+  github: https://github.com/artoftheblue/artofcalculus
   # bibliography: []
   math:
     '\m': '\mathbf'
@@ -16,7 +20,9 @@ site:
   logo: images/site_logo.png
   nav: []
   actions:
-    - title: Learn More
-      url: https://mystmd.org/guide
+    - title: Написать лектору
+      url: https://t.me/the_Man_of_Spade
+    - title: Сообщить об ошибке
+      url: https://t.me/artoftheblue
   domains: []
 
