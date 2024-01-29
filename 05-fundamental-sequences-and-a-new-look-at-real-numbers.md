@@ -88,7 +88,7 @@ $$
 
 :::{prf:proof}
 :class: dropdown
-:nonumber:~\\
+:nonumber:
 (1) Пусть $\{a_n\}$ — сходящаяся последовательность, скажем, $\lim_{n \to \infty}a_n = a$. Тогда для любого $\varepsilon>0$ можно найти такой $N$, что для всех $n>N$, $|a_n - a| < \frac{\varepsilon}{2}$. Тогда для любых $n,m \ge N$
 $$
 |a_n - a_m| = |a_n - a + a - a_m| \le |a_n - a| + |a - a_m| < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} =\varepsilon,

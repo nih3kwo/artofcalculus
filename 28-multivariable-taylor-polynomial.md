@@ -40,11 +40,11 @@ h_1 \\ \vdots\\ h_n
 $$
 здесь $\gamma_1(t) = a_1 + th_1,\ldots, \gamma_n(t) = a_n+th_n.$
 Тогда, получаем
-$$\begin{eqnarray}
+$$\begin{align*}
 \psi'_{\m{a},\m{h}}(t) & =& (\mathrm{d}\psi)_t = (\mathrm{d}f)_{\m{a}+t\m{h}} \cdot (\mathrm{d}\gamma)_t \\
 &=& (\mathrm{d}f)_{\m{a}+t\m{h}} \m{h} \\
 &=& \left.\frac{\partial f}{ \partial x_1}\right|_{\m{a} + t \m{h}} \cdot h_1 + \cdots + \left.\frac{\partial f}{ \partial x_n}\right|_{\m{a} + t \m{h}} \cdot h_n,
-\end{eqnarray}$$
+\end{align*}$$
 что и требовалось доказать.
 :::
 
@@ -83,11 +83,11 @@ $$
 \varphi_{\m{a},\m{h}}^{k}(t) = (\mathrm{d}^k_{\m{a}+t\m{h}}f)(\m{h}), \qquad 1 \le k \le m+1.
 $$
 получаем
-$$\begin{eqnarray}
+$$\begin{align*}
 \varphi(0) &=& f(\m{a}), \\
 \varphi^{(k)}(0) &=& (\mathrm{d}^k_{\m{a}}f)(\m{h}), \qquad 1 \le k \le m,\\
 \varphi^{(m+1)}(\theta) &=&(\mathrm{d}^k_{\m{a}+\theta \m{h}}f)(\m{h}).
-\end{eqnarray}$$
+\end{align*}$$
 
 Тогда мы можем записать
 $$

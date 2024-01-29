@@ -34,12 +34,12 @@ $$
 f^{-1} (B(p_0, r)) = f_1^{-1}(B(f(z_0) , r)) \cap f_2^{-1}( B(f_2(z_0)), r ).
 $$
 Действительно, имеем
-$$\begin{eqnarray}
+$$\begin{align*}
 z \in f^{-1} (B(p_0, r)) &\Longleftrightarrow&  f(z) \in B(p_0,r) \\
 &\Longleftrightarrow& (f_1(z), f_2(z)) \in B_1(f(z_0), r) \times B(f_2(z_0), r) \\
 &\Longleftrightarrow& \bigl\{ z \in F\,:\, f_1(z) \in B_1(f_1(z_0), r) \bigr\}  \& \bigl\{ z\in F, :\, f_2(z) \in B_2(f_2(z_0), r) \bigr\} \\
 &\Longleftarrow& z \in f_1^{-1}(B_1(f_1(z_0), r)) \cap f_2^{-1}(B_2(f_2(z_0), r)).
-\end{eqnarray}$$
+\end{align*}$$
 
 Тогда, используя лемму [](#union_and_cap_of_open), получаем, что прообраз любого открытого при $f$ открыт, что и доказывает предложение.
 :::
@@ -81,10 +81,10 @@ $$
 xy -ab =a (y-b) + b(x-a) + (x-a)(y-b),
 $$
 тогда
-$$\begin{eqnarray}
+$$\begin{align*}
 |xy -ab| \le |a| |y-b| + |b||x-a| + |x-a||y-b|  & \le &   |a| \delta + |b| \delta + \delta^2\\
 &=& \delta (|a| + |b| + \delta).
-\end{eqnarray}$$
+\end{align*}$$
 
 Если потребовать, что $\delta <1$, то мы получаем $|xy-ab| < \delta (|a| + |b|+1).$ Таким образом, если задано произвольное $\varepsilon >0$ такое, что $|xy -ab| < \varepsilon$, то возьмём такое $\delta$, что $0 < \delta <1$ и $\delta(1 + |a| + |b|)<\varepsilon$, наконец, пусть $\delta' = 2{\delta}$. Тем самым, мы получаем, что из неравенства $\sqrt{(x-a)^2 + (y-b)^2} < \sqrt{2}\delta < 2 \delta = \delta'$ следует неравенство $|xy - ab| < \varepsilon$, что и показывает непрерывность отображения $\mathsf{P}.$
 

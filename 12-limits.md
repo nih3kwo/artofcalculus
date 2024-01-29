@@ -221,7 +221,7 @@ $$
 
 :::{prf:proof}
 :class: dropdown
-:nonumber:~
+:nonumber:
 
 (1) Необходимость. 
 

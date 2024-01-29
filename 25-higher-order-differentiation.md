@@ -3,9 +3,9 @@
 Пусть дана функция $f: \mathbb{R}^n \to \mathbb{R}$ такая, что в открытом $\mathscr{U}$ у неё существуют все её частные производные $f_{x_i}' = \frac{\partial f}{\partial x_i}$. Пусть далее $\mathscr{V} \subseteq \mathscr{U}$ открыто, и пусть всюду в $\mathscr{V}$ её частные производные дифференцируемы, тогда мы получаем:
 :::{prf:definition}
 Частные производные высокого порядка определяются как частные производные от частных производных, т. е.
-$$\begin{eqnarray}
+$$\begin{align*}
 \frac{\partial^2 f}{\partial x_i \partial x_j} &:=& \frac{\partial }{\partial x_i}\left( \frac{\partial f}{\partial x_j} \right) = (f_{x_j}')'_{x_i} =: f''_{x_ix_j}. 
-\end{eqnarray}$$
+\end{align*}$$
 :::
 
 :::{warning}
@@ -27,13 +27,13 @@ $$
 :class: dropdown
 :nonumber:
 Пусть $\m{a} = (a_1,a_2)^\top$, тогда, по определению ([](#partial_i(o))),
-$$\begin{eqnarray}
+$$\begin{align*}
 \left. \frac{\partial^2 f}{\partial x \partial y}\right|_\m{a} &=& \left. \frac{\partial}{\partial x}\left( \frac{\partial f}{\partial y} \right) \right|_\m{a} \\
 &=& \lim_{t \to 0} \left( \frac{\frac{\partial f}{\partial y}(a_1+t, a_2) - \frac{\partial f}{\partial y}(a_1,a_2)  }{t}  \right) \\
 &=& \lim_{t \to 0}\left( \frac{ \lim\limits_{s\to 0} \dfrac{f(a_1+t, a_2 +s) -f(a_1+t,a_2)}{s}  - \lim\limits_{s\to 0} \dfrac{f(a_1,a_2+s) -f(a_1,a_2)}{s} } {t}  \right) \\
 &=& \lim_{t\to 0} \lim_{s \to 0} \dfrac{f(a_1+t, a_2 +s) -f(a_1+t,a_2) - f(a_1,a_2+s) +f(a_1,a_2)}{ts} \\
 &=&\lim_{t\to 0} \lim_{s \to 0} \frac{\Phi(t,s)}{ts},
-\end{eqnarray}$$
+\end{align*}$$
 где 
 $$
 \Phi(t,s):= f(a_1+t, a_2 +s) -f(a_1+t,a_2) - f(a_1,a_2+s) +f(a_1,a_2).
@@ -45,10 +45,10 @@ $$
 $$
 
 Пусть 
-$$\begin{eqnarray}
+$$\begin{align*}
 u(\tau) &: =& f(a_1 + \tau, a_2 + s) - f(a_1+ \tau, a_2), \qquad (a_1 + \tau, a_2) \in \mathscr{U} ,\\
 v(\sigma) &: =& f(a_1 + t, a_2 + \sigma) - f(a_1, a_2+\sigma), \qquad (a_1, a_2+\sigma) \in \mathscr{U} ,
-\end{eqnarray}$$
+\end{align*}$$
 
 тогда
 $$
@@ -56,68 +56,68 @@ $$
 $$
 
 Далее, так как по условию, $f$ имеет смешанные производные, значит она имеет и частные производные, а это значит, что $u(\tau)$, $v(\sigma)$ — дифференцируемы на отрезках $[0,t]$ и $[0,s]$, соответственно. Тогда, по теореме Лагранжа [](#Langrange) найдутся такие $\tau_0 \in (0, t)$ и $\sigma_0 \in (0, s)$, что
-$$\begin{eqnarray}
+$$\begin{align*}
 \Phi(t,s) &=& u(t) - u(0) = u'(\tau_0)t,\\
 \Phi(t,s) &=& v(s) - v(0) = v'(\sigma_0)s.
-\end{eqnarray}$$
+\end{align*}$$
 
 С другой стороны, 
-$$\begin{eqnarray}
+$$\begin{align*}
 u'(\tau_0) &=& \frac{\partial}{ \partial x}\Bigl( f(a_1 + \tau_0, a_2 + s) - f(a_1+ \tau_0, a_2)\Bigr) \\
 &=& f'_x(a_1 + \tau_0, a_2 + s) - f'_x(a_1+ \tau_0, a_2).
-\end{eqnarray}$$
+\end{align*}$$
 
 Аналогично, находим
-$$\begin{eqnarray}
+$$\begin{align*}
 v'(\sigma_0) &=& \frac{\partial}{ \partial y}\Bigl( f(a_1+t, a_2 + \sigma_0) - f(a_1, a_2+\sigma_0)\Bigr) \\
 &=& f'_y(a_1 + t, a_2 + \sigma_0) - f'_x(a_1, a_2+\sigma_0).
-\end{eqnarray}$$
+\end{align*}$$
 
 Пусть теперь
-$$\begin{eqnarray}
+$$\begin{align*}
 w(\alpha) &:=& f'_y(a_1 + \alpha, a_2 + \sigma_0), \qquad 0 \le \alpha \le t \\
 g(\beta) &: =& f'_x(a_1 + \tau_0, a_2 + \beta), \qquad 0 \le \beta \le s.
-\end{eqnarray}$$
+\end{align*}$$
 
 Тогда
-$$\begin{eqnarray}
+$$\begin{align*}
 w(t)- w(0) &=& f'_y(a_1 + t, a_2 + \sigma_0) - f'_x(a_1, a_2+\sigma_0)= v'(\sigma_0),\\
 g(s) - g(0) &=& f'_x(a_1 + \tau_0, a_2 + s) - f'_x(a_1+ \tau_0, a_2) = u'(\tau_0).
-\end{eqnarray}$$
+\end{align*}$$
 
 По условию, $f$ имеет смешанные частные производные на $\mathscr{U}$, тогда это значит, что $w$ и $g$ дифференцируемы на отрезках $[0,t]$ и $[0,s]$ соответственно. Тогда по теореме Лагранжа [](#Langrange), существуют такие $\alpha_0 \in (0,t)$ и $\beta_0 \in (0,s)$, что
-$$\begin{eqnarray}
+$$\begin{align*}
 w(t)- w(0) &=& w'(\alpha_0) t = f''_{xy}(a_1+\alpha_0, a_2+\sigma_0)ts,\\
 g(s) -g(0) &=& g'(\beta_0)s = f''_{yx}(a_1 + \tau_0,a_2+\beta_0)ts.
-\end{eqnarray}$$
+\end{align*}$$
 
 Таким образом, получаем
-$$\begin{eqnarray}
+$$\begin{align*}
 \Phi(t,s) &=& u'(\tau_0)t \\
 &=& (g(s) - g(0))t \\
 &=& g'(\beta_0)ts \\
 &=& f''_{yx}(a_1 + \tau_0,a_2+\beta_0)st
-\end{eqnarray}$$
+\end{align*}$$
 и
-$$\begin{eqnarray}
+$$\begin{align*}
 \Phi(t,s) &=& v'(\sigma_0)s \\
 &=& (w(t) - w(0))s \\
 &=& w'(\alpha_0)st \\
 &=& f''_{xy}(a_1 + \alpha_0,a_2+\sigma_0)st.
-\end{eqnarray}$$
+\end{align*}$$
 
 Ясно, что если $t,s \to 0$ то и $\alpha_0, \beta_0, \tau_0, \sigma_0 \to 0$, но тогда из-за предположения о непрерывности смешанных производных получаем
-$$\begin{eqnarray}
+$$\begin{align*}
 \lim_{t\to 0} \lim_{s \to 0} \frac{\Phi(t,s)}{ts} &=&  \lim_{t\to 0} \lim_{s \to 0} f''_{xy}(a_1 + \alpha_0,a_2+\sigma_0) \\
 &=& \lim_{t \to 0} f''_{xy}(a_1 + \alpha_0,a_2) \\
 &=& f''_{xy}(a_1,a_2),
-\end{eqnarray}$$
+\end{align*}$$
 и
-$$\begin{eqnarray}
+$$\begin{align*}
 \lim_{s\to 0} \lim_{t \to 0} \frac{\Phi(t,s)}{ts} &=& \lim_{s\to 0} \lim_{t \to 0}f''_{yx}(a_1 + \tau_0,a_2+\beta_0)\\
 &=& \lim_{s\to 0}f''_{yx}(a_1,a_2+\beta_0) \\
 &=& f''_{yx}(a_1,a_2),
-\end{eqnarray}$$
+\end{align*}$$
 что и доказывает утверждение.     
 :::
 
@@ -143,10 +143,10 @@ $$
 Повторим те же рассуждения, что и в предыдущем доказательстве. 
 
 Пусть 
-$$\begin{eqnarray}
+$$\begin{align*}
 u(\tau) &: =& f(a_1 + \tau, a_2 + t) - f(a_1+ \tau, a_2), \qquad (a_1 + \tau, a_2) \in \mathscr{U} ,\\
 v(\tau) &: =& f(a_1 + t, a_2 + \tau) - f(a_1, a_2+\tau), \qquad (a_1, a_2+\sigma) \in \mathscr{U} ,
-\end{eqnarray}$$
+\end{align*}$$
 
 тогда
 $$
@@ -154,20 +154,20 @@ $$
 $$
 
 Далее, так как по условию $f$ имеет смешанные производные, значит, она имеет и частные производные, а это значит, что $u(\tau)$, $v(\tau)$  дифференцируемы на отрезке $[0,t]$. Тогда по теореме Лагранжа [](#Langrange) найдётся такое $\tau_0 \in (0, t)$, что
-$$\begin{eqnarray}
+$$\begin{align*}
 \Phi(t,t) &=& u(t) - u(0) = u'(\tau_0)t,\\
 \Phi(t,t) &=& v(t) - v(0) = v'(\tau_0)t.
-\end{eqnarray}$$
+\end{align*}$$
 
 По условию $f'_x$, $f'_y$ дифференцируемы в окрестности точки $\m{a}$, тогда
-$$\begin{eqnarray}
+$$\begin{align*}
 f'_x(\m{a} + \m{h}) &=& f'_x(\m{a}) + (\mathrm{d}f_x')_\m{a} \m{h} + o(\m{h}), \\
 f'_y(\m{a} + \m{h}) &=& f'_y(\m{a}) + (\mathrm{d}f_y')_\m{a} \m{h} + o(\m{h}),
-\end{eqnarray}$$
+\end{align*}$$
 при $\m{h} \to \m{0}.$
 
 Тогда получаем
-$$\begin{eqnarray}
+$$\begin{align*}
 u'(\tau_0) &=& f'_x(a_1 + \tau_0, a_2 + t) - f'_x(a_1+ \tau_0, a_2) \\
 &=& f'_x(a_1,a_2) + \begin{pmatrix}
 f''_{xx}(a_1,a_2) & f''_{xy}(a_1,a_2) 
@@ -180,10 +180,10 @@ f''_{xx}(a_1,a_2) & f''_{xy}(a_1,a_2)
 \tau_0 \\ 0
 \end{pmatrix} - \omega_2(\tau_0, 0) \sqrt{\tau_0^2 +0^2} \\
 &=& f''_{xy}(a_1,a_2) t + \omega_1(\tau_0, t) \sqrt{\tau_0^2 +t^2}- \omega_2(\tau_0, 0) |\tau_0|.
-\end{eqnarray}$$
+\end{align*}$$
 
 Аналогично, получаем
-$$\begin{eqnarray}
+$$\begin{align*}
 v'(\tau_0) &=& f'_y(a_1 + t, a_2 + \tau_0) - f'_y(a_1, a_2+\tau_0) \\
 &=& f_y'(a_1, a_2) + \begin{pmatrix}
 f''_{yx}(a_1,a_2) & f''_{yy}(a_1,a_2) 
@@ -195,7 +195,7 @@ f''_{yx}(a_1.a_2) & f''_{yy}(a_1,a_2)
 0 \\ \tau_0
 \end{pmatrix} - \omega_4(0,\tau_0)|\tau_0| \\
 &=& f''_{yx}(a_1,a_2)t + \omega_3(t,\tau_0)\sqrt{t^2 +\tau_0^2} - \omega_4(0,\tau_0)|\tau_0|.
-\end{eqnarray}$$
+\end{align*}$$
 
 Так как $\Phi(t,t) = u'(\tau_0)t = v'(\tau_0)t$, то мы получаем
 $$

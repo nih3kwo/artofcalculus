@@ -83,11 +83,11 @@ $$
 :class: dropdown
 :nonumber:
     Действительно, имеем следующую цепочку эквивалентностей
-    $$\begin{eqnarray}
+    $$\begin{align*}
       \lim_{n \to \infty} x_n = x & \Longleftrightarrow &  \forall \varepsilon >0\, \exists N \in \mathbb{N}\, :\, \forall n >N, \, |x_n - x| <\varepsilon \\
       &\Longleftrightarrow& \forall \varepsilon >0\, \exists N \in \mathbb{N}\, :\, \forall n >N, \, |x_n' - 0| <\varepsilon \\
       &\Longleftrightarrow &  \lim_{n \to \infty} x'_n = 0.
-    \end{eqnarray}$$
+    \end{align*}$$
 :::
 
 ## Отделимость, единственность и арифметика предела
@@ -153,12 +153,12 @@ $$
 :class: dropdown
 :nonumber:
     Пусть последовательность $\m{x} = \{x_n\}_{n=1}^\infty$ имеет два предела, скажем $a,b$, при этом $a\ne b$. Тогда по определению предела для любого $\varepsilon>0$ мы можем найти такие $N, M$, что $|x_n - a|<\varepsilon$, когда $n>N$, и $|x_m-b|<\varepsilon$, при $m>M$. Пусть $K:=\max{N,M}$, тогда при $k>K$ мы будем иметь:
-   $$\begin{eqnarray}
+   $$\begin{align*}
       |a-b| &=& |a-x_K + x_K -b| \\
       &\le & |a-x_K| + |x_K-b| \\
       &\le& \varepsilon + \varepsilon \\
       &=& 2 \varepsilon.
-   \end{eqnarray}$$
+   \end{align*}$$
 
 А теперь воспользуемся тем фактом, что это неравенство должно выполняться \textbf{для любого числа $\varepsilon>0$}. Тогда, выбрав, например, $\varepsilon = \frac{1}{3}|a-b|$, мы приходим к противоречию.
 :::

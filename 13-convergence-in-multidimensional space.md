@@ -38,11 +38,11 @@ $$
 Согласно неравенству ([](#mgedgeM)) для каждого $1 \le k \le n$, $|x_{km} - a_k| \le d(\m{x}_m, \m{a})<r$.
 
 Имеем 
-$$\begin{eqnarray}
+$$\begin{align*}
 \lim_{m \to \infty} \m{x}_m = \m{a} &\Longleftrightarrow& \forall \varepsilon >0 \, \exists M : \forall m >M, \, d(\m{x}_m, \m{a}) = ||\m{x}_m - \m{a}|| < \varepsilon \\
 &\Longleftrightarrow& \forall\, 1 \le k \le n,\, |x_{km} - a_k| < \varepsilon \\
 &\Longleftrightarrow & \lim_{m \to \infty}x_{km} = a_k,\, 1 \le k \le n,
-\end{eqnarray}$$
+\end{align*}$$
 что доказывает требуемое.
 :::
 

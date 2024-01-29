@@ -33,11 +33,11 @@ $$
 :class: dropdown
 :nonumber:
 Пусть $r(x): = f(x) - T_f(x)$, очевидно, что $r(a) = r'(a) = \cdots = r^{(n)}(a) = 0$. По правилу Лопиталя [](#Lop)
-$$\begin{eqnarray}
+$$\begin{align*}
 \lim_{x \to a} \frac{r(x)}{(x-a)^n} &=& \lim_{x \to a} \frac{r'(x)}{n(x-a)^{n-1}} \\
 &=& \lim_{x \to a} \frac{r''(x)}{n(n-1)(x-a)^{n-2}} = \cdots \\
 &=& \lim_{x \to a} \frac{r^{(n-1)}(x)}{n!(x-a)}
-\end{eqnarray}$$
+\end{align*}$$
 Дальше правило Лопиталя применять вообще говорят нельзя, так как по условию известно, что существует лишь $f^{(n)}(a)$, а в окрестности она может не существовать. 
 
 Воспользуемся теперь определением, получаем
@@ -66,10 +66,10 @@ $$
 :class: dropdown
 :nonumber:
 Пусть
-$$\begin{eqnarray}
+$$\begin{align*}
 \psi(t) &:=& f(x) - \sum_{k=0}^n \frac{f^{(k)}(t)}{k!}(x-t)^k \\
 &=& f(x) - \left(f(t) + f'(t)(x-t) + \cdots + \frac{1}{n!}f^{(n)}(t)(x-t)^n \right) 
-\end{eqnarray}$$
+\end{align*}$$
 где $a \le t \le x$.
 
 Тогда
@@ -92,7 +92,7 @@ r_n(x,a)= - \frac{\psi'(c)}{g'(c)}(g(x) - g(c)).
 $$
 
 Имеем
-$$\begin{eqnarray}
+$$\begin{align*}
 \psi'(t) &= & - \left( f(t) + f'(t)(x-t) + \frac{1}{2!}f''(t)(x-t)^2 + \frac{1}{3!}f'''(t)(x-t)^3 + \cdots \frac{1}{n!}f^{(n)}(t) (x-t)^n \right)' \\
 &=& -f'(t) \\
 && - f''(t)(x-t) + f'(t) \\
@@ -100,7 +100,7 @@ $$\begin{eqnarray}
 &&  - \frac{1}{3}f^{(4)}(x-t)^3 + \frac{1}{3!}f'''(t)(x-t)^3 \\
 && \cdots - \frac{f^{(n+1)}(t)}{n!}(x-t)^n \\
 &=& - \frac{f^{(n+1)}(t)}{n!}(x-t)^n.
-\end{eqnarray}$$
+\end{align*}$$
 
 Таким образом,
 $$

@@ -74,11 +74,11 @@ f^{-1}(x), & x \in (0,1),\\
 $$
 
 Теперь мы можем ввести расстояние на $\overline{\mathbb{R}}$, $\overline{d}(x,y):=|\overline{f}(x) - \overline{f}(y)|$, $x,y \in \overline{\mathbb{R}}.$ Более подробно,
-$$\begin{eqnarray}
+$$\begin{align*}
 \overline{d}(x,y) &=& \left| \frac{x}{1+|x|} - \frac{y}{1+|y|} \right|, \qquad x,y\in \mathbb{R}\\
 d(x, + \infty) &=& \frac{1}{1+|x|}, \qquad x \ge 0\\
 d(-\infty,x) &=& \frac{1}{1+|x|}, \qquad x \le 0.
-\end{eqnarray}$$
+\end{align*}$$
 
 На $\overline{R}$ введём отношение порядка, по определению считая неравенство $x \le y$ эквивалентным неравенству $f(x) \le f(y)$. Легко проверить, что когда $x,y \in \mathbb{R}$, это отношение порядка есть обычное отношение порядка на $\mathbb{R}$ и что, кроме того, для любого $x\in \mathbb{R}$ мы имеем $- \infty < x < \infty.$
 
@@ -136,7 +136,7 @@ $$
 :::
 :::{prf:proof}
 :class: dropdown
-:nonumber:\
+:nonumber:
 
 (1) Пусть $\mathscr{U} = \cup_{\alpha \in A}\mathscr{U}_\alpha$ и пусть $x \in \mathscr{U}$, тогда для какого-то $\alpha \in A$, $x \in \mathscr{U}_a$. Так как $\mathscr{U}_\alpha$ — открыто, то найдётся такой $r >0$, что $B(x, r ) \subseteq \mathscr{U}_\alpha \subseteq \cup_{\alpha \in A}\mathscr{U}_\alpha$, что и доказывает открытость $\mathscr{U}.$
 
@@ -207,7 +207,7 @@ $$
 :::
 :::{prf:proof}
 :class: dropdown
-:nonumber:~
+:nonumber:
 
 (1) Пусть $f:E \to E'$ непрерывно. Возьмём открытое $\mathscr{U}' \subseteq E'$ и покажем, что $\mathscr{U}:=f^{-1}(\mathscr{U'})$ открыто в $E$. Пусть $x \in \mathscr{U}$, тогда $f(x) = x' \in \mathscr{U}'$, так как $\mathscr{U}'$ — открыто в $E'$, то найдётся шар $B'(x',r') \subseteq \mathscr{U}'$. Так как шар $B'(x',r')$ есть открытая окрестность точки $x'$ и по предположению $f$ непрерывна и в точке $x \in E$, значит, найдётся такой шар $B(x,r) \subseteq E$ такой, что $f(B(x,r)) \subseteq B'(x',r')$. 
 

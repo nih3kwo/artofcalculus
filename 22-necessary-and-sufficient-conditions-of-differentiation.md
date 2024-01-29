@@ -12,14 +12,14 @@
 Пусть $f:\mathbb{R}^n \to \mathbb{R}$, дифференцируемая на каком-то открытом $\mathscr{U} \subseteq \mathbb{R}^n$ или в фиксированной точке $\m{x}$. Тогда её дифференциал $(\mathrm{d}f)_\m{x}$ в точке $\m{x}$ задаётся матрицей размера $n\times 1$, $(\mathrm{d}f)_\m{x} = \begin{pmatrix}
 a_1 & \ldots & a_n
 \end{pmatrix}$, где все $a_i$ есть функции от $\m{x}$. Наша цель — найти эти $a_i$. Пусть $\m{h} = (h_1, \ldots, h_n)^\top \in \mathscr{U} \subseteq \mathbb{R}^n$, тогда получаем
-$$\begin{eqnarray}
+$$\begin{align*}
 f(\m{x} + \m{h}) - f(\m{x}) &=& (\mathrm{d}f)_\m{x}(\m{h}) + o(||\m{h}||) \\
 &=& \begin{pmatrix}
 a_1 & \ldots & a_n
 \end{pmatrix} \begin{pmatrix}
 h_1 \\ \vdots \\ h_n  \end{pmatrix} + o(||\m{h}||) \\
 &=& a_1h_1 + \cdots + a_nh_n + o(||\m{h}||).
-\end{eqnarray}$$
+\end{align*}$$
 
 Видно, что $a_i$ не зависит от координат вектора $\m{h}$ кроме $h_i$ т. е. чтобы найти $a_i$, нам достаточно рассмотреть вектор $\m{h}_i = h_i \m{e}_i$, где $\m{e}_i$ — базисный вектор. В таком случае, $||\m{h}_i|| = |h_i|$, и тогда для каждого $1 \le i \le n$ мы получаем
 $$
@@ -87,34 +87,34 @@ $$
 $$
 
 Тогда получаем
-$$\begin{eqnarray}
+$$\begin{align*}
 \varphi_k(t) - \varphi_k(t_0) &=& f(\m{a} + h_1 \m{e}_1 + \cdots + h_{k-1}\m{e}_{k-1} + t\m{e}_k) - f(\m{a} + h_1 \m{e}_1 + \cdots + h_{k-1}\m{e}_{k-1}) \\
 &-& -f(\m{a} + h_1 \m{e}_1 + \cdots + h_{k-1}\m{e}_{k-1} + t_0\m{e}_k) + f(\m{a} + h_1 \m{e}_1 + \cdots + h_{k-1}\m{e}_{k-1}) \\
 &=& f(\m{a} + h_1 \m{e}_1 + \cdots + h_{k-1}\m{e}_{k-1} + t\m{e}_k) - f(\m{a} + h_1 \m{e}_1 + \cdots + h_{k-1}\m{e}_{k-1} + t_0\m{e}_k),
-\end{eqnarray}$$
+\end{align*}$$
 в частности
 $$
 \varphi_k(h_k) - \varphi_k(0) = f_k.
 $$
 
 Пусть $\m{x}_0 := \m{a}+ h_1 \m{e}_1 + \cdots + h_{k-1}\m{e}_{k-1}+t_0\m{e}_k$, тогда 
-$$\begin{eqnarray}
+$$\begin{align*}
 \m{a} + h_1 \m{e}_1 + \cdots + h_{k-1}\m{e}_{k-1} + t\m{e}_k &=& \m{a} + h_1 \m{e}_1 + \cdots + h_{k-1}\m{e}_{k-1} + (t-t_0)\m{e}_k \\
 &+& \m{a} + h_1 \m{e}_1 + \cdots + h_{k-1}\m{e}_{k-1} + t_0\m{e}_k \\
 &=& \m{x}_0 + (t-t_0) \m{e}_k
-\end{eqnarray}$$
+\end{align*}$$
 
 Таким образом, мы можем написать
-$$\begin{eqnarray}
+$$\begin{align*}
 \varphi_k(t) - \varphi_k(t_0) &=&  f(\m{a} + h_1 \m{e}_1 + \cdots + h_{k-1}\m{e}_{k-1} + t\m{e}_k) - f(\m{a} + h_1 \m{e}_1 + \cdots + h_{k-1}\m{e}_{k-1} + t_0\m{e}_k) \\
 &=& f(\m{x}_0 + (t-t_0) \m{e}_k) - f(\m{x}_0),
-\end{eqnarray}$$
+\end{align*}$$
 а тогда
-$$\begin{eqnarray}
+$$\begin{align*}
 \varphi_k'(t_0) &:=& \lim_{t \to t_0} \frac{\varphi_k(t) - \varphi_k(t_0)}{t-t_0} \\
 &=& \lim_{t \to t_0} \frac{f(\m{x}_0 + (t-t_0) \m{e}_k) - f(\m{x}_0)}{t-t_0} \\
 &=:& \left.\frac{\partial f}{\partial x_k}\right|_{\m{x}_0} = f'_{x_k}(\m{x}_0).
-\end{eqnarray}$$
+\end{align*}$$
 
 Это значит, что функция $\varphi_k(t)$ дифференцируема на отрезке $[0,h_k]$, потому что по условию существуют все частные производные в $\mathscr{U}$. 
 
@@ -127,11 +127,11 @@ $$
 f_k = \varphi_k(h_k) - \varphi_k(0) = \varphi_k'(\theta_k)h_k = f'_{x_k}(\m{a} + \m{v}_k)h_k, 
 $$
 где все $\m{k}$ расположены между $\m{a}$ и $\m{a}+ \m{h}$, тогда окончательно получаем
-$$\begin{eqnarray}
+$$\begin{align*}
 f(\m{a} + \m{h}) - f(\m{a}) &=& f_1 + \cdots + f_n \\
 &=& f'_{x_1}(\m{a} + \m{v}_1)h_1 + \cdots + f'_{x_n}(\m{a} + \m{v}_n)h_n \\
 &=& \sum_{k =1}^n f'_{x_k}({\m{a} + \m{v}_k}) \cdot h_k,
-\end{eqnarray}$$
+\end{align*}$$
 что и требовалось доказать.
 :::
 
@@ -217,10 +217,10 @@ $$
 (2) $\Longrightarrow$ (3). Если $L$ непрерывно в нуле, то это значит, что для любого $\varepsilon >0$ можно всегда найти такое $\delta>0$, что из $||\m{h}|| <\delta$ будет следовать $||L(\m{h})|| <\varepsilon$. Пусть $\varepsilon = 1$, тогда мы всегда найдём такой $\delta>0$, что если $|| \m{h} || < \delta$, то $|| L(\m{h})|| < 1$. Зафиксируем такое $\delta.$
 
 Возьмём теперь произвольный ненулевой вектор[^ref221] $\m{v}$, тогда имеем
-$$\begin{eqnarray}
+$$\begin{align*}
 || L(\m{v}) || &=& \left\| \frac{2}{\delta} || \m{v} || L\left(  \frac{\delta \m{v}}{2 || \m{v} ||}\right) \right\| \\
 &=&  \frac{2}{\delta} || \m{v}|| \cdot \left\| L\left(  \frac{\delta \m{v}}{2 || \m{v} ||}\right) \right\| < \frac{2}{\delta} || \m{v}||
-\end{eqnarray}$$
+\end{align*}$$
 потому что 
 $$
 \left\|\frac{\delta \m{v}}{2 || \m{v} ||} \right\| = \frac{\delta}{2} < \delta,
@@ -261,7 +261,7 @@ a_{m1}v_1 + \cdots + a_{mn}v_n
 \end{pmatrix} = (u_1, \ldots, u_m)^\top =:\m{u} \in \mathbb{R}^m,
 $$ 
 тогда
-$$\begin{eqnarray}
+$$\begin{align*}
 ||L(\m{v})|| &=& ||\m{u}|| \\
 &=& \sqrt{(a_{11}v_1 + \cdots + a_{1n}v_n)^2 + \cdots + (a_{m1}v_1 + \cdots + a_{mn}v_n)^2} \\
 &\le & \sqrt{ m } \max_{1 \le k \le m} \left| a_{k1}v_1 + \cdots + a_{kn}v_n  \right| \\
@@ -269,7 +269,7 @@ $$\begin{eqnarray}
 &\le & \sqrt{ m } \max_{1 \le k \le m} \left(|a_{k1}| \cdot || \m{v}|| + \cdots + |a_{kn}| \cdot || \m{v}||  \right) \\
 &=& \sqrt{ m } \max_{1 \le k \le m}\left(|a_{k1}|  + \cdots + |a_{kn}|   \right) \cdot || \m{v}|| \\
 &=& K || \m{v}||,
-\end{eqnarray}$$
+\end{align*}$$
 где $K: = \sqrt{ m } \max_{1 \le k \le m}\left(|a_{k1}|  + \cdots + |a_{kn}|   \right)$, тогда по Предложению [](#contous_of_linear) оно непрерывно. 
 :::
 

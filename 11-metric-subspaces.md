@@ -24,11 +24,11 @@
 :class: dropdown
 :nonumber:
 Прежде всего, поймём, что есть открытый шар в $F$. Пусть $a \in F$, и рассмотрим открытый шар $B(a,r) \subseteq E$, тогда получаем
-$$\begin{eqnarray}
+$$\begin{align*}
 F \cap B(a,r) &:=& \{x \in E \cap F\, :\, d(x,a)<r\} \\
 &=&\{x\in F\, :\, d(x,a)<r\} \\
 &=& \{x \in F\, :\, d_F(x,a)<r\},
-\end{eqnarray}$$
+\end{align*}$$
 т. е. $F \cap B(a,r)$ — это **открытый шар в $F$ с центром в точке $a$ радиуса $r.$**
 
 :::{warning}

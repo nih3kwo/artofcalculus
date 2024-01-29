@@ -22,7 +22,7 @@
 
 :::{prf:proof}
 :class: dropdown
-:nonumber:~
+:nonumber:
 
 (1) Пусть $(K,d|_K)$ — компактное подпространство в $(E,d)$, и пусть $\{ \mathscr{U}_\alpha \}_{\alpha \in A}$ — его покрытие, т. е. $K = \cup_{\alpha \in A} \mathscr{U}_\alpha$, где все $\mathscr{U}_\alpha \subseteq K$ открыты в $K$, но тогда (Предложение [](#open_in_subset)) для каждого $\alpha \in A$ существует открытое множество $\widetilde{\mathscr{U}}_\alpha$ в $E$ такое, что $\widetilde{\mathscr{U}_\alpha} = \mathscr{U}_\alpha \cap K$. Тогда $K \subseteq \cup_{\alpha \in A} \widetilde{\mathscr{U}}_\alpha$. Так как $K$ — компакт, то можно найти конечное число множеств, скажем, $\mathscr{U}_1, \ldots, \mathscr{U}_n$, таких, что $K = \cup_{i=1}^n\mathscr{U}_i$, но тогда $K \subseteq \cup_{i=1}^n \widetilde{\mathscr{U}}_i$.
 
@@ -199,7 +199,7 @@ $$
 :::
 :::{prf:proof}
 :class: dropdown
-:nonumber:~
+:nonumber:
 
 (1) Согласно Теореме [](#properties_of_compact) (1) мы получаем необходимость.
 

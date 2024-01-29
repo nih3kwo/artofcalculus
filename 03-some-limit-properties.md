@@ -10,7 +10,7 @@
 :::
 :::{prf:proof}
 :class: dropdown
-:nonumber:~\\
+:nonumber:
 (1) Пусть $a_n':=a_n+c$, $n\in \mathbb{N}$. По определению получаем, что для любого $\varepsilon > 0$ найдётся такой $N$, что $|a_n - a| < \varepsilon$. Имеем $|a_n -a| = |a_n+c - a - c| = |a_n' - (a+c)|$, то есть для того же $N$ мы получаем, что при $n>N$, $|a_n' - (a+c)| < \varepsilon$, что и доказывает, что $\lim_{n\to \infty}(a_n + c) = a+c$.
 
 Пусть теперь $a'_n: = ca_n$, $n\in \mathbb{N}$. Ясно, что если $c =0$, то мы получаем постоянную последовательность $\{0,0,...\ldots,\}$ и мы уже знаем, что она сходится к $0.$ Пусть $c \ne 0.$ Так как $\lim_{n\to \infty}a_n = a$, то для любого $\varepsilon>0$ есть такой номер $N$, что $|a_n - a|<\varepsilon$ для всех $n>N$. Значит, если мы рассмотрим $\varepsilon':=\frac{\varepsilon}{|c|}$, то и для такого $\varepsilon'$ мы тоже знаем такой номер $N'$, что $|a_n - a|< \varepsilon'$. Умножив обе части этого неравенства на $|c|$, мы получаем $|c||a_n - a| <|c|\varepsilon'$, что равносильно неравенству $|a_n' - ca| < \varepsilon$, что и доказывает требуемое.
@@ -31,10 +31,10 @@ $$
 Докажем, что $\lim_{n\to \infty}(a_nb_n - ab) = 0$, тогда по [](#lim(a_n-a)=0) будет следовать требуемое.
 
 Согласно только что доказанным пунктам, имеем
-$$\begin{eqnarray}
+$$\begin{align*}
     \lim_{n\to \infty}(a_nb_n - ab) &=&  \lim_{n\to \infty}\Bigl( (a_n-a)(b_n-b) + a(b_n -b) + b(a_n -a) \Bigr)  \\
 &=&  \lim_{n\to \infty} (a_n-a)(b_n-b) + a \lim_{n\to \infty}(b_n -b) + b \lim_{n\to \infty}(a_n -a),
-\end{eqnarray}$$
+\end{align*}$$
 по [](#lim(a_n-a)=0), $\lim_{n\to \infty}(b_n -b) =0$, $\lim_{n\to \infty}(a_n -a)=0$, значит, $\lim_{n\to \infty}(a_nb_n - ab) = \lim_{n \to \infty}(a_n-a)(b_n-b).$ Покажем, что этот предел равен нулю. Так как $\lim_{n\to \infty} a_n  =a$ и $\lim_{n\to \infty}b_n =b$, то для любого $\varepsilon>0$, есть номера $N,M$ такие, что $|a_n - a| <\varepsilon$ и $|b_m -b| < \varepsilon$ для всех $n >N$, $m>M$. Пусть теперь $\varepsilon':=\sqrt{\varepsilon},$ тогда и для такого числа мы тоже знаем номера $N',M'$ такие, что  $|a_n - a| <\varepsilon'$ и $|b_m -b| < \varepsilon'$ для всех $n >N'$, $m>M'$. Пусть $K:= \max{N',M'}$, тогда для $k>K$ мы получаем
 $$
  |(a_k-a)(b_k-b)| = |a_k -a||b_k - b| < \varepsilon' \cdot \varepsilon' = \varepsilon, 
@@ -100,12 +100,12 @@ $$
 :class: dropdown
 :nonumber:
 Пусть $\varepsilon_0:=a-b >0$. Согласно определению предела, мы можем для $\frac{\varepsilon_0}{2}$ найти такие $N,M$, что $|a_n - a|<\frac{\varepsilon_0}{2}$, $|b_m-b|<\frac{\varepsilon_0}{2}$ для всех $n>N$, $m>M$.  Пусть $K:=\max\{N,M\}$, тогда для любого $k>K$
-$$\begin{eqnarray}
+$$\begin{align*}
     \varepsilon_0 &=& a-b\\
     &=& a-a_n + a_n - b_n+b_n - b \\
     &\le &a-a_n + b_n-b \\
     &<&\varepsilon_0
-\end{eqnarray}$$
+\end{align*}$$
 что даёт противоречие.
 
 :::

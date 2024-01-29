@@ -109,11 +109,11 @@ $$
 \lim_{\m{h} \to \m{0}} \frac{F(\m{x}_0 + \m{h}) -  F(\m{x_0})}{|| \m{h} ||} = (\mathrm{d}F)_{\m{x}_0}(\m{h}) \in \mathbb{R}^m,
 $$
 тогда
-$$\begin{eqnarray}
+$$\begin{align*}
 \lim_{\m{h} \to \m{0}}(   F(\m{x}_0 + \m{h}) - F(\m{x}_0)  ) &=& \lim_{\m{h} \to \m{0}} \frac{F(\m{x}_0 + \m{h}) -  F(\m{x_0})}{|| \m{h} ||} || \m{h}|| \\
 &=& (\mathrm{d}F)_{\m{x}_0}(\m{h}) \lim_{\m{h} \to \m{0}} || \m{h} || \\
 &=& 0,
-\end{eqnarray}$$
+\end{align*}$$
 но тогда $\lim_{\m{v} \to \m{x}_0}F(\m{v}) = F(\m{x}_0)$ но это и означает непрерывность $F.$[^ref171]
 
 :::
@@ -134,11 +134,11 @@ $$
 
 :::{prf:example}
 Пусть $f(x) = x^2$, покажем, что она дифференцируема всюду. Действительно, имеем
-$$\begin{eqnarray}
+$$\begin{align*}
 f(x+h) &=& (x+h)^2 \\
 &=& x^2 + 2xh + h^2 \\
 &=& f(x) + 2x \cdot h + o(|h|).
-\end{eqnarray}$$
+\end{align*}$$
 
 Таким образом, дифференциал определяется следующим образом: $\mathrm{d}f_{x_0} = 2x_0$ для любого $x_0 \in \mathbb{R}$.
 
@@ -151,7 +151,7 @@ $$
 
 :::{prf:example}
 Мы рассмотрим функцию уже от двух переменных $F: \mathbb{R}^2 \to \mathbb{R}$, $F(x_1,x_2): = (x_1 + x_2)^2$, где $\m{x} = (x_1, x_2)$. Покажем, что она тоже всюду дифференцируема. Пусть $\m{h}= (h_1,h_2)$, тогда получаем
-$$\begin{eqnarray}
+$$\begin{align*}
 F(\m{x} + \m{h}) &=& F((x_1 +h_1) + (x_2 + h_2) ) \\
 &=& ((x_1 +h_1) + (x_2 + h_2) )^2 \\
 &=& ((x_1 + x_2) + (h_1 + h_2))^2 \\
@@ -161,16 +161,16 @@ F(\m{x} + \m{h}) &=& F((x_1 +h_1) + (x_2 + h_2) ) \\
 \end{pmatrix} \begin{pmatrix}
 h_1 \\ h_2
 \end{pmatrix} + o(||\m{h}||).
-\end{eqnarray}$$
+\end{align*}$$
 
 Прокомментируем, что тут написано. Во-первых, если $\m{h} \to 0$, то, по Лемме [](#||h||->0), $h_1, h_2 \to 0$. Мы должны показать, что $(h_1+h_2)^2 \in o(||\m{h}||)$, т. е. $\lim_{h_1 \to 0, h_2 \to 0} \frac{(h_1 + h_2)^2}{\sqrt{h_1^2 + h_2^2}} = 0$. Применим полярную систему координат $h_1 = \rho \cos \varphi$, $h_2 = \rho \sin \varphi$, тогда $\rho = \sqrt{h_1^2 + h_2^2} \to 0$.
 
 Имеем
-$$\begin{eqnarray}
+$$\begin{align*}
 \lim_{h_1 \to, h_2 \to 0} \frac{(h_1 + h_2)^2}{\sqrt{h_1^2 + h_2^2}} &=& \lim_{\rho \to 0} \frac{\rho ^2 + 2\rho^2 \cos \varphi \sin \varphi }{\rho} \\
 &=& \lim_{\rho \to 0} \rho \cdot \left(1 + \sin 2\varphi \right) \\
 &=& 0,
-\end{eqnarray}$$
+\end{align*}$$
 поэтому $(h_1 + h_2)^2 \in o(||\m{h}||).$
 
 Во-вторых, произведение $2(x_1 + x_2)(h_1 + h_2)$ можно записать в виде произведения матриц
@@ -226,11 +226,11 @@ $$
 f(x) - f(x_0) = \frac{f(x) - f(x_0)}{x-x_0}(x-x_0),
 $$
 тогда
-$$\begin{eqnarray}
+$$\begin{align*}
 \lim_{x \to x_0} (f(x) - f(x_0))  &=& \lim_{x \to x_0}\frac{f(x) - f(x_0)}{x-x_0}(x-x_0) \\
 &=& f'(x_0) \lim_{x \to x_0}(x-x_0) \\
 &=& 0,
-\end{eqnarray}$$
+\end{align*}$$
 т. е. $\lim_{x \to x_0} f(x) = f(x_0)$, что и означает её непрерывность.\\
 
 :::{warning}
@@ -249,11 +249,11 @@ $$\begin{eqnarray}
 ```
 
 Рассмотрим предел
-$$\begin{eqnarray}
+$$\begin{align*}
 \lim_{x \to 0}\frac{f(x) - f(0)}{x - 0} &=& \lim_{x \to 0} \frac{|x| - 0}{x-0} \\
 &=&\lim_{x \to 0} \frac{|x|}{x}\\
 &=& \lim_{x \to 0}\mathrm{sign}(x),
-\end{eqnarray}$$
+\end{align*}$$
 где $\mathrm{sign}(x) : = \begin{cases}
 1, & x > 0, \\
 0, & x =0, \\

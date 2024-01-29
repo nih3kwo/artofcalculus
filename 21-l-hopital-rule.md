@@ -67,11 +67,11 @@ $$
 $$
 
 Имеем
-$$\begin{eqnarray}
+$$\begin{align*}
 \left| \frac{f(x)}{g(x)} -A\right| &=& \left| \frac{f'(c)}{g'(c)}- A - \frac{f'(c)}{g'(c)} \cdot \frac{g(y)}{g(x)}  + \frac{f(y)}{g(x)}\right| \\
 &\le & \left|\frac{f'(c)}{g'(c)}- A \right| + \left| \frac{f'(c)}{g'(c)} \cdot \frac{g(y)}{g(x)}\right| + \left|  \frac{f(y)}{g(x)}\right| \\
 &<& \varepsilon + C\cdot \varepsilon + \varepsilon \\
 &=& (C+2)\varepsilon,
-\end{eqnarray}$$
+\end{align*}$$
 что и доказывает требуемое.
 :::
