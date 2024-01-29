@@ -90,6 +90,7 @@ $$
 :::
 
 :::{prf:theorem}
+:name: Tayl_for_2
 Если функция $f:\mathbb{R}^n \to \mathbb{R}$ — дважды дифференцируема в точке $\m{a}$, то
 $$
 f(\m{a} + \m{h}) =f(\m{a}) + \nabla_\m{a}(f)(\m{h}) + \frac{1}{2} \m{h}^\top \m{H}_\m{a}(f) \m{h} + o(\|\m{h}\|^2), \qquad \m{h} \to \m{0}_n.

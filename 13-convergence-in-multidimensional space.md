@@ -2,7 +2,7 @@
 
 Для доказательства обобщённой теоремы Больцано—Вейерштрасса и вообще в дальнейшем нам понадобится следующее неравенство
 
-(mgedgeM)=
+(mledleM)=
 $$
 \boxed{
 \max_{1 \le k \le n} |x_k| \le \sqrt{\sum_{k=1}^n x_k^2} \le \sqrt{n} \max_{1\le k \le n} |x_k|.}
@@ -35,7 +35,7 @@ $$
 :::{prf:proof}
 :class: dropdown
 :nonumber:
-Согласно неравенству ([](#mgedgeM)) для каждого $1 \le k \le n$, $|x_{km} - a_k| \le d(\m{x}_m, \m{a})<r$.
+Согласно неравенству ([](#mledleM)) для каждого $1 \le k \le n$, $|x_{km} - a_k| \le d(\m{x}_m, \m{a})<r$.
 
 Имеем 
 $$\begin{align*}
@@ -55,7 +55,7 @@ $$\begin{align*}
 :class: dropdown
 :nonumber:
 
-Пусть $\{\m{x}_m\} \subseteq B(\m{a},r)$, тогда $d(\m{x}_m, \m{a})<r$, но тогда согласно ([](#mgedgeM)),
+Пусть $\{\m{x}_m\} \subseteq B(\m{a},r)$, тогда $d(\m{x}_m, \m{a})<r$, но тогда согласно ([](#mledleM)),
 $$
 |x_{km} - a_k| \le \max_{1\le k \le n}| x_{km} - a_{k}  | \le d(\m{x}_m, \m{a})<r,
 $$

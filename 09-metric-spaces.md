@@ -184,7 +184,7 @@ $$
 
 
 :::{prf:example}
-:name: x^2sin(1x)
+:name: xpower2sin(1x)
 Пусть $E = E' = \mathbb{R}$ с одинаковой метрикой $d(x,y) = |x-y|$, покажем, что отображение $\overline{f}:E \to E'$;
 $$
 \overline{f}(x) = \begin{cases}

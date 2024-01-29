@@ -93,7 +93,7 @@ $$
 :::
 
 :::{prf:lemma} **Переход к пределу в неравенствах**
-:name: alesserthanb
+:name: aleb
      Пусть даны такие последовательности $\{a_n\}, \{b_n\}$, что $a_n<b_n$ для всех $n$, $\lim_{n \to \infty} a_n =a$ и $\lim_{n \to \infty} b_n = b$. Тогда $a\le b$. 
 :::
 :::{prf:proof}

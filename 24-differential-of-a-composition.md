@@ -60,7 +60,7 @@ $$\begin{align*}
 $$
 \left\| \frac{(\mathrm{d}F)_\m{a}(\m{h})}{|| \m{h} ||} + \alpha(\m{h})  \right\| \le \left\| \frac{(\mathrm{d}F)_\m{a}(\m{h})}{|| \m{h} ||} \right\| + \| \alpha(\m{h}) \| \le K + \| \alpha(\m{h}) \|,
 $$
-так как $\lim_{\m{h} \to \m{0}_n}\alpha(\m{h}) = \m{0}_k$, то согласно Предложению [](#xn->x=||xn||->||x||), Теореме [](#f<g=>lim):
+так как $\lim_{\m{h} \to \m{0}_n}\alpha(\m{h}) = \m{0}_k$, то согласно Предложению [](#xntox=xntox), Теореме [](#fleggeqlim):
 $$
 0 \le \lim_{\m{h} \to \m{0}_n}\left\| \frac{(\mathrm{d}F)_\m{a}(\m{h})}{|| \m{h} ||} + \alpha(\m{h})  \right\| =C \le K.
 $$

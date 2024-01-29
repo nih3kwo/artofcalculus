@@ -166,7 +166,7 @@ $$
 \frac{\alpha(\m{h})}{|| \m{h} ||} = \sum_{k=1}^n \varepsilon_k(\m{h}) \frac{h_k}{||\m{h} ||}.
 $$
 
-Наконец, согласно ([](#m<d<M)), 
+Наконец, согласно ([](#mledleM)), 
 $$
 || \m{h} || = \sqrt{h_1^2 + \cdots + h_n^2} \ge  \max_{1\le i \le n} |h_i|,
 $$
