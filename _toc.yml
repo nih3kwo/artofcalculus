@@ -40,3 +40,4 @@ parts:
       - file: 28-multivariable-taylor-polynomial
       - file: 29-compact-spaces
       - file: 30-taylor-polynomial-in-matrix-form
+      - file: 31-extremums
