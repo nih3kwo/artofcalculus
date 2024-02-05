@@ -44,3 +44,22 @@ $$
 :nonumber:
 Пусть $F'$ — замкнутое подмножество в $E'$, тогда $\mathscr{U}': = E'\setminus F'$ — открыто в $E'$ и $E' = F' \cup \mathscr{U}'$, $F' \cap \mathscr{U}' = \varnothing$. Далее, ясно что $f^{-1}(F') \cap f^{-1}(\mathscr{U}') = \varnothing$ и $E = f^{-1}(F') \cap f^{-1}(\mathscr{U}')$. Тогда согласно Теореме [](#preimage_of_open), $f$ — непрерывно если и только если $f^{-1}(\mathscr{U}')$ — открыто в $E$, но тогда $f^{-1}(F') = E \setminus \mathscr{U}'$ замкнуто тогда и только тогда, когда $f^{-1}(\mathscr{U}')$ — открыто. Это завершает доказательство.
 :::
+
+:::{prf:lemma}
+:name: closed_ball=closed
+Замкнутый шар — замкнут.
+:::
+:::{prf:proof}
+:class: dropdown
+:nonumber:
+Пусть $(E,d)$ — метрическое пространство, $\bar B(a,r)$ — замкнутый шар. Покажем, что $E\setminus B(a,r)$ — открыто. Пусть $x\notin \bar B(a,r)$, тогда $d(a,x) > r$, и положим $\varepsilon: = d(a,x) - r$, очевидно, что $\varepsilon >0$. Имеем $d(x,a) \le d(y,a) + d(y,x)$, тогда $d(y,a) \ge d(x,a) - d(y,x)$.
+
+Пусть теперь $y\in B(x, \frac{\varepsilon}{2})$, тогда получаем
+$$\begin{align*}
+d(y,a) &\ge & d(x,a) - d(y,x) \\
+&\ge & r + \varepsilon- \frac{\varepsilon}{2}\\
+&=& r + \frac{\varepsilon}{2}\\
+&>& r
+\end{align*}$$
+т.е. $y\notin \bar B(a,r)$. А это означает, что весь открытый шар $B(x, \frac{\varepsilon}{2})$ не лежит в $\bar B(a,r)$, что и требовалось доказать.
+:::
