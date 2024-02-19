@@ -16,7 +16,7 @@
 
 :::{prf:theorem} Необходимое условие условного экстремума
 
-Пусть $f, \varphi_1,\ldots, \varphi_m: \mathbb{R}^{n+m} \to \mathbb{R}$ являются непрерывно дифференцируемыми фукнциями в окрестности $\mathscr{W}$ точки $\m{a}$ и пусть 
+Пусть $f, \varphi_1,\ldots, \varphi_m: \mathbb{R}^{n+m} \to \mathbb{R}$ являются непрерывно дифференцируемыми фукнциями в окрестности $\mathscr{W}$ точки $\m{a}$, и пусть 
 $$
 \mathrm{rk} \begin{pmatrix}
 \dfrac{\partial \varphi_1}{\partial x_1} (\m{x}) & \ldots & \dfrac{\partial \varphi_1}{\partial x_{n+m}} (\m{x}) \\
@@ -62,7 +62,7 @@ u_{m+n} &=& x_{m+n}
 \end{matrix}
 \end{equation}
 
-Если нужно, то перенумеровав переменные, можно счистать, что из условия о ранге матрицы, вытекает
+Если нужно, то, перенумеровав переменные, можно считать, что из условия о ранге матрицы вытекает
 $$
 \mathrm{det} \begin{pmatrix}
 \dfrac{\partial \varphi_1}{\partial x_{1}}(\m{x}) &\ldots& \dfrac{\partial \varphi_1}{\partial x_{m}}(\m{x}) \\
@@ -71,7 +71,7 @@ $$
 \end{pmatrix} \ne 0.
 $$
 
-Тогда, по теореме об обратном отображении [](#inverse_function_theorem), $\Phi$ — локально обратимо в окресности $\mathscr{U} \subseteq \mathscr{W}$ точки $\m{a}.$ Это значит, что существуют такие непрывно дифференцирируемые функции $\psi_i: \mathscr{V} \to \mathbb{R}$, $1\le i \le n+m$, где $\mathscr{V}$ — окрестность точки $\Phi(\m{a})$ что мы получаем обратную замену коородинат к замене ([](#coordantes_u)) 
+Тогда по теореме об обратном отображении [](#inverse_function_theorem), $\Phi$ — локально обратима в окрестности $\mathscr{U} \subseteq \mathscr{W}$ точки $\m{a}.$ Это значит, что существуют такие непрерывно дифференцируемые функции $\psi_i: \mathscr{V} \to \mathbb{R}$, $1\le i \le n+m$, где $\mathscr{V}$ — окрестность точки $\Phi(\m{a})$, что мы получаем обратную замену координат к замене ([](#coordantes_u)) 
 $$
 \begin{matrix}
 x_1 & = & \psi_1(u_1,\ldots, u_{m}) \\
@@ -80,7 +80,7 @@ x_{n+m} & = & \psi_{n+m}(u_1,\ldots, u_m)
 \end{matrix}
 $$
 
-В итоге мы получаем две коммутитивные диаграммы
+В итоге, мы получаем две коммутативные диаграммы
 
 ![alt text](image-4.png)
 
@@ -93,13 +93,13 @@ $$
 f(x_1,\ldots, x_{n+m})= f_u(\psi_1(u_1,\ldots, \psi_m), \ldots, \psi_{n+m}(u_1,\ldots, u_m)).
 $$
 
-Тогда, если мы ограничиммся рассмотрением точек на множестве $\Omega$, то во-первых мы получаем, что 
+Тогда, если мы ограничимся рассмотрением точек на множестве $\Omega$, то во-первых, мы получаем, что 
 $$
 \Phi(\Omega) = \{(u_1,\ldots, u_{n+m}) \in \mathscr{U}\, : \, u_1=0,\ldots, u_m=0\},
 $$
 во-вторых мы получаем функцию уже от $n$ переменных $f_u(0,\ldots, 0, u_{m+1},\ldots, u_{m+n})$.
 
-Далее из диаграммы
+Далее, из диаграммы
 
 ![alt text](image-5.png)
 
@@ -126,12 +126,12 @@ $$
 f_u(0,\ldots, 0, u_{m+1},\ldots, u_{m+n}) = f(0,\ldots, 0, x_{m+1}, \ldots, x_{n+m}) \circ \Phi^{-1}.
 $$
 
-Но, тогда $\Phi(\m{a})$ — точка экстремума функции $f_u(0,\ldots, 0, u_{m+1},\ldots, u_{m+n})$ и по необходимому признаку [](#nessary_condition_for_extr), мы получаем
+Но тогда $\Phi(\m{a})$ — точка экстремума функции $f_u(0,\ldots, 0, u_{m+1},\ldots, u_{m+n})$ и по необходимому признаку [](#nessary_condition_for_extr), мы получаем
 $$
 \dfrac{\partial f_u}{\partial{u_{m+1}}}(\Phi(\m{a})) = \cdots = \dfrac{\partial f_u}{\partial{u_{m+n}}}(\Phi(\m{a})) = 0.
 $$
 
-Это значит, что в точке $\Phi(\m{a})$, имеем
+Это значит, что в точке $\Phi(\m{a})$ имеем
 $$
 (\mathrm{d}f_u)_{\Phi(\m{a})} = \begin{pmatrix}
 \lambda_1 & \ldots & \lambda_m & 0 & \ldots & 0
@@ -142,7 +142,7 @@ $$
 
 ![alt text](image-6.png)
 
-и из теоремы о композиции дифференциалов [](#d(FG)), получаем
+и из теоремы о композиции дифференциалов [](#d(FG)) получаем
 $$\begin{eqnarray}
 (\mathrm{d}f)_\m{a} &=& (\mathrm{d}f_u)_{\Phi(\m{a})} \cdot (\mathrm{d}\Phi)_{\m{a}} \\
 &=& \begin{pmatrix}
