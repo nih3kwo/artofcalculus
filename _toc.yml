@@ -43,3 +43,6 @@ parts:
       - file: 31-extremums
       - file: 32-theorem-about-the-implicit-and-the-inverse-functions
       - file: 33-theory-of-local-extremums
+  - caption: Числовые ряды
+    chapters: 
+      - file: 34-number-series
