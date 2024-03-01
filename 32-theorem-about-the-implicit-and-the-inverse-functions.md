@@ -1,6 +1,7 @@
 # Теорема о неявной и обратной функций
 
 :::{prf:theorem} Теорема об обратной функции 
+:label: inverse_function_theorem
 Пусть $\mathscr{U}, \mathscr{V} \subseteq \mathbb{R}^n$ — два открытых множества, и пусть $F:\mathscr{U} \to \mathscr{V}$ — дифференцируемое отображение. Пусть $(\mathrm{d}F)_\m{a}$ обратимо в точке $\m{a} \in \mathscr{U}$. Тогда существуют такие открытые множества $\widetilde{\mathscr{U}}, \widetilde{\mathscr{V}} \subseteq \mathbb{R}^n$, что $\m{a} \in \widetilde{\mathscr{U}}$, $F(\m{a}) \in \widetilde{\mathscr{V}}$, $ F: \widetilde{\mathscr{U}} \to \widetilde{\mathscr{V}}$ — биективно, и, более того, его обратное $F^{-1}:\widetilde{\mathscr{V}} \to \widetilde{\mathscr{U}}$ — дифференцируемое.
 :::
 
@@ -213,6 +214,7 @@ $$
 
 
 :::{prf:theorem}[Теорема о неявной функции]
+:label: implicit_function_theorem
 Пусть $\m{x} \in \mathbb{R}^n$, $\m{y} \in \mathbb{R}^m$, $\mathscr{W}$ — окрестность точки $(\m{x}_0, \m{y}_0) \in \mathbb{R}^n \times \mathbb{R}^m$, отображение $F: \mathscr{W} \to \mathbb{R}^m$ непрерывно дифференцируемо, $F(\m{x}_0, \m{y}_0) = \m{0}_m$ и якобиан отображения $\m{y}\mapsto F(\m{x}_0, \m{y})$ в точке $\m{y}_0$ отличен от нуля. Тогда найдутся открытые окрестности $\mathscr{U}$ и $\mathscr{V}$ точек $\m{x}_0$ и $\m{y}_0$ в $\mathbb{R}^n$ и $\mathbb{R}^m$ и непрерывно дифференцируемое отображение $f: \mathscr{U} \to \mathscr{V}$, обладающее следующим свойством: для точки $(\m{x}, \m{y}) \in \mathscr{U} \times \mathscr{V}$ равенство $F(\m{x}, \m{y}) = 0$ эквивалентно равенству $\m{y} = f(\m{x}).$
 
 Для точки $\m{x} \in \mathscr{U}$ дифференциал отображения $f$ при этом можно вычислить по формуле

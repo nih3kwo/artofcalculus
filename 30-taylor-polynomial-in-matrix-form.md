@@ -73,6 +73,7 @@ f(\m{a} + \m{h}) &=& f(\m{a}) + (\mathrm{d}f)_\m{a} \m{h} + \frac{1}{2!} (\mathr
 :::
 
 :::{prf:definition}
+:label: hesse_matrix
 Пусть функция $f:\mathbb{R}^n \to \mathbb{R}$ дважды дифференцируема в точке $\m{a}$, тогда матрица
 $$
 \m{H}_\m{a}(f): = \begin{pmatrix}
