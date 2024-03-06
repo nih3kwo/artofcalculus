@@ -77,6 +77,23 @@ $$
  (3) пусть $a = 0$, тогда для любого $\varepsilon>0$ можно найти такой $N$, что $-\varepsilon < a_n <\varepsilon$, для всех $n>N$. Тогда $-\sqrt{\varepsilon} < 0 < \sqrt{a_n} < \sqrt{\varepsilon}$, что и показывает $\lim_{n\to \infty} \sqrt{a_n} = 0.$
 :::
 
+:::{prf:example}
+:name: sqrtnn1
+Покажем, что $\lim_{n\to \infty}\sqrt[n]{n} = 1$. Имеем $n = \left(1+ (\sqrt[n]{n}-1) \right)^n$, тогда по биному Ньютона получаем
+$$
+n = 1 + \binom{n}{2} (\sqrt[n]{n} - 1)^2 + \cdots + (\sqrt[n]{n} - 1)^n,
+$$
+тогда
+$$
+n > \binom{n}{2} (\sqrt[n]{n} - 1)^2 = \frac{n(n-1)}{2} (\sqrt[n]{n} - 1)^2, 
+$$
+откуда получаем 
+$$
+0 < (\sqrt[n]{n} - 1) < \sqrt{\frac{2}{n-1}},
+$$
+и так как $\lim_{n\to \infty} 0 = 0$ и $\lim_{n\to \infty} \frac{2}{n-1} = 0$, то по лемме о зажатой последовательности [](#sqeezy), получаем $\lim{n\to \infty} (\sqrt[n]{n} - 1) = 0$, а тогда используя предложение [](#lim(a_n-a)=0) мы получаем требуемое.   
+
+:::
 
 :::{prf:lemma} **Лемма о зажатой последовательности**
 :name: sqeezy

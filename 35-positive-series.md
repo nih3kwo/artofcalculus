@@ -219,7 +219,7 @@ $$
 $$
 \lim_{n\to \infty} \mathscr{D}_n = \lim_{n \to \infty} \frac{x_{n+1}}{x_n} = \lim_{n\to \infty} \left(\frac{n}{n+1} \right)^\alpha  = \left( \lim_{n \to \infty} \frac{n}{n+1} \right)^\alpha =1,
 $$
-так же, как (см. Пример [](#sqrt[n]{n)->1})
+так же, как (см. Пример [](#sqrtnn1))
 $$
 \lim_{n\to \infty} \mathscr{C}_n =  \lim_{n\to \infty} \sqrt[n]{x_n} = \lim_{n \to \infty}\sqrt[n]{\frac{1}{n^\alpha}} = \left( \frac{1}{\lim\limits_{n\to \infty}\sqrt[n]{n}}\right)^\alpha =1.
 $$
