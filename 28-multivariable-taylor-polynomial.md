@@ -69,7 +69,7 @@ $$
 \varphi^{k}(t) = (\mathrm{d}^k_{\m{a}+t\m{h}}f)(\m{h}).
 $$
 
-Тогда её полином Тэйлора с остаточным мономом в форме Лагранже (Следствие [](#monom_in_Langrange) имеет вид
+Тогда её полином Тейлора с остаточным мономом в форме Лагранже (Следствие [](#monom_in_Langrange) имеет вид
 $$
 \varphi(t) = \varphi(0) + \frac{\varphi'(0)}{1!}t + \frac{\varphi''(0)}{2!}t^2 + \cdots + \frac{\varphi^{(m)}(0)}{m!}t^m + \frac{\varphi^{(m+1)}(\theta)}{(m+1)!}t^{m+1}
 $$
