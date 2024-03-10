@@ -93,7 +93,7 @@ $$
 
 Тогда коэффициент при $\frac{\partial^{k+1}f}{\partial x_1^{p+1}\partial x_2^{p_2} \cdots \partial x_n^{p_n}} h_1^{p_1+1}h_2^{p_2}\cdots h_n^{p_n}$ есть следующее выражение
 $$
-K = \frac{k!}{p_1! p_2! \cdots p_n!} + \frac{k!}{(p_1+1)!p_2! \cdots p_n!} + \cdots + \frac{k!}{(p_1+1)!p_2! \cdots (p_n-1)!}
+ K = \frac{k!}{p_1! p_2! \cdots p_n!} + \frac{k!}{(p_1+1)!(p_2-1)! \cdots p_n!} + \cdots + \frac{k!}{(p_1+1)!p_2! \cdots (p_n-1)!}
 $$
 имеем
 $$\begin{align*}
