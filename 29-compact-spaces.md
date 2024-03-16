@@ -92,7 +92,7 @@ $$
   B(y, \varepsilon) \cap K \subseteq B(y, \varepsilon) \cap \bigcup_{i=1}^n B(x_i,r_i) = \varnothing,
 $$
 
-т. е. мы нашли окрестность $B(y, \varepsilon)$ точки $y$, которая не пересекается с $K$. Но это означает см. Определение [](#limit_point), Лемма [](#closure), что $y \notin \overline{K}$.  Поэтому если $y\in \overline{K}$, то $y \in K$, \ie $\overline{K} = K.$
+т. е. мы нашли окрестность $B(y, \varepsilon)$ точки $y$, которая не пересекается с $K$. Но это означает см. Определение [](#limit_point), Лемма [](#closure), что $y \notin \overline{K}$.  Поэтому если $y\in \overline{K}$, то $y \in K$, т. е. $\overline{K} = K.$
 
 (3) Пусть $F \subseteq K$ — замкнутое подмножество в $K$, и пусть $\{\mathscr{U}_\alpha\}_{\alpha \in A}$ — покрытие $F$ открытыми множествами из $E$, т. е. $F \subseteq \cup_{\alpha \in A} \mathscr{U}_\alpha$.
 

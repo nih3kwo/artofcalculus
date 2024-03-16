@@ -4,7 +4,7 @@
 
 :::{prf:definition}
 :label: local_extremum
-Точка $\m{a} \in \mathbb{R}^n$ называется **точкой локального максимума (минимума)** функции $f:\mathbb{R}^n \to \mathbb{R}$, если она определена в некоторой её окрестности $\mathscr{U}(\m{a})$ и $f(\m{x}) \ge f(\m{a})$ (**соотв.** $f(\m{x}) \le f(\m{a})$) для любой точки $\m{x} \in \mathscr{U}(\m{a}).$
+Точка $\m{a} \in \mathbb{R}^n$ называется **точкой локального максимума (минимума)** функции $f:\mathbb{R}^n \to \mathbb{R}$, если она определена в некоторой её окрестности $\mathscr{U}(\m{a})$ и $f(\m{x}) \le f(\m{a})$ (**соотв.** $f(\m{x}) \ge f(\m{a})$) для любой точки $\m{x} \in \mathscr{U}(\m{a}).$
 
 Точки локального максимума и минимума называются точками **экстремума.**
 :::
@@ -17,7 +17,7 @@
 :label: required_extremum 
 Если $\m{a} = (a_1,\ldots, a_n) \in \mathbb{R}^n$ — точка экстремума функции $f:\mathbb{R}^n \to \mathbb{R}$, тогда, если все частные производные $f'_{x_i}$, $1\le i \le n$ существуют в какой-то окрестности $\mathscr{U}(\m{a})$ точки $\m{a}$, то $(\mathrm{d}f)_\m{a}(\m{h}) = 0$ для любого $\m{h} \in \mathscr{U}(\m{a}),$ или
 $$
-\left.\frac{\partial f}{\partial x_1}\right|_\m{a} = \ldots = \left.\frac{\partial f}{\partial x_1}\right|_\m{a} = 0.   
+\left.\frac{\partial f}{\partial x_1}\right|_\m{a} = \ldots = \left.\frac{\partial f}{\partial x_n}\right|_\m{a} = 0.   
 $$
 :::
 :::{prf:proof}

@@ -69,7 +69,7 @@ $$
 \varphi^{k}(t) = (\mathrm{d}^k_{\m{a}+t\m{h}}f)(\m{h}).
 $$
 
-Тогда её полином Тейлора с остаточным мономом в форме Лагранже (Следствие [](#monom_in_Langrange) имеет вид
+Тогда её полином Тейлора с остаточным мономом в форме Лагранжа (Следствие [](#monom_in_Langrange) имеет вид
 $$
 \varphi(t) = \varphi(0) + \frac{\varphi'(0)}{1!}t + \frac{\varphi''(0)}{2!}t^2 + \cdots + \frac{\varphi^{(m)}(0)}{m!}t^m + \frac{\varphi^{(m+1)}(\theta)}{(m+1)!}t^{m+1}
 $$
@@ -83,12 +83,12 @@ $$
 $$\begin{align*}
 \varphi(0) &=& f(\m{a}), \\
 \varphi^{(k)}(0) &=& (\mathrm{d}^k_{\m{a}}f)(\m{h}), \qquad 1 \le k \le m,\\
-\varphi^{(m+1)}(\theta) &=&(\mathrm{d}^k_{\m{a}+\theta \m{h}}f)(\m{h}).
+\varphi^{(m+1)}(\theta) &=&(\mathrm{d}^{m+1}_{\m{a}+\theta \m{h}}f)(\m{h}).
 \end{align*}$$
 
 Тогда мы можем записать
 $$
-\varphi(t) = f(\m{a}) + \sum_{k=1}^m \frac{(\mathrm{d}^k_{\m{a}}f)(\m{h})}{k!}t^k + \frac{( \mathrm{d}^k_{\m{a}+\theta \m{h}}f)(\m{h}) }{(m+1)!}t^{m+1},
+\varphi(t) = f(\m{a}) + \sum_{k=1}^m \frac{(\mathrm{d}^k_{\m{a}}f)(\m{h})}{k!}t^k + \frac{( \mathrm{d}^{m+1}_{\m{a}+\theta \m{h}}f)(\m{h}) }{(m+1)!}t^{m+1},
 $$
 так как $\varphi(1) = f(\m{a}+\m{h})$, то подставляя $t=1$ в последней сумме мы получаем требуемое.
 :::

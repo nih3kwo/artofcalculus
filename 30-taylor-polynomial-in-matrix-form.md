@@ -111,7 +111,7 @@ $$\begin{align*}
 \end{align*}$$
 где $\m{h} = (h_1, \ldots, h_n)^n$, но последнее выражение можно записать в матричном виде следующим образом
 $$
-(h_1, \ldots, h_n)^\top \begin{pmatrix}
+(h_1, \ldots, h_n) \begin{pmatrix}
 \left.\dfrac{\partial^2 f}{\partial x_1^2}\right|_{\m{a}} & \left.\dfrac{\partial^2 f}{\partial x_1 \partial x_2}\right|_{\m{a}} &\ldots & \left.\dfrac{\partial^2 f}{\partial x_1 \partial x_n}\right|_{\m{a}} \\
 \left.\dfrac{\partial^2 f}{\partial x_2 \partial x_1}\right|_{\m{a}} & \left.\dfrac{\partial^2 f}{\partial x_2^2}\right|_{\m{a}} & \ldots & \left.\dfrac{\partial^2 f}{\partial x_2 \partial x_n}\right|_{\m{a}} \\
 \vdots & \vdots & \ddots & \vdots \\
