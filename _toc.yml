@@ -1,9 +1,6 @@
 format: jb-book
 root: README
 parts:
-  - caption: 
-    chapters:
-      - file: 99-colloquim-3
   - caption: Действительные числа и последовательности
     chapters:
       - file: 00-initial-knowledge
@@ -50,3 +47,11 @@ parts:
       - file: 35-positive-series
       - file: 36-alternating-series
       - file: 37-absolute-and-conditional-convergence
+  - caption: Интегральное исчисление
+    chapters:
+      - file: 38-linear-differential-forms
+      - file: 39-indefinite-integral
+      - file: 40-integration-means
+  - caption: Архив
+    chapters:
+      - file: 99-colloquim-3
