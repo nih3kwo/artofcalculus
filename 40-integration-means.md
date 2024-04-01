@@ -55,3 +55,101 @@ $$
 $$
 и полагая $C: = \frac{C'}{\alpha +1}$, мы получаем требуемое.
 :::
+
+## Интегрирование по частям
+
+Докажем следующую формулу, которая называется **правилом интегрирования по частям**.
+
+:::{prf:theorem}[Интегрирование по частям]
+Пусть $u = u(x)$, $v= v(x)$ — две функции от $x$, имеющие непрерывные производные $u'= u'(x)$, $v' = v'(x)$. Тогда имеет место формула
+$$
+\int u \mathrm{d}v = uv - \int v \mathrm{d}u.
+$$
+:::
+:::{prf:proof}
+:class: dropdown
+:nonumber:
+
+Согласно ([](#df=f'dx)), а также правилу Лейбница (Теорема [](#ariph_for_der) 2), имеем 
+$$\begin{eqnarray}
+\mathrm{d}(uv) &=& (uv)' \mathrm{d}x \\
+&=& u'v \mathrm{d}x + uv'\mathrm{d}x \\
+&=& v \bigl( u'\mathrm{d}x\bigr) + u \bigl( v'\mathrm{d}x \bigr) \\
+&=& v \mathrm{d}u + u \mathrm{d}v.
+\end{eqnarray}$$
+Таким образом, $u\mathrm{d}v = \mathrm{d}(uv) - v \mathrm{d}u$. Тогда, используя линейность интеграла (Предложение [](#linearity_of_int)) и Лемму [](#intdF=F), получаем
+$$\begin{eqnarray}
+\int u \mathrm{d}v &=& \int \Bigl(  \mathrm{d}(uv) - v \mathrm{d}u \Bigr) \\
+&=& \int \mathrm{d}(uv) - \int v \mathrm{d}u \\
+&=& uv - \int v \mathrm{d}u,
+\end{eqnarray}$$
+что и требовалось доказать.    
+:::
+
+:::{warning}
+Следует заметить, что более формально мы должны были бы записать
+$$
+\int \mathrm{d}(uv) - \int v \mathrm{d}u = uv + C - \int v \mathrm{d}u,
+$$
+но выражение $C - \int v \mathrm{d}u$ есть неопределённый интеграл для формы $v\mathrm{d}u$, поэтому его можно записать просто как $\int v \mathrm{d}u.$
+:::
+
+
+:::{prf:example}
+Рассмотрим типичные примеры на использование этого правила.
+
+
+1. Рассмотрим форму $\ln(x) \mathrm{d}x$, положим $u = \ln(x)$ и $v = x$, тогда получаем
+$$ 
+\int \ln(x) \mathrm{d}x =  \ln(x)\cdot x - \int x \mathrm{d}(\ln (x)),
+$$
+так как $\mathrm{d}(\ln(x)) = (\ln(x))'\mathrm{d}x = \frac{1}{x}\mathrm{d}x$, то получаем
+$$\begin{eqnarray}
+\int \ln(x) \mathrm{d}x &=& \ln(x) \cdot x - \int \frac{x}{x}\mathrm{d}x \\
+&=& x \ln(x) - \int \mathrm{d}x \\
+&=& x\ln(x) - x + C.   
+\end{eqnarray}$$
+2. Рассмотрим форму $\arctan(x) \mathrm{d}x$, полагая $u = \arctan(x)$, $v = x$, получаем
+$$
+\int \arctan(x) \mathrm{d}x = \arctan(x) \cdot x  - \int x \mathrm{d}(\arctan(x)),
+$$
+так как 
+$$
+\mathrm{d}(\arctan(x)) = (\arctan(x))'\mathrm{d}x = \frac{\mathrm{d}x}{1+ x^2},
+$$
+то получаем
+$$\begin{eqnarray}
+\int \arctan(x) \mathrm{d}x &=& x \arctan(x) - \int \frac{x\mathrm{d}x}{1+x^2} \\
+&=& x \arctan(x) - \frac{1}{2} \int \frac{\mathrm{d}(x^2)}{1+x^2} \\
+&=& x \arctan(x) - \frac{1}{2} \int \frac{\mathrm{d}(x^2+1)}{1+x^2}\\
+&=& x \arctan(x) - \frac{1}{2} \ln(1+x^2) + C.
+\end{eqnarray}$$
+3. Рассмотрим форму $\omega = x^2 \sin(x) \mathrm{d}x$. Если мы теперь просто положим, что $u = x^2 \sin(x)$, а $v = x$, то, во-первых, мы находим
+$$
+\mathrm{d}u = u'\mathrm{d}x = (x^2 \sin(x))'\mathrm{d}x = 2x \sin(x) \mathrm{d}x + x^2 \cos(x) \mathrm{d}x,
+$$
+и тогда мы получаем
+$$\begin{eqnarray}
+\int x^2 \sin(x) \mathrm{d}x &=& x^3 \sin(x) - \int x \bigl( 2x \sin(x) +x^2 \cos(x)  \bigr)\mathrm{d}x    \\
+&=& x^3 \sin(x) - 2 \int x^2 \sin(x) \mathrm{d}x - \int x^3 \cos(x)  \mathrm{d}x
+\end{eqnarray}$$
+откуда
+$$
+\int x^2 \sin(x) \mathrm{d}x = \frac{x^3}{3}\sin(x) -  \int x^3 \cos(x)  \mathrm{d}x.
+$$
+
+Таким образом, задача свелась к нахождению интеграла от формы $x^3 \cos(x)\mathrm{d}x$ и если опять положить, что $u= x^3 \cos(x)$, $v = x$, то, как нетрудно проверить, задача уже сведётся к интегрированию формы $x^4 \sin(x)\mathrm{d}x.$
+
+Таким образом, интегрировать первоначальную форму $x^2 \sin(x) \mathrm{d}x$ нужно другим способом. Для этого достаточно вспомнить, что $\mathrm{d}(-\cos(x)) = \sin(x) \mathrm{d}x$. Таким образом, форму можно преобразовать следующим образом
+$$
+\omega = x^2 \sin(x) \mathrm{d}x = x \mathrm{d}(-\cos (x)),
+$$
+тогда, если положить, что $u = x$, а $v = - \cos(x)$, то получаем
+$$\begin{eqnarray}
+\int \omega &=& \int u \mathrm{d}(v) = uv - \int v \mathrm{d}u \\
+&=& x (- \cos(x)) - \int (-\cos(x))\mathrm{d}x \\
+&=& - x \cos(x) + \int \cos(x) \mathrm{d}x \\
+&=& - x \cos(x) + \sin(x) +C.
+\end{eqnarray}$$
+
+:::

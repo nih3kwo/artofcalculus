@@ -52,6 +52,7 @@ parts:
       - file: 38-linear-differential-forms
       - file: 39-indefinite-integral
       - file: 40-integration-means
+      - file: 41-rational-function-integration
   - caption: Архив
     chapters:
       - file: 99-colloquim-3
