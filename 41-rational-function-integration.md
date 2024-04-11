@@ -413,7 +413,7 @@ $$
 :::{prf:proof}
 :class: dropdown
 :nonumber:
-Действительно, если дробь не правильная, то поделив $P(x) = B(x) Q(x) + R(x)$ на $Q(x)$ мы получаем
+Действительно, если дробь неправильная, то поделив $P(x) = B(x) Q(x) + R(x)$ на $Q(x)$ мы получаем
 $$
 \int \frac{P(x)}{Q(x)}\mathrm{d}x = \int B(x)\mathrm{d}x + \int \frac{R(x)}{Q(x)}\mathrm{d}x.
 $$
