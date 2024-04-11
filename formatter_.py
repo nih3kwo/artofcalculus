@@ -5,6 +5,7 @@ data = paste()
 lines = data.split("\n")
 
 for i in range(len(lines)):
+    lines[i] = lines[i].replace(r"\textit{т.е.}", "т.е.")
     lines[i] = lines[i].lstrip()
     if lines[i].startswith(r"\section"):
         lines[i] = lines[i].replace(r"\section{", "# ").replace("}", "").replace("~", "")
@@ -61,6 +62,7 @@ for i in range(len(lines)):
 
     lines[i] = lines[i].replace(r"\begin{eqnarray*}", r"$$\begin{eqnarray}")
     lines[i] = lines[i].replace(r"\end{eqnarray*}", r"\end{eqnarray}$$")
+    lines[i] = lines[i].replace("eqnarray", "align*")
     
     while r"\ref{" in lines[i]:
         ind = lines[i].index(r"\ref{")
