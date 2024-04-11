@@ -53,6 +53,8 @@ parts:
       - file: 39-indefinite-integral
       - file: 40-integration-means
       - file: 41-rational-function-integration
+      - file: 42-irrational-function-integration
+      - file: 43-definite-integral
   - caption: Архив
     chapters:
       - file: 99-colloquim-3
