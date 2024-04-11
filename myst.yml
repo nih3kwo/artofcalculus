@@ -13,9 +13,11 @@ project:
   # bibliography: []
   math:
     '\m': '\mathbf'
+    '\bigintss': '\int' 
+    '\bigintsss': '\int'
 site:
   template: book-theme
-  # title:
+  title: The Hitchhiker's Guide to the Calculus Galaxy
   # options:
   logo: images/site_logo.png
   nav: []
