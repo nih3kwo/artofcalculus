@@ -216,15 +216,30 @@ $$
 Итак, у нас всё готово, чтобы ввести следующее важное определение.
 
 :::{prf:definition}
-Пусть $I \subsetneq \mathbb{R}$ — промежуток, $\lambda(I)$ — разбиение промежутка $I$ и пусть $f:I \to \mathbb{R}$ — ступенчатая функция относительно этого разбиения. Определим **интеграл на промежутке $I$** ступенчатой функции $f:I \to \mathbb{R}$ относительно разбиения $\lambda(I)$ следующим образом
+Пусть $I \subsetneq \mathbb{R}$ — промежуток, $\lambda(I)$ — разбиение промежутка $I$ и пусть $f:I \to \mathbb{R}$ — ступенчатая функция относительно этого разбиения, **т.е.,** $f = \sum_{A \in \lambda(I)}f(A) \cdot \chi_A$. Определим **интеграл на промежутке $I$** ступенчатой функции $f:I \to \mathbb{R}$ относительно разбиения $\lambda(I)$ следующим образом
 $$
-\int_{\lambda(I)}f\mathrm{d}x: =  \sum_{J \in \lambda(I)} \alpha_J\cdot |J|
+\int_{\lambda(I)}f: =  \sum_{A \in \lambda(I)} f(A)\cdot |A|
 $$
 :::
 
 :::{warning}
 Во-первых, что стоит слева от равно нужно понимать как символ и не более того! Во-вторых, это определение может показаться некорректным если $\lambda(I)$ содержит пустое множество, но так как $|\varnothing| = 0$, то мы на самом деле получаем корректное определение.     
 :::
+
+:::{prf:remark}
+:name: int_via_chi
+Если $f = \chi_I$, и взяв разбиение $\lambda(I) = \{I\}$ то мы получаем следующее
+$$
+\int_{\lambda(I)}\chi_I = |I|.
+$$
+И тогда мы можем записать, что если $f = \sum_{A \in \lambda(I)}f(A) \cdot \chi_A$, то
+$$
+\boxed{
+\int_{\lambda(I)}f = \sum_{A \in \lambda(I)} f(A) \cdot \int_{\lambda(I)}\chi_A
+}
+$$
+:::
+
 
 :::{prf:example}
 :name: int_[1,4]=10
@@ -238,14 +253,14 @@ f(x)  = \begin{cases}
 $$
 и пусть $\lambda(I) = \{ [1,3), \{3\}, (3,4] \}$, тогда
 $$\begin{align*}
-\int_{\lambda(I)} f \mathrm{d}x &=& \alpha_{[1,3)}\cdot | [1,3) | + \alpha_{\{3\}}\cdot |\{3\}| + \alpha_{(3,4]} \cdot | (3,4] | \\
+\int_{\lambda(I)} f  &=& \alpha_{[1,3)}\cdot | [1,3) | + \alpha_{\{3\}}\cdot |\{3\}| + \alpha_{(3,4]} \cdot | (3,4] | \\
 &=& 2 \cdot 2 + 4 \cdot 0 + 6 \cdot 1 \\
 &=& 10.
 \end{align*}$$
 
 С другой стороны, рассмотрим такое разбиение $\lambda'(I) = \{ \varnothing, [1,2), [2,3), \{3\}, (3,4] \}$, нетрудно видеть, что оно тоньше разбиения $\lambda(I)$. Находим
 $$\begin{align*}
-\int_{\lambda'(I)}f \mathrm{d}x&=&\alpha_\varnothing \cdot |\varnothing| + \alpha_{[1,2)} \cdot | [1,2) | + \alpha_{[2,3)} \cdot |[2,3)| + \alpha_{\{3\}}\cdot |\{3\}| + \alpha_{(3,4]} \cdot | (3,4] | \\
+\int_{\lambda'(I)}f &=&\alpha_\varnothing \cdot |\varnothing| + \alpha_{[1,2)} \cdot | [1,2) | + \alpha_{[2,3)} \cdot |[2,3)| + \alpha_{\{3\}}\cdot |\{3\}| + \alpha_{(3,4]} \cdot | (3,4] | \\
 &=& \alpha_\varnothing \cdot 0 + 2 \cdot 1 + 2 \cdot 1 + 4 \cdot 0 + 6 \cdot 1 \\
 &=& 10.
 \end{align*}$$
@@ -257,7 +272,7 @@ $$\begin{align*}
 :::{prf:lemma}
 Пусть $I \subsetneq \mathbb{R}$ — промежуток и пусть $f:I \to \mathbb{R}$ — ступенчатая функция относительно разбиения $\lambda(I)$, тогда если имеем разбиение $\lambda'(I)$, которое тоньше, чем $\lambda(I)$, то
 $$
-\int_{\lambda(I)}f\mathrm{d}x = \int_{\lambda'(I)}f\mathrm{d}x.
+\int_{\lambda(I)}f = \int_{\lambda'(I)}f.
 $$
 :::
 
@@ -277,10 +292,10 @@ $$
 
 Таким образом, имеем
 $$\begin{align*}
-\int_{\lambda'(I)}f\mathrm{d}x &=& \Bigl(f(A_{11}') \cdot \left| A'_{11} \right| + \cdots + f(A_{1\ell_1})\cdot \left|A'_{i\ell_1}\right|\Bigr) + \cdots + \Bigl(f(A_{11}') \left|A_{11}'\right| + \cdots + f(A_{1\ell_1})\cdot \left|A'_{i\ell_1}\right| \Bigr) \\
+\int_{\lambda'(I)}f &=& \Bigl(f(A_{11}') \cdot \left| A'_{11} \right| + \cdots + f(A_{1\ell_1})\cdot \left|A'_{i\ell_1}\right|\Bigr) + \cdots + \Bigl(f(A_{11}') \left|A_{11}'\right| + \cdots + f(A_{1\ell_1})\cdot \left|A'_{i\ell_1}\right| \Bigr) \\
 &=& f(A_1) \cdot \left( \left| A'_{11}  \right| + \cdots + \left| A'_{1\ell_1} \right| \right) + \cdots + f(A_n) \cdot \left( \left| A'_{n1}  \right| + \cdots + \left| A'_{n\ell_n} \right| \right) \\
 &=& f(A_1) |A_1| + \cdots + f(A_n)\cdot |A_n| \\
-&=& \int_{\lambda(I)}f\mathrm{d}x.
+&=& \int_{\lambda(I)}f.
 \end{align*}$$
 :::
 
@@ -290,7 +305,7 @@ $$\begin{align*}
 :::{prf:definition}
 Пусть $I \subsetneq \mathbb{R}$ — промежуток, $f:I \to \mathbb{R}$ — ступенчатая функция на нём. Определим **интеграл на промежутке $I$** ступенчатой функции $f:I \to \mathbb{R}$ следующим образом
 $$
-\int_If\mathrm{d}x: =  \int_{\lambda(I)}f\mathrm{d}x,
+\int_If: =  \int_{\lambda(I)}f,
 $$
 где $\lambda(I)$ такое разбиение промежутка $I$, что $f$ является ступенчатой относительно $\lambda(I).$
 :::
@@ -307,31 +322,32 @@ f(x)  = \begin{cases}
 $$
 и пусть $\lambda(I) = \{ [1,3), \{3\}, (3,4] \}$, тогда
 $$\begin{align*}
-\int_{\lambda(I)} f \mathrm{d}x &=& \alpha_{[1,3)}\cdot | [1,3) | + \alpha_{\{3\}}\cdot |\{3\}| + \alpha_{(3,4]} \cdot | (3,4] | \\
+\int_{\lambda(I)} f  &=& \alpha_{[1,3)}\cdot | [1,3) | + \alpha_{\{3\}}\cdot |\{3\}| + \alpha_{(3,4]} \cdot | (3,4] | \\
 &=& 2 \cdot 2 + 4 \cdot 0 + 6 \cdot 1 \\
 &=& 10.
 \end{align*}$$
 
 Тогда
 $$
-\int_{[1,4]}f \mathrm{d}x  =10.
+\int_{[1,4]}f   =10.
 $$
 :::
 
 :::{prf:theorem}
-Пусть $I \subsetneq \mathbb{R}$ — промежуток и $f,g:I \mathbb{R}$ — две ступенчатые функции на нём.
+:name: imprtant_for_int
+Пусть $I \subsetneq \mathbb{R}$ — промежуток и $f,g:I \to \mathbb{R}$ — две ступенчатые функции на нём.
 
 1. $$
-\int_I(\alpha \cdot f +  \beta \cdot g)\mathrm{d}x = \alpha\cdot \int_I f\mathrm{d}x  + \beta \cdot \int_I g \mathrm{d}x, \qquad \alpha, \beta \in \mathbb{R}.
+\int_I( f \pm  g) =  \int_I f  \pm  \int_I g , \qquad \alpha, \beta \in \mathbb{R}.
 $$
 2. Если $f(x) \ge g(x)$ для всех $x \in I$, то
 $$
-\int_I f\mathrm{d}x \ge \int_I g(x) \mathrm{d}x.
+\int_I f \ge \int_I g.
 $$
 
 3. Если $f(x) = \alpha$ для всех $x \in I$, то
 $$
-\int_I f\mathrm{d}x = \alpha \cdot |I|.
+\int_I f = \alpha \cdot |I|.
 $$
 4. Если $I \subseteq J$ и если $\varphi: J \to \mathbb{R}$ функция, определённая следующим образом
 $$
@@ -340,10 +356,12 @@ f(x) & x \in I,\\
 0 & x \notin I,
 \end{cases}
 $$
-тогда $\varphi(x)$ — ступенчатая на $J$ и $\int_J\varphi \mathrm{d}x  = \int_I f\mathrm{d}x$.
+тогда $\varphi(x)$ — ступенчатая на $J$ и 
+$$\int_J\varphi   = \int_I f.$$
+
 5. Пусть $\{A,B\}$ — разбиение промежутка $I$, тогда если функции $f|_A:A \to \mathbb{R}$, $f|_B:B \to \mathbb{R}$ ступенчаты на $A$ и $B$ соответственно, то
 $$
-\int_I f \mathrm{d}x = \int_A f|_A \mathrm{d}x + \int_B f|_B \mathrm{d}x.
+\int_I f  = \int_A f|_A  + \int_B f|_B .
 $$
 
 
@@ -352,5 +370,59 @@ $$
 :::{prf:proof}
 :class: dropdown
 :nonumber:
-Это следует сразу из определения интеграла, ступенчатых функций и определения разбиения промежутка.
+
+Пусть $\lambda_f(I)  =  \cup_{p=1}^n A_p$, $\lambda_g(I) =  \cup_{q=1}^m B_q$ — разбиения промежутка $I$ относительно которых $f$, $g$ — ступенчаты, соответственно. Согласно предложению [](#beautefull),
+\begin{align*}
+& f =  \sum_{p=1}^n\sum_{q=1}^m f(A_p) \cdot \chi_{A_p}\cdot \chi_{B_q} = \sum_{p=1}^n\sum_{q=1}^m f(A_p) \cdot \chi_{A_p\cap B_q}, \\
+& g=  \sum_{p=1}^n\sum_{q=1}^m g(B_q) \cdot \chi_{A_p} \cdot \chi_{B_q} = \sum_{p=1}^n\sum_{q=1}^m g(B_q) \cdot \chi_{A_p\cap B_q}.
+\end{align*}
+
+(1) Согласно следствию [](#cor_for_sum), $f\pm g = \sum_{p=1}^n\sum_{q=1}^m (f(A_p) \pm g(B_q)) \cdot \chi_{A_p\cap B_q}$, и тогда пользуясь замечанием [](#int_via_chi),
+$$\begin{align*}
+\int_I (f\pm g) &=& \sum_{p=1}^n\sum_{q=1}^m (f(A_p) \pm g(B_q)) \cdot \int_I \chi_{A_p \cap B_q} \\
+&=&\sum_{p=1}^n\sum_{q=1}^m f(A_p) \cdot \int_I \chi_{A_p \cap B_q} \pm \sum_{p=1}^n\sum_{q=1}^m g(B_q) \cdot \int_I \chi_{A_p \cap B_q} \\
+&=& \int_I f \pm \int_I g.
+\end{align*}$$
+
+(2) Если $f(x) \ge g(x)$ для всех $x\in I$, то для любых $p,q$ таких, что $A_p \cap B_q \ne \varnothing$, имеем $f(A_p) \ge g(B_q)$. Тогда, согласно замечанию [](#int_via_chi),
+$$\begin{align*}
+\int_I f &:=&  \sum_{p=1}^n\sum_{q=1}^m f(A_p) \cdot \int_I \chi_{A_p \cap B_q} = \sum_{p=1}^n\sum_{q=1}^m f(A_p) \cdot |A_p \cap B_q| \\
+&\ge & \sum_{p=1}^n\sum_{q=1}^m g(A_p) \cdot |A_p \cap B_q| \\
+&=& \sum_{p=1}^n\sum_{q=1}^m f(A_p) \cdot \int \chi_{A_p \cap B_q} \\
+&=:& \int_I g.
+\end{align*}$$
+
+(3) Если $f(x) = \alpha$ для всех $x\in I$, то $f = \alpha \cdot \chi_I$, и согласно замечанию [](#int_via_chi),
+$$
+\int_f f = \alpha\cdot \int \chi_I = \alpha \cdot |I|.
+$$
+
+(4) Пусть $\lambda(I)$ — разбиение промежутка $I$ и $f = \sum_{A \in \lambda(I)} f(A) \cdot \chi_A$, то определим разбиение $\lambda(J)$ промежутка $J$ следующим образом
+$$
+\lambda(J): = \lambda(I) \cup \{J\setminus I\}
+$$
+положим, что $\varphi(J\setminus I) :=0$ мы получаем, что $\varphi$ — ступенчата на $J.$ Мы можем также записать
+$$
+\varphi = \sum_{A \in \lambda(I)} f(A) \chi_A + \varphi(J\setminus I) \chi_{J \setminus I}
+$$
+тогда согласно Замечанию [](#int_via_chi),
+$$\begin{align*}
+\int_J \varphi &=& \sum_{A \in \lambda(I)} f(A) \int_J \chi_A + \varphi(J\setminus I) \int_J \chi_{J \setminus I}   \\
+&=& \sum_{A \in \lambda(I)} f(A) \cdot |A| + 0 \cdot |J \setminus I|\\
+&=& \int_I f.
+\end{align*}$$
+
+(5) Пусть $\lambda(A): = \cup_{p=1}^n A_p$, $\lambda(B) : = \cup_{q=1}^m B_q$ — разбиения промежутков $A,B$ соответственно. Тогда $\lambda : = \lambda(A) \cup \lambda(B)$ разбиение промежутка $I.$ 
+
+Имеем
+$$
+f = \sum_{C \in \lambda(I)} f(C) \cdot \chi_C = \sum_{p=1}^n f(A_p)\cdot \chi_{A_p} + \sum_{q=1}^m f(B_q)\cdot \chi_{B_q} = f|_A + f|_B,
+$$
+тогда согласно замечанию [](#int_via_chi),
+$$\begin{align*}
+\int_I f &=& \sum_{C \in \lambda(I)} f(C) \cdot \int_I \chi_C \\
+&=& \sum_{C \in \lambda(I)} f(C) \cdot |C| \\
+&=& \sum_{p=1}^n f(A_p) \cdot |A_p| + \sum_{q=1}^m f(B_q)\cdot |B_q| \\
+&=& \int_A f|_A + \int_B f|_B.
+\end{align*}$$
 :::
