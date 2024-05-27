@@ -56,6 +56,7 @@ parts:
       - file: 42-irrational-function-integration
       - file: 43-definite-integral
       - file: 44-integral-of-bounded-function
+      - file: 45-fundamental-theorems-of-calculus
   - caption: Архив
     chapters:
       - file: 99-colloquim-3
