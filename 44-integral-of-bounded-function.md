@@ -32,6 +32,8 @@ $$
 a\cdot |I| \le \inf \int_I f  \le \sup \int_I f \le b \cdot |I|.
 $$
 :::
+
+(theorem-4-13)=
 :::{prf:proof}
 :class: dropdown
 :nonumber:
@@ -96,6 +98,7 @@ $$
 Пусть $f: I \to \mathbb{R}$ — ступенчатая функция на ограниченном промежутке $I \subsetneq \mathbb{R}$, тогда она интегрируема по Риману, и более того интеграл Римана от неё это то же самое, что и интеграл от ступенчатой функции (см. определение [](#int_of_p.c)).
 :::
 
+(theorem-4-14)=
 :::{prf:proof}
 :class: dropdown
 :nonumber:
@@ -281,6 +284,7 @@ $$
 \int_I f = \int_A f|_A + \int_B f|_B.
 $$
 
+(theorem-4-15)=
 :::
 :::{prf:proof}
 :class: dropdown

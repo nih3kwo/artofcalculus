@@ -26,6 +26,7 @@ $$
 Тогда ряд $(a_n)$ сходится.
 :::
 
+(theorem-4-1)=
 :::{prf:proof}
 :class: dropdown
 :nonumber:

@@ -66,6 +66,8 @@ $$
 \int u \mathrm{d}v = uv - \int v \mathrm{d}u.
 $$
 :::
+
+(theorem-4-7)=
 :::{prf:proof}
 :class: dropdown
 :nonumber:

@@ -154,6 +154,8 @@ $$
 $$
 где $\alpha, \beta \in \mathbb{R}.$
 :::
+
+(theorem-4-6)=
 :::{prf:proof}
 :class: dropdown
 :nonumber:

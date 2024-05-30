@@ -188,6 +188,8 @@ $$
 :name: decomp_of_fraction
 Каждая правильная дробь может быть представлена в виде суммы конечного числа простых дробей.
 :::
+
+(theorem-4-8)=
 :::{prf:proof}
 :class: dropdown
 :nonumber:
@@ -324,6 +326,8 @@ $$
 \int \omega_{n+1} = \frac{1}{2n\alpha^2}\cdot \frac{x}{(x^2 + \alpha^2)^n} + \frac{2n-1}{2n\alpha^2} \cdot\int \omega_n, \qquad \int \omega_1 = \frac{1}{\alpha} \cdot \arctan\left( \frac{x}{\alpha}\right) + C.
 $$
 :::
+
+(theorem-4-9)=
 :::{prf:proof}
 :class: dropdown
 :nonumber:~
@@ -363,6 +367,8 @@ $$
 :::{prf:lemma}
 :name: int_of_prime} Интеграл от формы $\frac{Ax + B}{(x^2 + ax + b)^n}\mathrm{d}x$ выражается через рациональные функции и функции $\ln$, $\arctan$.
 :::
+
+(theorem-4-10)=
 :::{prf:proof}
 :class: dropdown
 :nonumber:
