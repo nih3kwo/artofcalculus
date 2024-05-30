@@ -57,6 +57,7 @@ parts:
       - file: 43-definite-integral
       - file: 44-integral-of-bounded-function
       - file: 45-fundamental-theorems-of-calculus
-  - caption: Архив
+  - caption: Коллоквиумы
     chapters:
+      - file: 98-colloquim-4
       - file: 99-colloquim-3
