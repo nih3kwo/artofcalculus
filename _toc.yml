@@ -47,13 +47,15 @@ parts:
       - file: 35-positive-series
       - file: 36-alternating-series
       - file: 37-absolute-and-conditional-convergence
-  - caption: Интегральное исчисление
+  - caption: Интегрирование линейных дифференциальных форм
     chapters:
       - file: 38-linear-differential-forms
       - file: 39-indefinite-integral
       - file: 40-integration-means
       - file: 41-rational-function-integration
       - file: 42-irrational-function-integration
+  - caption: Интегрирование на промежутке
+    chapters:
       - file: 43-definite-integral
       - file: 44-integral-of-bounded-function
       - file: 45-fundamental-theorems-of-calculus
