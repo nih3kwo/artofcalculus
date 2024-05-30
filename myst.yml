@@ -18,7 +18,8 @@ project:
 site:
   template: book-theme
   title: The Hitchhiker's Guide to the Calculus Galaxy
-  # options:
+  options:
+    favicon: download.ico
   logo: images/site_logo.png
   nav: []
   actions:
