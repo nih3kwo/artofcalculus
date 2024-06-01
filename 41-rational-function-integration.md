@@ -330,8 +330,7 @@ $$
 (theorem-4-9)=
 :::{prf:proof}
 :class: dropdown
-:nonumber:~
-
+:nonumber:
 (1) Так как $(\arctan(y))' = \frac{1}{y^2 + 1}$, то
 $$\begin{eqnarray}
 \int \omega_1 &=& \int \frac{\mathrm{d}x}{x^2 + \alpha^2}  = \ \frac{\mathrm{d}x}{\alpha^2\cdot\left (\left( \frac{x^2}{\alpha^2} \right) + 1\right)}\\
@@ -363,9 +362,9 @@ $$
 из которого и следует требуемое.    
 :::
 
-
 :::{prf:lemma}
-:name: int_of_prime} Интеграл от формы $\frac{Ax + B}{(x^2 + ax + b)^n}\mathrm{d}x$ выражается через рациональные функции и функции $\ln$, $\arctan$.
+:name: int_of_prime
+Интеграл от формы $\frac{Ax + B}{(x^2 + ax + b)^n}\mathrm{d}x$ выражается через рациональные функции и функции $\ln$, $\arctan$.
 :::
 
 (theorem-4-10)=
