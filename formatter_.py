@@ -5,12 +5,17 @@ data = paste()
 lines = data.split("\n")
 
 for i in range(len(lines)):
+    lines[i] = lines[i].replace(r"\(", "$")
+    lines[i] = lines[i].replace(r"\)", "$")
     lines[i] = lines[i].replace(r"\textit{т.е.}", "т.е.")
+    lines[i] = lines[i].replace(r"\bigskip", "")
     lines[i] = lines[i].lstrip()
     if lines[i].startswith(r"\section"):
         lines[i] = lines[i].replace(r"\section{", "# ").replace("}", "").replace("~", "")
     if lines[i].startswith(r"\subsection"):
         lines[i] = lines[i].replace(r"\subsection{", "## ").replace("}", "").replace("~", "")
+    if lines[i].startswith(r"\subsubsection"):
+        lines[i] = lines[i].replace(r"\subsubsection{", "### ").replace("}", "").replace("~", "")
     lines[i] = lines[i].replace(r"\[", "$$").replace(r"\]", "$$")
 
     for string in ["proposition", "lemma", "remark", "example",
@@ -40,6 +45,11 @@ for i in range(len(lines)):
     if lines[i].startswith(r"\end{mydanger}"):
         lines[i] = ":::"
 
+    if lines[i].startswith(r"\begin{comment}"):
+        lines[i] = ":::{note}"
+    if lines[i].startswith(r"\end{comment}"):
+        lines[i] = ":::"
+
     if lines[i].startswith(r"\begin{comments}"):
         lines[i] = ":::{seealso}"
     if lines[i].startswith(r"\end{comments}"):
@@ -53,6 +63,12 @@ for i in range(len(lines)):
         print(i, italics_index)
         lines[i] = lines[i][:italics_index] + lines[i][italics_index:].replace("}", "**", 1)
         lines[i] = lines[i].replace(r"\textit{", "**", 1)
+
+    while r"\emph{" in lines[i]:
+        italics_index = lines[i].index(r"\emph{")
+        print(i, italics_index)
+        lines[i] = lines[i][:italics_index] + lines[i][italics_index:].replace("}", "*", 1)
+        lines[i] = lines[i].replace(r"\emph{", "*", 1)
 
     while r"\textbf{" in lines[i]:
         italics_index = lines[i].index(r"\textbf{")
