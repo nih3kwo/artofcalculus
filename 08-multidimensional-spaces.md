@@ -1,10 +1,10 @@
 # Пространства в ℝⁿ
 
 :::{prf:definition}
-    
+ 
 Множество, обозначаемое через $\mathbb{R}^n$, определятся следующим образом
 $$
- \mathbb{R}^n: = \underbrace{\mathbb{R} \times \cdots \times  \mathbb{R}}_n.
+ \mathbb{R}^n: = \underbrace{\mathbb{R} \times \cdots \times \mathbb{R}}_n.
 $$
 
 При этом, для любых $\alpha,\beta \in \mathbb{R}$, и $\mathbf{x}=(x_1,\ldots, x_n), \mathbf{y} = (y_1,\ldots, y_n) \in \mathbb{R}^n$;
@@ -20,11 +20,11 @@ $$
 Возьмём $\mathbf{x} = (x_1,\ldots, x_n)^\top \in \mathbb{R}^n$, тогда ясно, что 
 
 $$\begin{pmatrix}
-    x_1 \\ \vdots \\x_n 
+ x_1 \\ \vdots \\x_n 
 \end{pmatrix} = x_1 \begin{pmatrix}
-    1 \\ \vdots \\ 0
+ 1 \\ \vdots \\ 0
 \end{pmatrix} + \cdots + x_n \begin{pmatrix}
-    0 \\ \vdots \\1
+ 0 \\ \vdots \\1
 \end{pmatrix}
 $$
 
@@ -35,27 +35,27 @@ $$
 *Линейное отображение* $f:\mathbb{R}^n \to \mathbb{R}^m$ -- это такое отображение, что $f(\alpha \m{x} +\beta \m{y]} ) = \alpha f(\m{x}) +\beta f(\m{y})$, где $\m{x,y} \in \mathbb{R}^n$, $\alpha, \beta \in \mathbb{R}.$ 
 
 :::{warning}
-    Геометрически это означает, что образ прямой — это опять прямая.
+ Геометрически это означает, что образ прямой — это опять прямая.
 :::
 
 В таком случае, линейное отображение $f:\mathbb{R}^n \to \mathbb{R}^m$ достаточно задать на базисных векторах и мы получаем что-то вроде
 
 $$
  \begin{pmatrix}
-     1 \\ \vdots \\ 0
+ 1 \\ \vdots \\ 0
  \end{pmatrix} \mapsto \begin{pmatrix}
-     a_{11} \\ \vdots \\ a_{m1}
+ a_{11} \\ \vdots \\ a_{m1}
  \end{pmatrix}, \ldots, \begin{pmatrix}
-     0 \\ \vdots \\ 1
+ 0 \\ \vdots \\ 1
  \end{pmatrix} \mapsto \begin{pmatrix}
-     a_{1n} \\ \vdots \\ a_{mn}
+ a_{1n} \\ \vdots \\ a_{mn}
  \end{pmatrix},
 $$
 что и кодируется матрицей 
 $A = \begin{pmatrix}
-    a_{11} & \ldots & a_{1n} \\
-    \vdots & \ddots & \vdots \\
-    a_{m1} & \ldots & a_{mn}
+ a_{11} & \ldots & a_{1n} \\
+ \vdots & \ddots & \vdots \\
+ a_{m1} & \ldots & a_{mn}
 \end{pmatrix}$
 
 ```{figure} ./images/linear_map.jpg

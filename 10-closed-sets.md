@@ -29,7 +29,7 @@ $$
 :name: closure
 Множество $F$ в метрическом пространстве замкнуто, если и только если все его точки это предельные точки, **т.е.,** $F = \overline{F}.$ 
 :::
-(1) Пусть $F$ — замкнуто, тогда найдётся какое-то открытое $\mathscr{U} \subseteq E$, такое, что $F  = E \setminus \mathscr{U}$. Пусть $x \notin F$, тогда $x \in \mathscr{U}$, и тогда найдётся окрестность $\mathscr{W}(x)$ такая, что $\mathscr{W}(x) \subseteq \mathscr{U}$, потому что $\mathscr{U}$ — открыто, **т.е.,** $\mathscr{W}(x) \cap F = \varnothing.$ Таким образом, получили, что если $F$ — замкнуто, то никакая точка $x \notin F$ не может быть предельной для $F$, **т.е.,** $F = \overline{F}.$ 
+(1) Пусть $F$ — замкнуто, тогда найдётся какое-то открытое $\mathscr{U} \subseteq E$, такое, что $F = E \setminus \mathscr{U}$. Пусть $x \notin F$, тогда $x \in \mathscr{U}$, и тогда найдётся окрестность $\mathscr{W}(x)$ такая, что $\mathscr{W}(x) \subseteq \mathscr{U}$, потому что $\mathscr{U}$ — открыто, **т.е.,** $\mathscr{W}(x) \cap F = \varnothing.$ Таким образом, получили, что если $F$ — замкнуто, то никакая точка $x \notin F$ не может быть предельной для $F$, **т.е.,** $F = \overline{F}.$ 
 
 (2) Пусть $F = \overline{F}$, тогда для любой точки $x \notin F$, можно всегда найти окрестность $\mathscr{W}(x)$ такую, что $\mathscr{W}(x) \cap F = \varnothing$. Пусть $\mathscr{U}:= \cup_{x E\setminus F} \mathscr{W}(x)$, тогда, $\mathscr{U}$ — открыто в $E$ и $F = E \setminus \mathscr{U}.$
 

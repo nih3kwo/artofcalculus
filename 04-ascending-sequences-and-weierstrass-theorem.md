@@ -39,7 +39,7 @@
 * таким образом, остаётся только один вариант, $a = 1.$
 \end{enumerate}
 
-Это можно также доказать следующим образом.  Действительно, если $1-\delta = \mathrm{sup}(A)$, где $\delta > 0$,  то рассмотрев $x:=1-\frac{\delta}{2}$ мы видим что $x\in A$ и $1-\delta < x$. Это и означает что ни при каких $\delta >0$, число $1 - \delta$ не может быть супремумом.
+Это можно также доказать следующим образом. Действительно, если $1-\delta = \mathrm{sup}(A)$, где $\delta > 0$, то рассмотрев $x:=1-\frac{\delta}{2}$ мы видим что $x\in A$ и $1-\delta < x$. Это и означает что ни при каких $\delta >0$, число $1 - \delta$ не может быть супремумом.
 
 Аналогично можно показать, что $0 = \mathrm{inf}(A).$
 :::
@@ -91,7 +91,7 @@ $$
 $$\begin{align*}
 a &=& \lim_{n \to \infty}a_{n+1} \\
 &=&\lim_{n \to \infty} \frac{1}{2} \left(a_n+ \frac{2}{a_n} \right) \\
-&=&  \frac{1}{2}\left( \lim_{n \to \infty} a_n + \frac{2}{\lim_{n \to \infty} a_n} \right) \\
+&=& \frac{1}{2}\left( \lim_{n \to \infty} a_n + \frac{2}{\lim_{n \to \infty} a_n} \right) \\
 &=&\frac{1}{2}\left( a + \frac{2}{a}\right).
 \end{align*}$$
 
@@ -108,7 +108,7 @@ $$\begin{align*}
 e_n &=& \left(1 + \frac{1}{n} \right)^n = \sum_{k=0}^n \binom{n}{k} \frac{1}{n^k}\\
 &=& 1 + 1 + \frac{1}{2!} \cdot \frac{n(n-1)}{n^2} + \frac{1}{3!}\cdot \frac{n(n-1)(n-2)}{n^3} + \cdots \\
 && + \frac{1}{(n-1)!} \cdot \frac{n(n-1)\cdots (n-(n-2))}{n^{n-1}} + \frac{1}{n!} \frac{n(n-1)\cdots (n-(n-1))}{n^n} \\
-&=& 2 + \frac{1}{2} \cdot 1\cdot \left(1-\frac{1}{n} \right) + \frac{1}{3!} \cdot 1 \cdot \left(1 - \frac{1}{n} \right) \left(1 - \frac{2}{n} \right)  + \cdots \\
+&=& 2 + \frac{1}{2} \cdot 1\cdot \left(1-\frac{1}{n} \right) + \frac{1}{3!} \cdot 1 \cdot \left(1 - \frac{1}{n} \right) \left(1 - \frac{2}{n} \right) + \cdots \\
 && + \frac{1}{(n-1)!} \cdot 1 \cdot \left(1 - \frac{1}{n} \right) \left(1 - \frac{2}{n} \right) \cdots \left(1 - \frac{n-2}{n} \right) + \frac{1}{n!} \cdot 1 \cdot \left(1 - \frac{1}{n} \right) \cdots \left(1 - \frac{n-1}{n} \right).
 \end{align*}$$
 
