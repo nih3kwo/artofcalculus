@@ -14,7 +14,7 @@ $$
 :::
 
 :::{prf:lemma}
-Для любой точки $a = (a_1,a_2) \in E$ и любого $r >0$ имеем $ B(a,r )  = B_1(a_1,r_1) \times B_2(a_2, r_2)$.
+Для любой точки $a = (a_1,a_2) \in E$ и любого $r >0$ имеем $ B(a,r ) = B_1(a_1,r_1) \times B_2(a_2, r_2)$.
 :::
 :::{prf:proof}
 :class: dropdown
@@ -35,9 +35,9 @@ f^{-1} (B(p_0, r)) = f_1^{-1}(B(f(z_0) , r)) \cap f_2^{-1}( B(f_2(z_0)), r ).
 $$
 Действительно, имеем
 $$\begin{align*}
-z \in f^{-1} (B(p_0, r)) &\Longleftrightarrow&  f(z) \in B(p_0,r) \\
+z \in f^{-1} (B(p_0, r)) &\Longleftrightarrow& f(z) \in B(p_0,r) \\
 &\Longleftrightarrow& (f_1(z), f_2(z)) \in B_1(f(z_0), r) \times B(f_2(z_0), r) \\
-&\Longleftrightarrow& \bigl\{ z \in F\,:\, f_1(z) \in B_1(f_1(z_0), r) \bigr\}  \& \bigl\{ z\in F, :\, f_2(z) \in B_2(f_2(z_0), r) \bigr\} \\
+&\Longleftrightarrow& \bigl\{ z \in F\,:\, f_1(z) \in B_1(f_1(z_0), r) \bigr\} \& \bigl\{ z\in F, :\, f_2(z) \in B_2(f_2(z_0), r) \bigr\} \\
 &\Longleftarrow& z \in f_1^{-1}(B_1(f_1(z_0), r)) \cap f_2^{-1}(B_2(f_2(z_0), r)).
 \end{align*}$$
 
@@ -65,7 +65,7 @@ $$
 $$
 влечёт неравенство $|f(x,y) - f(a,b)|< \varepsilon$. 
 
-(1) Покажем, что $\mathsf{S}:\mathbb{R} \times \mathbb{R} \to \mathbb{R}$, $(x,y) \mapsto x+y$  непрерывно. Если $|x-a|, |y-b| <\delta$, то $ \sqrt{(x-a)^2 + (y-b)^2} < \sqrt{2}\delta < 2 \delta$, и 
+(1) Покажем, что $\mathsf{S}:\mathbb{R} \times \mathbb{R} \to \mathbb{R}$, $(x,y) \mapsto x+y$ непрерывно. Если $|x-a|, |y-b| <\delta$, то $ \sqrt{(x-a)^2 + (y-b)^2} < \sqrt{2}\delta < 2 \delta$, и 
 $$
 |x+y - (a+b)| = |(x-a) + (y-b)| \le |x-a| + |y-b| < 2 \delta.
 $$
@@ -74,7 +74,7 @@ $$
 
 (2) Покажем, что отображение $\mathsf{P}: \mathbb{R} \times \mathbb{R} \to \mathbb{R}$, $(x,y) \mapsto xy$ непрерывно. 
 
-Пусть $|x-a|, |y-b| < \delta$, тогда  $\sqrt{(x-a)^2 + (y-b)^2} < \sqrt{2}\delta < 2 \delta$.
+Пусть $|x-a|, |y-b| < \delta$, тогда $\sqrt{(x-a)^2 + (y-b)^2} < \sqrt{2}\delta < 2 \delta$.
 
 Далее, имеем
 $$
@@ -82,7 +82,7 @@ xy -ab =a (y-b) + b(x-a) + (x-a)(y-b),
 $$
 тогда
 $$\begin{align*}
-|xy -ab| \le |a| |y-b| + |b||x-a| + |x-a||y-b|  & \le &   |a| \delta + |b| \delta + \delta^2\\
+|xy -ab| \le |a| |y-b| + |b||x-a| + |x-a||y-b| & \le & |a| \delta + |b| \delta + \delta^2\\
 &=& \delta (|a| + |b| + \delta).
 \end{align*}$$
 
@@ -90,7 +90,7 @@ $$\begin{align*}
 
 (3) Покажем, что отображение $h_\lambda: \mathbb{R} \to \mathbb{R}$, $x \mapsto \lambda x$, где $\lambda$ — фиксированное число, непрерывно. 
 
-Действительно, во-первых, если $\lambda  =0$, то получаем постоянное отображение которое, очевидно, непрерывно. Во-вторых, если $\lambda \ne 0$, то для $\varepsilon >0$ пусть $\delta = \frac{\varepsilon}{|\lambda|}$. Тогда если $|x-a|<\delta < \frac{\varepsilon}{\lambda}$, то $|\lambda||x-a| < \varepsilon$, т. е. $|\lambda x - \lambda a| < \varepsilon$, что и доказывает требуемое.
+Действительно, во-первых, если $\lambda =0$, то получаем постоянное отображение которое, очевидно, непрерывно. Во-вторых, если $\lambda \ne 0$, то для $\varepsilon >0$ пусть $\delta = \frac{\varepsilon}{|\lambda|}$. Тогда если $|x-a|<\delta < \frac{\varepsilon}{\lambda}$, то $|\lambda||x-a| < \varepsilon$, т. е. $|\lambda x - \lambda a| < \varepsilon$, что и доказывает требуемое.
 
 (4) Покажем, что отображение $f:\mathbb{R}/\{0\} \to \mathbb{R}$, $x \mapsto \frac{1}{x}$ непрерывно. То есть нужно показать, что если для заданного $\varepsilon>0$ всегда можно найти такое $\delta>0$, что $|x-a|<\delta$, то $|\frac{1}{x} = \frac{1}{a}|<\varepsilon.$
 
@@ -98,7 +98,7 @@ $$\begin{align*}
 $$
 0<\delta < \min \left( \frac{|a|}{2}, \varepsilon\frac{|a|^2}{2} \right),
 $$
-тогда если $|x-a|< \delta$, то $|x|>\frac{|a|}{2}$. Действительно, если $\frac{|a|}{2}< \varepsilon\frac{|a|^2}{2}$, то $|x| > |a| - \delta > \frac{|a|}{2}$. Если же $\frac{|a|}{2}> \varepsilon\frac{|a|^2}{2}$, то $\varepsilon < \frac{1}{|a|}$ и тогда $|x|  > |a| - \delta > |a| -\varepsilon \frac{|a|^2}{2} > |a| -  \frac{1}{|a|}\frac{|a|^2}{2} = |a| - \frac{|a|}{2} = \frac{|a|}{2}.$
+тогда если $|x-a|< \delta$, то $|x|>\frac{|a|}{2}$. Действительно, если $\frac{|a|}{2}< \varepsilon\frac{|a|^2}{2}$, то $|x| > |a| - \delta > \frac{|a|}{2}$. Если же $\frac{|a|}{2}> \varepsilon\frac{|a|^2}{2}$, то $\varepsilon < \frac{1}{|a|}$ и тогда $|x| > |a| - \delta > |a| -\varepsilon \frac{|a|^2}{2} > |a| - \frac{1}{|a|}\frac{|a|^2}{2} = |a| - \frac{|a|}{2} = \frac{|a|}{2}.$
 
 Имеем
 

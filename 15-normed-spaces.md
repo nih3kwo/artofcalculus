@@ -32,7 +32,7 @@ $$
 :::{prf:lemma}
 :name: x-ylex-y
 $$
-\left| ||x|| - ||y||  \right| \le ||x-y||.
+\left| ||x|| - ||y|| \right| \le ||x-y||.
 $$
 :::
 
