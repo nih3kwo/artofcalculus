@@ -57,24 +57,40 @@ $$
 $$
 что и доказывает требуемое.
 :::
-
 :::{prf:proposition}
- Пусть дана последовательность $\{a_n\}$ такая что $a_n \ge 0$, $n\ge 1$ и $\lim_{n \to \infty} a_n = a$, $a \ge 0$. Тогда $\lim_{n \to \infty}\sqrt{a_n} = \sqrt{a}.$ 
+Пусть дана последовательность $\{a_n\}$ такая что $a_n \ge 0$, $n\ge 1$ и $\lim_{n \to \infty} a_n = a$, $a \ge 0$. Тогда $\lim_{n \to \infty}\sqrt{a_n} = \sqrt{a}.$    
 :::
 :::{prf:proof}
 :class: dropdown
 :nonumber:
- (1) Пусть $\lim_{n \to \infty}a_n = 1$, тогда для любого $\varepsilon>0$ можно найти такой $N$, что $1 - \varepsilon <a_n<1 + \varepsilon$ для всех $n >N$. Тогда, если $\varepsilon<1$, то получаем $\sqrt{1-\varepsilon} < \sqrt{a_n} <\sqrt{1+\varepsilon}$. Далее, так как $\sqrt{1+\varepsilon} < 1 + \varepsilon$, при любом $\varepsilon>0$ то мы получаем $\sqrt{1-\varepsilon} < \sqrt{a_n} <1+\varepsilon$.
+(1) Пусть $\lim_{n \to \infty}a_n = 1$, тогда для любого $\varepsilon>0$ можно найти такой $N$, что $1 - \varepsilon <a_n<1 + \varepsilon$ для всех $n >N$. Тогда, если $\varepsilon<1$, то получаем $\sqrt{1-\varepsilon} < \sqrt{a_n} <\sqrt{1+\varepsilon}$. Далее, так как $\sqrt{1+\varepsilon} < 1 + \varepsilon$, и $1-\varepsilon < \sqrt{1-\varepsilon}$ при любом $0 <\varepsilon<1$ то мы получаем
+$$
+1 -\varepsilon < \sqrt{1-\varepsilon} < \sqrt{a_n} < \sqrt{1+\varepsilon} < 1 + \varepsilon
+$$
+для всех $n > N$ что влечёт $\lim_{n \to \infty}\sqrt{a_n} =1$. 
 
- Пусть $\varepsilon \le1$, тогда $\sqrt{1-\varepsilon} < 1 - \varepsilon$ и мы получаем $1- \varepsilon < \sqrt{a_n} , 1 + \varepsilon$ для всех $n > N$ что влечёт $\lim_{n \to \infty}\sqrt{a_n} =1$. 
+Пусть $\varepsilon >1$, тогда мы получаем что $1 - \varepsilon <0$ и $0 < a_n  < 1 +\varepsilon$ для всех $n >N$, но также мы получаем что и $0 < \sqrt{a_n} < 1 + \varepsilon$, что также можно записать так $1- \varepsilon < \sqrt{a_n} < 1 + \varepsilon$.
 
- Пусть $\varepsilon >1$, тогда мы получаем что $1 - \varepsilon <0$ и $0 < a_n < 1 +\varepsilon$ для всех $n >N$, но также мы получаем что и $0 < \sqrt{a_n} < 1 + \varepsilon$, что также можно записать так $1- \varepsilon < \sqrt{a_n} , 1 + \varepsilon$.
+Итак, мы показали, что если $\lim_{n \to \infty}a_n = 1$ то и $\lim_{n \to \infty}\sqrt{a_n} = 1.$
 
- Итак, мы показали, что если $\lim_{n \to \infty}a_n = 1$ то и $\lim_{n \to \infty}\sqrt{a_n} = 1.$
+(2) Пусть $\lim_{n \to \infty}a_n = a \ne 1,0.$ Тогда $\lim_{n \to \infty} \frac{a_n}{a} = 1$, и тогда $\lim_{n \to \infty}\sqrt{\frac{a_n}{a}} = 1$. Умножая на $\sqrt{a}$ обе части и воспользовавшись арифметикой предела, получаем $\sqrt{a} \lim_{n \to \infty}\sqrt{\frac{a_n}{a}} = \lim_{n \to \infty}\sqrt{a_n} = \sqrt{a}$.
 
- (2) Пусть $\lim_{n \to \infty}a_n = a \ne 1,0.$ Тогда $\lim_{n \to \infty} \frac{a_n}{a} = 1$, и тогда $\lim_{n \to \infty}\sqrt{\frac{a_n}{a}} = 1$. Умножая на $\sqrt{a}$ обе части и воспользовавшись арифметикой предела, получаем $\sqrt{a} \lim_{n \to \infty}\sqrt{\frac{a_n}{a}} = \lim_{n \to \infty}\sqrt{a_n} = \sqrt{a}$.
+(3) пусть $a = 0$, тогда для любого $\varepsilon>0$ можно найти такой $N$, что $-\varepsilon < a_n <\varepsilon$, для всех $n>N$. Тогда $-\sqrt{\varepsilon} < 0 < \sqrt{a_n} < \sqrt{\varepsilon}$, что и показывает $\lim_{n\to \infty} \sqrt{a_n} = 0.$
+:::
 
- (3) пусть $a = 0$, тогда для любого $\varepsilon>0$ можно найти такой $N$, что $-\varepsilon < a_n <\varepsilon$, для всех $n>N$. Тогда $-\sqrt{\varepsilon} < 0 < \sqrt{a_n} < \sqrt{\varepsilon}$, что и показывает $\lim_{n\to \infty} \sqrt{a_n} = 0.$
+
+:::{prf:lemma} **Лемма о зажатой последовательности**
+:name: sqeezy
+Пусть даны такие последовательности $\{a_n\}, \{b_n\}, \{c_n\}$, что $a_n<b_n<c_n$ для всех $n$, $\lim_{n \to \infty} a_n = \lim_{n \to \infty} c_n = a$, тогда $\lim_{n \to \infty} b_n = a.$
+:::
+:::{prf:proof}
+:class: dropdown
+:nonumber:
+По определению предела, для любого $\varepsilon >0$, существуют такие номера $N,M$, что $|a_n - a| < \varepsilon$ и $|c_m - a|< \varepsilon$ для всех $n>N$, $m>M$. Пусть $K:=\max\{N,M\}$, тогда для любого $k>K$, $|a_k - a| < \varepsilon$ и $|c_k - a|< \varepsilon$. Мы получили совокупность неравенств
+$$
+a - \varepsilon < a_k < a+ \varepsilon, \qquad a -\varepsilon < c_k < a+ \varepsilon, \qquad \forall k >K,
+$$
+но тогда мы получаем $a- \varepsilon < a_k < b_k < c_k < a + \varepsilon$, т. е. для любого $\varepsilon>0$ мы нашли такое $K$, что для всех $k>K$, $a- \varepsilon < b_k < a+ \varepsilon$ или то же самое, что и $|b_k -a|< \varepsilon$, но это и означает, что $\lim_{n \to \infty}b_n = a$, что и требовалось доказать.
 :::
 
 :::{prf:example}
@@ -91,37 +107,24 @@ $$
 $$
 0 < (\sqrt[n]{n} - 1) < \sqrt{\frac{2}{n-1}},
 $$
-и так как $\lim_{n\to \infty} 0 = 0$ и $\lim_{n\to \infty} \frac{2}{n-1} = 0$, то по лемме о зажатой последовательности [](#sqeezy), получаем $\lim{n\to \infty} (\sqrt[n]{n} - 1) = 0$, а тогда используя предложение [](#lim(a_n-a)=0) мы получаем требуемое. 
+и так как $\lim_{n\to \infty} 0 = 0$ и $\lim_{n\to \infty} \frac{2}{n-1} = 0$, то по лемме о зажатой последовательности [](#sqeezy), получаем $\lim{n\to \infty} (\sqrt[n]{n} - 1) = 0$, а тогда используя предложение [](#lim(a_n-a)=0) мы получаем требуемое.   
 
 :::
 
-:::{prf:lemma} **Лемма о зажатой последовательности**
-:name: sqeezy
- Пусть даны такие последовательности $\{a_n\}, \{b_n\}, \{c_n\}$, что $a_n<b_n<c_n$ для всех $n$, $\lim_{n \to \infty} a_n = \lim_{n \to \infty} c_n = a$, тогда $\lim_{n \to \infty} b_n = a.$
-:::
-:::{prf:proof}
-:class: dropdown
-:nonumber:
- По определению предела, для любого $\varepsilon >0$, существуют такие номера $N,M$, что $|a_n - a| < \varepsilon$ и $|c_m - a|< \varepsilon$ для всех $n>N$, $m>M$. Пусть $K:=\max\{N,M\}$, тогда для любого $k>K$, $|a_k - a| < \varepsilon$ и $|c_k - a|< \varepsilon$. Мы получили совокупность неравенств
- $$
- a - \varepsilon < a_k < a+ \varepsilon, \qquad a -\varepsilon < c_k < a+ \varepsilon, \qquad \forall k >K,
- $$
- но тогда мы получаем $a- \varepsilon < a_k < b_k < c_k < a + \varepsilon$, т. е. для любого $\varepsilon>0$ мы нашли такое $K$, что для всех $k>K$, $a- \varepsilon < b_k < a+ \varepsilon$ или то же самое, что и $|b_k -a|< \varepsilon$, но это и означает, что $\lim_{n \to \infty}b_n = a$, что и требовалось доказать.
-:::
 
 :::{prf:lemma} **Переход к пределу в неравенствах**
 :name: aleb
- Пусть даны такие последовательности $\{a_n\}, \{b_n\}$, что $a_n<b_n$ для всех $n$, $\lim_{n \to \infty} a_n =a$ и $\lim_{n \to \infty} b_n = b$. Тогда $a\le b$. 
+Пусть даны такие последовательности $\{a_n\}, \{b_n\}$, что $a_n<b_n$ для всех $n$, $\lim_{n \to \infty} a_n =a$ и $\lim_{n \to \infty} b_n = b$. Тогда $a\le b$. 
 :::
 :::{prf:proof}
 :class: dropdown
 :nonumber:
-Пусть $\varepsilon_0:=a-b >0$. Согласно определению предела, мы можем для $\frac{\varepsilon_0}{2}$ найти такие $N,M$, что $|a_n - a|<\frac{\varepsilon_0}{2}$, $|b_m-b|<\frac{\varepsilon_0}{2}$ для всех $n>N$, $m>M$. Пусть $K:=\max\{N,M\}$, тогда для любого $k>K$
+Пусть $\varepsilon_0:=a-b >0$. Согласно определению предела, мы можем для $\frac{\varepsilon_0}{2}$ найти такие $N,M$, что $|a_n - a|<\frac{\varepsilon_0}{2}$, $|b_m-b|<\frac{\varepsilon_0}{2}$ для всех $n>N$, $m>M$.  Пусть $K:=\max\{N,M\}$, тогда для любого $k>K$
 $$\begin{align*}
- \varepsilon_0 &=& a-b\\
- &=& a-a_n + a_n - b_n+b_n - b \\
- &\le &a-a_n + b_n-b \\
- &<&\varepsilon_0
+\varepsilon_0 &=& a-b\\
+&=& a-a_n + a_n - b_n+b_n - b \\
+&\le &a-a_n + b_n-b \\
+&<&\varepsilon_0
 \end{align*}$$
 что даёт противоречие.
 
