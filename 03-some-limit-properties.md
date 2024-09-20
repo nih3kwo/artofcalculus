@@ -1,6 +1,8 @@
 # Некоторые свойства пределов
 
-:::{prf:theorem} Арифметика пределов
+## Арифметика предела
+
+:::{prf:theorem} Арифметика предела
 :name: a+b,ca,ab
 Пусть $\{a_n\}, \{b_n\}$ — две последовательности, причём $\lim_{n\to \infty} a_n =a$ и $\lim_{n\to \infty}b_n =b$. Тогда:
 * $\lim_{n\to \infty}(a_n + c) = a+c$ и $\lim_{n\to \infty}(ca_n) = ca$ для любого числа $c\in \mathbb{R};$
@@ -78,6 +80,7 @@ $$
 (3) пусть $a = 0$, тогда для любого $\varepsilon>0$ можно найти такой $N$, что $-\varepsilon < a_n <\varepsilon$, для всех $n>N$. Тогда $-\sqrt{\varepsilon} < 0 < \sqrt{a_n} < \sqrt{\varepsilon}$, что и показывает $\lim_{n\to \infty} \sqrt{a_n} = 0.$
 :::
 
+## Лемма о зажатой последовательности
 
 :::{prf:lemma} **Лемма о зажатой последовательности**
 :name: sqeezy
