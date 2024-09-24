@@ -84,7 +84,7 @@ $$
 
 :::{prf:lemma} **Лемма о зажатой последовательности**
 :name: sqeezy
-Пусть даны такие последовательности $\{a_n\}, \{b_n\}, \{c_n\}$, что $a_n<b_n<c_n$ для всех $n$, $\lim_{n \to \infty} a_n = \lim_{n \to \infty} c_n = a$, тогда $\lim_{n \to \infty} b_n = a.$
+Пусть даны такие последовательности $(a_n), (b_n), (c_n)$, что $a_n<b_n<c_n$ для всех $n$, $\lim_{n \to \infty} a_n = \lim_{n \to \infty} c_n = a$, тогда $\lim_{n \to \infty} b_n = a.$
 :::
 :::{prf:proof}
 :class: dropdown
