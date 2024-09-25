@@ -41,7 +41,7 @@ $$\begin{align*}
 $$
  |(a_k-a)(b_k-b)| = |a_k -a||b_k - b| < \varepsilon' \cdot \varepsilon' = \varepsilon, 
 $$
-что и доказывает бесконечную малость последовательности $(a_n-a)(b_n-b)$, т. е. $\lim_{n \to \infty}(a_n-a)(b_n-b) = 0$ и значит, $\lim_{n\to \infty}(a_nb_n - ab) = 0 \Longleftrightarrow \lim_{n\to \infty}a_nb_b = ab.$
+что и доказывает бесконечную малость последовательности $(a_n-a)(b_n-b)$, т. е. $\lim_{n \to \infty}(a_n-a)(b_n-b) = 0$ и значит, $\lim_{n\to \infty}(a_nb_n - ab) = 0 \Longleftrightarrow \lim_{n\to \infty}a_nb_n = ab.$
 
 (4) Достаточно доказать, что $\lim_{n \to \infty} \frac{1}{b_n} = \frac{1}{b}$. Тогда из предыдущего пункта будет следовать требуемое. Далее без ограничения общности будем считать, что $b>0$, так как в случае $b<0$ мы умножим последовательность $\{b_n\}$ на $-1$ и по пункту (1) сведём задачу к той, когда $b>0.$
 
