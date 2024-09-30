@@ -75,23 +75,27 @@
 
 Покажем, что она ограничена снизу: для этого воспользуемся неравенством $\frac{x+y}{2} \ge \sqrt{xy}$. Имеем
 $$
-a_{n+1} = \frac{1}{2}\left(a_n + \frac{2}{a_n} \right) \ge \frac{1}{2}\cdot 2 \cdot \sqrt{a_n \cdot \frac{2}{a_n}} = \sqrt{2}.
+a_{n+1} = c \ge \frac{1}{2}\cdot 2 \cdot \sqrt{a_n \cdot \frac{2}{a_n}} = \sqrt{2},
 $$
+т.е. $a_n \ge \sqrt{2}$ для всех $n \ge 1$.
 
-Покажем, что она неубывающая, т. е. для всех $n\ge 1$, $a_{n+1} \ge a_n$, или что равносильно $\frac{a_{n+1}}{a_n} \ge 1$, так как $a_n >0$.
+Покажем, что она неубывающая, т. е. для всех $n\ge 1$, $a_{n+1} \ge a_n$.
 
-Находим
-$$
-\frac{a_{n+1}}{a_n} = \frac{1}{2} \left(1+ \frac{2}{a_n^2} \right) \ge \frac{1}{2} \left(1 + \frac{2}{(\sqrt{2})^2} \right) = 1,
-$$
-что и показывает, что она не убывает.
+Имеем
+$$\begin{align*}
+a_{n+1} - a_n &= \frac{1}{2}\left(a_n + \frac{2}{a_n} \right) - a_n \\
+&= \frac{a_n}{2} + \frac{1}{a_n} - a_n \\
+&= -\frac{a_n}{2} + \frac{1}{a_n} \\
+&= -\frac{1}{2}\cdot\left( \frac{a_n^2 - 2}{a_n^2}\right),
+\end{align*}$$
+так как $a_n \ge \sqrt{2}$, то $a_{n+1} - a_n \le 0$, **т.е.,** $a_{n+1} \le a_n$, а это значит что она не убывает. 
 
 Таким образом, по теореме Вейерштрасса эта последовательность имеет предел. Пусть $\lim_{n\to \infty}a_n =a$, тогда по теореме [](#a+b,ca,ab) получаем
 $$\begin{align*}
-a &=& \lim_{n \to \infty}a_{n+1} \\
-&=&\lim_{n \to \infty} \frac{1}{2} \left(a_n+ \frac{2}{a_n} \right) \\
-&=& \frac{1}{2}\left( \lim_{n \to \infty} a_n + \frac{2}{\lim_{n \to \infty} a_n} \right) \\
-&=&\frac{1}{2}\left( a + \frac{2}{a}\right).
+a &= \lim_{n \to \infty}a_{n+1} \\
+&=\lim_{n \to \infty} \frac{1}{2} \left(a_n+ \frac{2}{a_n} \right) \\
+&=  \frac{1}{2}\left( \lim_{n \to \infty} a_n + \frac{2}{\lim_{n \to \infty} a_n} \right) \\
+&=\frac{1}{2}\left( a + \frac{2}{a}\right).
 \end{align*}$$
 
 Мы получили квадратное уравнение $a = \frac{1}{2}\left(a + \frac{2}{a} \right)$, откуда $a^2 = 2$. С учётом $a_n \ge \sqrt{2}$ получаем, что $a = \sqrt{2}$. Итак, $\lim_{n \to \infty}a_n = \sqrt{2}.$
@@ -104,17 +108,17 @@ a &=& \lim_{n \to \infty}a_{n+1} \\
 
 Имеем
 $$\begin{align*}
-e_n &=& \left(1 + \frac{1}{n} \right)^n = \sum_{k=0}^n \binom{n}{k} \frac{1}{n^k}\\
-&=& 1 + 1 + \frac{1}{2!} \cdot \frac{n(n-1)}{n^2} + \frac{1}{3!}\cdot \frac{n(n-1)(n-2)}{n^3} + \cdots \\
-&& + \frac{1}{(n-1)!} \cdot \frac{n(n-1)\cdots (n-(n-2))}{n^{n-1}} + \frac{1}{n!} \frac{n(n-1)\cdots (n-(n-1))}{n^n} \\
-&=& 2 + \frac{1}{2} \cdot 1\cdot \left(1-\frac{1}{n} \right) + \frac{1}{3!} \cdot 1 \cdot \left(1 - \frac{1}{n} \right) \left(1 - \frac{2}{n} \right) + \cdots \\
-&& + \frac{1}{(n-1)!} \cdot 1 \cdot \left(1 - \frac{1}{n} \right) \left(1 - \frac{2}{n} \right) \cdots \left(1 - \frac{n-2}{n} \right) + \frac{1}{n!} \cdot 1 \cdot \left(1 - \frac{1}{n} \right) \cdots \left(1 - \frac{n-1}{n} \right).
+e_n &= \left(1 + \frac{1}{n} \right)^n = \sum_{k=0}^n \binom{n}{k} \frac{1}{n^k}\\
+&=1 + 1 + \frac{1}{2!} \cdot \frac{n(n-1)}{n^2} + \frac{1}{3!}\cdot \frac{n(n-1)(n-2)}{n^3} + \cdots \\
+&+ \frac{1}{(n-1)!} \cdot \frac{n(n-1)\cdots (n-(n-2))}{n^{n-1}} + \frac{1}{n!} \frac{n(n-1)\cdots (n-(n-1))}{n^n} \\
+&=2 + \frac{1}{2} \cdot 1\cdot \left(1-\frac{1}{n} \right) + \frac{1}{3!} \cdot 1 \cdot \left(1 - \frac{1}{n} \right) \left(1 - \frac{2}{n} \right) + \cdots \\
+&+ \frac{1}{(n-1)!} \cdot 1 \cdot \left(1 - \frac{1}{n} \right) \left(1 - \frac{2}{n} \right) \cdots \left(1 - \frac{n-2}{n} \right) + \frac{1}{n!} \cdot 1 \cdot \left(1 - \frac{1}{n} \right) \cdots \left(1 - \frac{n-1}{n} \right)
 \end{align*}$$
 
 Заметим прежде всего, что так как $\frac{m}{n} >0$, то все $e_n >0$. Далее имеем
 $$\begin{align*}
-e_{n+1} &=& 2 + \frac{1}{2}\cdot 1 \cdot\left(1 - \frac{1}{n+1} \right) + \frac{1}{3!} \cdot \left(1 - \frac{1}{n+1} \right)\left(1 - \frac{2}{n+1} \right) + \cdots \\
-&& + \frac{1}{n!} \cdot 1 \cdot \left(1 - \frac{1}{n+1} \right) \left(1 - \frac{2}{n+1} \right) \cdots \left(1 - \frac{n-1}{n+1} \right) + \frac{1}{(n+1)!} \cdot 1 \cdot \left(1 - \frac{1}{n+1} \right) \cdots \left(1 - \frac{n}{n+1} \right).
+e_{n+1} &= 2 + \frac{1}{2}\cdot 1 \cdot\left(1 - \frac{1}{n+1} \right) + \frac{1}{3!} \cdot \left(1 - \frac{1}{n+1} \right)\left(1 - \frac{2}{n+1} \right) + \cdots \\
+&+ \frac{1}{n!} \cdot 1 \cdot \left(1 - \frac{1}{n+1} \right) \left(1 - \frac{2}{n+1} \right) \cdots \left(1 - \frac{n-1}{n+1} \right) + \frac{1}{(n+1)!} \cdot 1 \cdot \left(1 - \frac{1}{n+1} \right) \cdots \left(1 - \frac{n}{n+1} \right).
 \end{align*}$$
 
 Так как $1 - \frac{t}{n} < 1 - \frac{t}{n+1}$, то $e_n \le e_{n+1}$. С другой стороны, каждая скобка $1- \frac{t}{n} <1$, тогда
