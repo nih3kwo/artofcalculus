@@ -10,6 +10,12 @@ parts:
       - file: 04-ascending-sequences-and-weierstrass-theorem
       - file: 05-fundamental-sequences-and-a-new-look-at-real-numbers
       - file: 06-subsequences-and-partial-limits
+  - caption: Начало теории рядов
+    chapters: 
+      - file: 34-number-series
+      - file: 35-positive-series
+      - file: 36-alternating-series
+      - file: 37-absolute-and-conditional-convergence
   - caption: Метрические пространства
     chapters:
       - file: 07-mappings
@@ -41,12 +47,6 @@ parts:
       - file: 31-extremums
       - file: 32-theorem-about-the-implicit-and-the-inverse-functions
       - file: 33-theory-of-local-extremums
-  - caption: Начало теории рядов
-    chapters: 
-      - file: 34-number-series
-      - file: 35-positive-series
-      - file: 36-alternating-series
-      - file: 37-absolute-and-conditional-convergence
   - caption: Интегрирование линейных дифференциальных форм
     chapters:
       - file: 38-linear-differential-forms
@@ -61,5 +61,6 @@ parts:
       - file: 45-fundamental-theorems-of-calculus
   - caption: Коллоквиумы
     chapters:
-      - file: 98-colloquim-4
-      - file: 99-colloquim-3
+      - file: 97-colloquium-1
+      - file: 99-colloquium-3
+      - file: 98-colloquium-4
