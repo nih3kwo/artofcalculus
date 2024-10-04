@@ -39,7 +39,7 @@ $$
 $$
 \left(\frac{(-1)^k}{2k+1}\right)_{k \ge 0}, \qquad \left(1-\frac{1}{3} + \frac{1}{5} + \cdots + \frac{(-1)^k}{2k+1}\right)_{k\ge 0} 
 $$
-называется **рядом Мадхавы — Лейбинца (Madhava–-Leibniz series)**. 
+называется **рядом Мадхавы — Лейбница (Madhava — Leibniz series)**. 
     
 :::
 
