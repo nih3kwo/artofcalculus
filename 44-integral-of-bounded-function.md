@@ -26,8 +26,8 @@ $$
 :::
 
 :::{prf:lemma}
-:name: inf_int<sup_int
-Пусть $f:I \to \mathbb{R}$ — ограниченная функция на промежутке $I \subsetneq \mathbb{R}$, числами $a,b$,**т.е.,** $a \le f(x) \le b$ для всех $x \in I$. Тогда
+:name: inf_int_less_sup_int
+Пусть $f:I \to \mathbb{R}$ — ограниченная функция на промежутке $I \subsetneq \mathbb{R}$, числами $a,b$,**т.е.** $a \le f(x) \le b$ для всех $x \in I$. Тогда
 $$
 a\cdot |I| \le \inf \int_I f  \le \sup \int_I f \le b \cdot |I|.
 $$
@@ -37,7 +37,7 @@ $$
 :::{prf:proof}
 :class: dropdown
 :nonumber:
-Рассмотрим функции $a,b:I \to \mathbb{R}$, $a(x) := a$, $b(x): =b$, $x\in I$. Тогда $a \in m(f)$, $b \in M(f)$, тогда по определению $\sup, \inf$ (см. Определение [](#sup,inf)), получаем
+Рассмотрим функции $a,b:I \to \mathbb{R}$, $a(x) := a$, $b(x): =b$, $x\in I$. Тогда $a \in m(f)$, $b \in M(f)$, тогда по определению $\sup, \inf$ (см. Определение [](#upper-lower-bound)), получаем
 $$
 \sup \int_I f\le \int_I b = b \cdot |I|, \qquad \inf \int_I f \ge \int_I a = a\cdot |I|.
 $$
@@ -63,7 +63,8 @@ $$
 
 :::{prf:proof}
 :class: dropdown
-:nonumber: Пусть $f:I \to \mathbb{R}$ — ограниченная функция, скажем $a\le f(x) \le b$, $x \in I$, на ограниченном промежутке $I \subsetneq \mathbb{R}$. По только что доказанной лемме (см. Лемма [](#inf_int<sup_int)), имеем
+:nonumber: 
+Пусть $f:I \to \mathbb{R}$ — ограниченная функция, скажем $a\le f(x) \le b$, $x \in I$, на ограниченном промежутке $I \subsetneq \mathbb{R}$. По только что доказанной лемме (см. Лемма [](#inf_int_less_sup_int)), имеем
 $$
 \inf \int_I f, \,\sup \int_If \in [A,B], \qquad A: = a \cdot |I|, \, B:=b\cdot |I|,
 $$
@@ -72,7 +73,7 @@ $$
 
 
 
-Таким образом следующее определение корректно.
+Таким образом, следующее определение корректно.
 
 :::{prf:definition} Интеграл Римана от ограниченной функции
 :name: int_of_bounded
@@ -88,7 +89,7 @@ $$
 
 :::{prf:remark}
 :name: why_bounded
-Теперь ясно почему мы рассматриваем только ограниченные функции на ограниченном промежутке. Ведь в противном случае, верхний или нижний интегралы просто могут не существовать.    
+Теперь ясно, почему мы рассматриваем только ограниченные функции на ограниченном промежутке. Ведь в противном случае верхний или нижний интегралы просто могут не существовать.    
 :::
 
 
@@ -106,11 +107,11 @@ $$
 $$
 \sup \int_I f \le \int_I f, \qquad \inf \int_I f \ge \int_I f,
 $$
-**т.е.,**
+**т.е.**
 $$
 \sup \int_I f \le \int_I f \le \inf \int_I f,
 $$
-но согласно лемме [](#inf_int<sup_int), 
+но согласно лемме [](#inf_int_less_sup_int), 
 $$
 \inf \int_I f \le \sup \int_I f
 $$
@@ -128,8 +129,8 @@ $$
 
 Здесь мы докажем важные свойства интеграла от ограниченной функции.
 
-(def416)=
 :::{prf:definition}
+:label: up_and_low_Riman
 Пусть $f:I \to \mathbb{R}$ — ограниченная функция на ограниченном промежутке $I \subsetneq \mathbb{R}$ и пусть $\lambda(I)$ — некоторое разбиение промежутка $I$. Определим **верхнюю и нижнюю суммы Римана** следующим образом
 $$
 {U}(f, \lambda(I)): = \sum_{\substack{A \in \lambda(I) \\ A \ne  \varnothing}} \sup_{x\in A} f(x)\cdot |A|
@@ -160,7 +161,7 @@ $$
 
 
 :::{prf:lemma}
-:name: intg>U
+:name: intg-le-U
 Пусть $f: I \to \mathbb{R}$ — ограниченная функция на ограниченном промежутке $I \subsetneq \mathbb{R}$ и пусть $g,h$ — ступенчатые функции на $I$ и $g \in M(f), h \in m(f)$, тогда
 $$
 \int_I g \ge U(f, \lambda_g(I)), \qquad \int_I h \le L(f, \lambda_h(I)),
@@ -187,6 +188,7 @@ $$\begin{align*}
 
 
 :::{prf:corollary}
+:label: cor_for_supint
 Пусть $f:I \to \mathbb{R}$ — ограниченная функция на ограниченном промежутке $I$, тогда
 $$
 \sup \int_I f = \inf \Bigl\{ U(f, \lambda(I))\, : \, \mbox{$\lambda(I) $— разбиение промежутка $I$} \Bigr\}
@@ -199,7 +201,8 @@ $$
 
 :::{prf:proof}
 :class: dropdown
-:nonumber: Мы докажем первое утверждение, так как второе доказывается аналогично.
+:nonumber: 
+Мы докажем первое утверждение, так как второе доказывается аналогично.
 
 Пусть $\lambda(I)$ —произволбное разбиение промежутка $I$, тогда рассмотрим множество $M_{p.c}(f, \lambda(I))$ всех ступенчатых относительно разбиения $\lambda(I)$ функции которые мажорируют функцию $f$ (**соотв.** минорируют функцию f).
 
@@ -208,7 +211,7 @@ $$
 \sup \int_I f \ge \inf_{\lambda(I)} \{U(f, \lambda(I))\}.
 $$
 
-Для любой $g\in M(f, \lambda(I))$, по лемме [](#intg>U), 
+Для любой $g\in M(f, \lambda(I))$, по лемме [](#intg-le-U), 
 $$
 U(f, \lambda(I)) \le \int_I g,
 $$
@@ -303,12 +306,12 @@ $$
 \end{equation}
 
 
-(1) Покажем что $f+g$ интегрируема по Риману. Воспользуемся определением [](#int_of_bounded), Теоремой [](#imprtant_for_int) и полученными выше неравенствами
+(1) Покажем, что $f+g$ интегрируема по Риману. Воспользуемся определением [](#int_of_bounded), Теоремой [](#imprtant_for_int) и полученными выше неравенствами
 $$\begin{align*}
 \sup \int_I (f+g) &\le& \int_I (\overline{f}+\overline{g}) \\
-&=& \int_I \overline{f} + \int_I \overline{g} \\
+&= \int_I \overline{f} + \int_I \overline{g} \\
 &< & \int_I f + \varepsilon + \int_I g + \varepsilon \\
-&=& \int_I f + \int_I g + 2 \varepsilon.
+&= \int_I f + \int_I g + 2 \varepsilon.
 \end{align*}$$
 
 Аналогично, получаем
@@ -316,7 +319,7 @@ $$
 \inf \int_I(f+g) > \int_If + \int_I g - 2\varepsilon.
 $$
 
-Теперь, по лемме [](#inf_int<sup_int), получаем
+Теперь по лемме [](#inf_int_less_sup_int), получаем
 $$
 \int_If + \int_I g - 2\varepsilon < \inf \int_I(f+g) \le \sup \int_I (f+g) < \int_I f + \int_I g + 2 \varepsilon,
 $$
@@ -329,7 +332,7 @@ $$
 $$
 \inf \int_I(f+g) = \int_I f + \int_I g, \qquad \sup \int_I (f+g) = \int_If + \int_I g,
 $$
-**т.е.,**
+**т.е.**
 $$
 \inf \int_I(f+g) = \sup \int_I (f+g) = \int_If + \int_I g,
 $$
@@ -337,17 +340,17 @@ $$
 
 (2) Покажем, что $\alpha f$ интегрируема по Риману. Нам нужно рассмотреть несколько случаев в зависимости от числа $\alpha.$
 
-Пусть $\alpha = 0$, тогда $\alpha f=0$ — постоянная функция и тогда по лемме [](#int_coinside), интеграл Римана от функции $\alpha f$ тоже самое, что и интеграл от ступенчатой функции $\alpha \cdot f$ который равен $\alpha = 0.$
+Пусть $\alpha = 0$, тогда $\alpha f=0$ — постоянная функция и тогда по лемме [](#int_coinside), интеграл Римана от функции $\alpha f$ тоже самое, что и интеграл от ступенчатой функции $\alpha \cdot f$, который равен $\alpha = 0.$
 
 Пусть $\alpha >0$, то $\alpha \overline{f} \in M_{p.c}(\alpha f)$, $\alpha \underline{f} \in m_{p.c}(f)$. Тогда
 по определению $\inf$, $\sup$, теореме [](#imprtant_for_int), и полученным выше неравенствам, получаем
 $$\begin{align*}
 \sup \int_I \alpha f &\le & \int_I \alpha \cdot \overline{f} \\
-&=& \alpha \int_I \overline{f} < \alpha\left( \int_If + \varepsilon \right),\\
+&= \alpha \int_I \overline{f} < \alpha\left( \int_If + \varepsilon \right),\\
 \inf \int_I \alpha f &\ge & \int_I \alpha \cdot \underline{f} \\
-&=& \alpha \int_I \underline{f} > \alpha\left( \int_If - \varepsilon \right),
+&= \alpha \int_I \underline{f} > \alpha\left( \int_If - \varepsilon \right),
 \end{align*}$$
-пользуясь теперь леммой [](#inf_int<sup_int), имеем
+пользуясь теперь леммой [](#inf_int_less_sup_int), имеем
 $$
 \alpha \int_I f - \alpha \varepsilon  < \inf \int_I \alpha f \le \sup \int_I \alpha f < \alpha \int_I f + \alpha \varepsilon.
 $$
@@ -359,7 +362,7 @@ $$
 $$
 \inf \int_I \alpha f = \alpha \int_I f, \qquad \sup \int_I \alpha f = \alpha \int_I f,
 $$
-**т.е.,**
+**т.е.**
 $$
 \int_I \alpha f = \alpha \int_I f.
 $$
@@ -375,7 +378,7 @@ $$
 \inf \int_I \alpha f = \inf \int_I - |\alpha| f \ge \int \alpha \overline{f} > - |\alpha| \int \overline{f} - \varepsilon.
 $$
 
-Таким образом пользуясь леммой [](#inf_int<sup_int), получаем
+Таким образом, пользуясь леммой [](#inf_int_less_sup_int), получаем
 $$
 \alpha \int_I f -\varepsilon < \inf \int_I \alpha f \le \sup \int_I \alpha f < \alpha \int_I f + \varepsilon,
 $$
@@ -399,7 +402,7 @@ $$
 $$
 \int_I f = \alpha \cdot |I|,
 $$
-то и требовалось показать.
+что и требовалось показать.
 
 (7) Для данных $\overline{f}\in M_{p.c}(f)$, $\underline{f} \in m_{p.c}(f)$  определим $\overline{F}, \underline{F}:J \to \mathbb{R}$ следующим образом
 $$
@@ -458,7 +461,7 @@ $$
 \int_B \underline{f}_B \le \inf \int_B f|_B \le \sup \int_B f|_B \le \int_B \underline{f}|_B.
 $$
 
-Тогда воспользовавшись Теоремой [](#imprtant_for_int) 5., получаем
+Тогда, воспользовавшись Теоремой [](#imprtant_for_int) 5., получаем
 $$
 \int_I \overline{f} = \int_A \overline{f}_A + \int_B \overline{f}_B,
 $$
@@ -467,11 +470,11 @@ $$
 \int_I \underline{f} = \int_A \underline{f}_A + \int_B \underline{f}_B.
 $$
 
-Тогда используя неравенства ([](#non_for_Th)), имеем
+Тогда, используя неравенства ([](#non_for_Th)), имеем
 $$
 \int_I f - \varepsilon < \left( \int_A \underline{f}|_A + \int_B \underline{f}_B \right) \le \left( \int_A \overline{f}|_A + \int_B \overline{f}_B \right) < \int_I f + \varepsilon,
 $$
-отсюда вытекает следующие неравенства\footnote{Действительно если мы имеем $x-\varepsilon < x \le z < x+\varepsilon$, то $0 \le z-y < x-y+\varepsilon$, но так как $x-\varepsilon <y$, то $x-y<\varepsilon$ откуда $0 \le z - y \le 2 \varepsilon.$}
+отсюда вытекает следующие неравенства[^ref44-1]
 $$
 0 \le \left( \int_A \overline{f}|_A + \int_B \overline{f}_B \right) -  \left( \int_A \underline{f}|_A + \int_B \underline{f}_B \right) \le 2 \varepsilon,
 $$
@@ -480,7 +483,7 @@ $$
 0 \le \left( \int_A \overline{f}|_A - \int_A \underline{f}|_A  \right) + \left( \int_B \overline{f}_B  -\int_B \underline{f}_B \right) \le 2 \varepsilon.
 $$
 
-Так как $\overline{f}|_A \ge \underline{f}|_A$, $\overline{f}|_B \ge \underline{f}|_B$, то согласно теореме [](#imprtant_for_int) 2., получаем что обе скобки в положительны, а значит 
+Так как $\overline{f}|_A \ge \underline{f}|_A$, $\overline{f}|_B \ge \underline{f}|_B$, то согласно теореме [](#imprtant_for_int) 2., получаем, что обе скобки выше положительны, а значит 
 $$
 0 \le \int_A \overline{f}|_A - \int_A \underline{f}|_A  \le 2 \varepsilon
 $$
@@ -490,7 +493,7 @@ $$
 $$
 для любого $\varepsilon>0.$
 
-Теперь вернёмся к неравенствам полученным выше
+Теперь вернёмся к неравенствам, полученным выше
 $$
 \int_A \underline{f}_A \le \inf \int_A f|_A \le \sup \int_A f|_A \le \int_A \underline{f}|_A.
 $$
@@ -509,3 +512,5 @@ $$
 $$
 что и означает интегрируемость функций $f|_A$, $f|_B$ по Риману.
 :::
+
+[^ref44-1]: Действительно, если мы имеем $x-\varepsilon < x \le z < x+\varepsilon$, то $0 \le z-y < x-y+\varepsilon$, но так как $x-\varepsilon <y$, то $x-y<\varepsilon$, откуда $0 \le z - y \le 2 \varepsilon.$

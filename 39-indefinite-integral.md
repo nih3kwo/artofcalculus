@@ -31,7 +31,7 @@ $$
 
 :::{prf:proof}
 :class: dropdown
-:nonumber:~
+:nonumber:
 
 (1) Если $F(x)$ — интеграл для фукнции $f(x)$, то $F'(x) = f(x)$, а тогда
 $$
@@ -88,7 +88,7 @@ $$
 :::{prf:proof}
 :class: dropdown
 :nonumber:
-Пусть $\int f(x) \mathrm{d}x = F(x)+С$, тогда, согласно определению [](#int1), $F'(x) = f(x)$, и тогда
+Пусть $\int f(x) \mathrm{d}x = F(x)+C$, тогда, согласно определению [](#int1), $F'(x) = f(x)$, и тогда
 $$
 \left(\int f(x) \mathrm{d}x \right)' =  (F(x) + C)' = F'(x)  = f(x), 
 $$
@@ -167,37 +167,37 @@ $$
 $$
 
 Если $\alpha = 0$, то мы получаем тождество, поэтому пусть $\alpha \ne 0.$ В силу линейности дифференциала, теоремы [](#int1=int2+C) и леммы [](#int2), получаем
-$$\begin{eqnarray}
-\int \alpha f(x) \mathrm{d}x &=& \int \alpha \mathrm{d}F(x) \\
-&=& \int \mathrm{d}(\alpha F(x)) \\
-&=& \alpha F(x) + C \\
-&=& \alpha \left( F(x) + \frac{C}{\alpha} \right).
-\end{eqnarray}$$
+$$\begin{align*}
+\int \alpha f(x) \mathrm{d}x &= \int \alpha \mathrm{d}F(x) \\
+&= \int \mathrm{d}(\alpha F(x)) \\
+&= \alpha F(x) + C \\
+&= \alpha \left( F(x) + \frac{C}{\alpha} \right).
+\end{align*}$$
 
 Так как $C$ — произвольное число, то число $\frac{C}{\alpha}$ можно также рассматривать как произвольное, и тогда согласно определению [](#int2), выражение в последней скобке — это $\int f(x) \mathrm{d}x$.
 
 Получаем
-$$\begin{eqnarray}
-\int \alpha f(x) \mathrm{d}x &=&\alpha \left( F(x) + \frac{C}{\alpha} \right) \\
+$$\begin{align*}
+\int \alpha f(x) \mathrm{d}x &=\alpha \left( F(x) + \frac{C}{\alpha} \right) \\
 & =& \alpha \int f(x) \mathrm{d}x.
-\end{eqnarray}$$
+\end{align*}$$
 
 (2) Пусть $\alpha, \beta\ne 0$, так как в противном случае, мы либо получаем тождество $0 \equiv 0$, либо что уже было доказано выше.
 
 Используя те же свойства и только что полученное, получаем
-$$\begin{eqnarray}
-\int \Bigl(\alpha f(x) + \beta g(x) \Bigr) \mathrm{d}x &=& \int\Bigl( \alpha f(x) \mathrm{d}x + \beta g(x) \mathrm{d}x \Bigr) \\
-&=& \int \Bigl( \alpha \mathrm{d}F(x) + \beta \mathrm{d}G(x) \Bigr) \\
-&=& \int \Bigl( \mathrm{d}(\alpha F(x)) + \mathrm{d}(\beta G(x))  \Bigr) \\
-&=& \int \mathrm{d}(\alpha F(x) + \beta G(x)) \\
-&=& \alpha F(x) + \beta G(x) + C.
-\end{eqnarray}$$
+$$\begin{align*}
+\int \Bigl(\alpha f(x) + \beta g(x) \Bigr) \mathrm{d}x &= \int\Bigl( \alpha f(x) \mathrm{d}x + \beta g(x) \mathrm{d}x \Bigr) \\
+&= \int \Bigl( \alpha \mathrm{d}F(x) + \beta \mathrm{d}G(x) \Bigr) \\
+&= \int \Bigl( \mathrm{d}(\alpha F(x)) + \mathrm{d}(\beta G(x))  \Bigr) \\
+&= \int \mathrm{d}(\alpha F(x) + \beta G(x)) \\
+&= \alpha F(x) + \beta G(x) + C.
+\end{align*}$$
 
 Имеем $C = \frac{C}{2} + \frac{C}{2}$ и так как $C$ — произвольное число, то и числа $\frac{C}{2\alpha}$, $\frac{C}{2\beta}$ тоже можно считать произвольными. Тогда согласно определению [](#int2), линейности дифференциала и леммы [](#int2), получаем
-$$\begin{eqnarray}
-\int \Bigl(\alpha f(x) + \beta g(x) \Bigr) \mathrm{d}x &=& \alpha F(x) + \beta G(x) + C \\
-&=& \alpha \left( F(x) + \frac{C}{2\alpha} \right) + \left(G(x) + \frac{C}{2\beta} \right) \\
-&=&\alpha \int \mathrm{d}F(x) + \beta \int \mathrm{d}G(x) \\
-&=& \alpha \int f(x) \mathrm{d}x + \beta \int g(x) \mathrm{d}x.
-\end{eqnarray}$$
+$$\begin{align*}
+\int \Bigl(\alpha f(x) + \beta g(x) \Bigr) \mathrm{d}x &= \alpha F(x) + \beta G(x) + C \\
+&= \alpha \left( F(x) + \frac{C}{2\alpha} \right) + \left(G(x) + \frac{C}{2\beta} \right) \\
+&=\alpha \int \mathrm{d}F(x) + \beta \int \mathrm{d}G(x) \\
+&= \alpha \int f(x) \mathrm{d}x + \beta \int g(x) \mathrm{d}x.
+\end{align*}$$
 :::

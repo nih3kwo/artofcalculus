@@ -29,10 +29,10 @@ $$
 $$
 В таком виде её уже нельзя представить как $R(x,y)\mathrm{d}x$, однако сделаем следующие преобразования
 $$\begin{align*}
-\omega  &=&  \frac{\mathrm{d}x}{\sqrt[3]{(x-1)(x+1)^2}} \\
-&=&  \frac{\mathrm{d}x}{\sqrt[3]{(x-1)\frac{(x+1)^3}{(x+1)} }} \\
-&=&  \frac{\mathrm{d}x}{(x+1) {\sqrt[3]{\frac{x-1}{x+1}}}} \\
-&=& \sqrt[3]{\frac{x+1}{x-1}}\cdot \frac{1}{x+1}\mathrm{d}x, \\
+\omega  &=  \frac{\mathrm{d}x}{\sqrt[3]{(x-1)(x+1)^2}} \\
+&=  \frac{\mathrm{d}x}{\sqrt[3]{(x-1)\frac{(x+1)^3}{(x+1)} }} \\
+&=  \frac{\mathrm{d}x}{(x+1) {\sqrt[3]{\frac{x-1}{x+1}}}} \\
+&= \sqrt[3]{\frac{x+1}{x-1}}\cdot \frac{1}{x+1}\mathrm{d}x, \\
 \end{align*}$$
 и тогда уже можно написать, что $\omega = R(x,y)\mathrm{d}x$, где $R(x,y) = \frac{y}{x+1}$.
 :::
@@ -86,11 +86,11 @@ $$
 $$
 Мы можем положить, что $x = u^4$, так как $4$ — наименьшее общее кратное для $2,4$. Тогда находим $\mathrm{d}x = (u^4)'\mathrm{d}x = 4u^3 \mathrm{d}u$, подставляем
 $$\begin{align*}
-\bigintsss \frac{\sqrt{x}}{\sqrt[4]{x^3} +4} \mathrm{d}x &=& \bigintsss \frac{x^{\frac{1}{2}}}{x^{\frac{3}{4}}+4} \mathrm{d}x \\
-&=& 4 \bigintsss \frac{u^2 \cdot u^3 \mathrm{d}u}{u^3+4} = 4 \bigintsss \frac{u^5\mathrm{d}u}{u^3+4} \\
-&=& 4 \bigintsss \left(u^3 - \frac{4u^2}{u^3+4} \right)\mathrm{d}u \\
-&=& 4\bigintsss u^3 \mathrm{d}u - 16 \bigintsss\frac{u^2 \mathrm{d}u}{u^3 +4} = 4\bigintsss u^3 \mathrm{d}u - \frac{16}{3} \bigintsss\frac{\mathrm{d}(u^3)}{u^3 +4} \\
-&=& u^4 - \frac{16}{3} \ln |u^3 + 4| +C,
+\bigintsss \frac{\sqrt{x}}{\sqrt[4]{x^3} +4} \mathrm{d}x &= \bigintsss \frac{x^{\frac{1}{2}}}{x^{\frac{3}{4}}+4} \mathrm{d}x \\
+&= 4 \bigintsss \frac{u^2 \cdot u^3 \mathrm{d}u}{u^3+4} = 4 \bigintsss \frac{u^5\mathrm{d}u}{u^3+4} \\
+&= 4 \bigintsss \left(u^3 - \frac{4u^2}{u^3+4} \right)\mathrm{d}u \\
+&= 4\bigintsss u^3 \mathrm{d}u - 16 \bigintsss\frac{u^2 \mathrm{d}u}{u^3 +4} = 4\bigintsss u^3 \mathrm{d}u - \frac{16}{3} \bigintsss\frac{\mathrm{d}(u^3)}{u^3 +4} \\
+&= u^4 - \frac{16}{3} \ln |u^3 + 4| +C,
 \end{align*}$$
 и тогда
 $$

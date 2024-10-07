@@ -27,6 +27,8 @@ $$
 $$
 
 Тогда мы можем сократить эту формулу следующим образом
+
+(dffdx)=
 $$
 \boxed{
 \mathrm{d}f = f'\cdot \mathrm{d}x.
@@ -63,10 +65,10 @@ $$
 \end{equation}
 
 Действительно, имеем
-$$\begin{eqnarray}
-(\nabla_\m{a} f) (\m{h}) &=& \left.\frac{\partial f}{\partial x_1}\right|_\m{a} \cdot \mathrm{d}x_1(\m{h}) + \cdots +  \left.\frac{\partial f}{\partial x_n}\right|_\m{a} \cdot \mathrm{d}x_n (\m{h}) \\
-&=& \left.\frac{\partial f}{\partial x_1}\right|_\m{a} \cdot h_1 + \cdots +  \left.\frac{\partial f}{\partial x_n}\right|_\m{a} \cdot h_n ,
-\end{eqnarray}$$
+$$\begin{align*}
+(\nabla_\m{a} f) (\m{h}) &= \left.\frac{\partial f}{\partial x_1}\right|_\m{a} \cdot \mathrm{d}x_1(\m{h}) + \cdots +  \left.\frac{\partial f}{\partial x_n}\right|_\m{a} \cdot \mathrm{d}x_n (\m{h}) \\
+&= \left.\frac{\partial f}{\partial x_1}\right|_\m{a} \cdot h_1 + \cdots +  \left.\frac{\partial f}{\partial x_n}\right|_\m{a} \cdot h_n ,
+\end{align*}$$
 что и есть определение дифференциала фукнции.
 :::
 
@@ -85,10 +87,10 @@ $$
 
 :::{prf:example}
 Дифференциал функции всюду дифференцируемой функции как раз и есть пример дифференциальной формы. Например, пусть $f(x_1,x_2) = x_1^3 - 2x_1x_2 + 3x_2^2$, ясно, что это всюду дифференцируемая функция на $\mathbb{R}^2$. Находим
-$$\begin{eqnarray}
-\frac{\partial f}{\partial x_1} &=& 3x_1^2 - 2x_2, \\
-\frac{\partial f}{\partial x_2} &=&  - 2x_1 + 6x_2,
-\end{eqnarray}$$
+$$\begin{align*}
+\frac{\partial f}{\partial x_1} &= 3x_1^2 - 2x_2, \\
+\frac{\partial f}{\partial x_2} &=  - 2x_1 + 6x_2,
+\end{align*}$$
 
 Поэтому, учитывая ([](#differential_via_dx)), получаем
 $$

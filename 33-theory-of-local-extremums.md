@@ -128,7 +128,7 @@ $$
 f_u(0,\ldots, 0, u_{m+1},\ldots, u_{m+n}) = f(0,\ldots, 0, x_{m+1}, \ldots, x_{n+m}) \circ \Phi^{-1}.
 $$
 
-Но тогда $\Phi(\m{a})$ — точка экстремума функции $f_u(0,\ldots, 0, u_{m+1},\ldots, u_{m+n})$ и по необходимому признаку [](#nessary_condition_for_extr), мы получаем
+Но тогда $\Phi(\m{a})$ — точка экстремума функции $f_u(0,\ldots, 0, u_{m+1},\ldots, u_{m+n})$ и по необходимому признаку [](#required_extremum), мы получаем
 $$
 \dfrac{\partial f_u}{\partial{u_{m+1}}}(\Phi(\m{a})) = \cdots = \dfrac{\partial f_u}{\partial{u_{m+n}}}(\Phi(\m{a})) = 0.
 $$
@@ -145,9 +145,9 @@ $$
 ![alt text](image-6.png)
 
 и из теоремы о композиции дифференциалов [](#d(FG)) получаем
-$$\begin{eqnarray}
-(\mathrm{d}f)_\m{a} &=& (\mathrm{d}f_u)_{\Phi(\m{a})} \cdot (\mathrm{d}\Phi)_{\m{a}} \\
-&=& \begin{pmatrix}
+$$\begin{align*}
+(\mathrm{d}f)_\m{a} &= (\mathrm{d}f_u)_{\Phi(\m{a})} \cdot (\mathrm{d}\Phi)_{\m{a}} \\
+&= \begin{pmatrix}
 \lambda_1 & \ldots & \lambda_m & 0 & \ldots 0
 \end{pmatrix} \begin{pmatrix}
 \dfrac{\partial \varphi_1}{\partial x_1}(\m{a}) & \ldots & \dfrac{\partial \varphi_1}{\partial x_m}(\m{a}) & \dfrac{\partial \varphi_1}{\partial x_{m+1}}(\m{a}) & \ldots & \dfrac{\partial \varphi_1}{\partial x_{m+n}}(\m{a}) \\
@@ -157,7 +157,7 @@ $$\begin{eqnarray}
 \vdots & \ddots & \vdots & \vdots & \ddots & \vdots\\
 0 & \ldots & 0 & 0 & \ldots & 1
 \end{pmatrix} \\
-&=& \lambda_1 (\mathrm{d}\varphi_1)_{\m{a}} + \ldots + \lambda_m (\mathrm{d}\varphi_m)_{\m{a}},
-\end{eqnarray}$$
+&= \lambda_1 (\mathrm{d}\varphi_1)_{\m{a}} + \ldots + \lambda_m (\mathrm{d}\varphi_m)_{\m{a}},
+\end{align*}$$
 что и требовалось доказать.
 :::

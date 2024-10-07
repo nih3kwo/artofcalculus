@@ -24,10 +24,10 @@ $$
 :class: dropdown
 :nonumber:
 Пусть
-$$\begin{eqnarray}
-A(x) &=& \alpha_nx^n + \alpha_{n-1}x^{n-1} + \cdots + \alpha_1x + \alpha_0, \\
-B(x) &=& \beta_kx^k + \beta_{k-1}x^{k-1} + \cdots + \beta_1x + \beta_0,
-\end{eqnarray}$$
+$$\begin{align*}
+A(x) &= \alpha_nx^n + \alpha_{n-1}x^{n-1} + \cdots + \alpha_1x + \alpha_0, \\
+B(x) &= \beta_kx^k + \beta_{k-1}x^{k-1} + \cdots + \beta_1x + \beta_0,
+\end{align*}$$
 где $n = \mathrm{deg}(A(x))$, $k = \mathrm{deg}(B(x))$, так что $\alpha_n, \beta_k \ne 0$.
 
 Применим индукцию по $n$.
@@ -45,22 +45,22 @@ $$
 (3) Пусть теперь $n>0$. Если $\mathrm{deg}(A(x)) < \mathrm{deg}(B(x))$, то положим $Q(x) : = 0$, а $R(x):=A(x).$
 
 Итак, пусть теперь теорема доказана в случае $n>0$ и $\mathrm{deg}(A(x)) \ge \mathrm{deg}(B(x))$. Тогда можем записать
-$$\begin{eqnarray}
-A(x) &=& \alpha_nx^n + \alpha_{n-1}x^{n-1} + \cdots + \alpha_1x + \alpha_0 \\
-&=& \frac{\alpha_n}{\beta_k} x^{n-k} (\beta_k x^k) + \alpha_{n-1}x^{n-1} + \cdots + \alpha_1x + \alpha_0 \\
-&=& \frac{\alpha_n}{\beta_k} x^{n-k} \Bigl( B(x) - \beta_{k-1}x^{k-1} - \cdots - \beta_0  \Bigr) + \alpha_{n-1}x^{n-1} + \cdots + \alpha_1x + \alpha_0 \\
-&=&  \frac{\alpha_n}{\beta_k}x^{n-k} B(x) + \widetilde{A}(x),
-\end{eqnarray}$$
+$$\begin{align*}
+A(x) &= \alpha_nx^n + \alpha_{n-1}x^{n-1} + \cdots + \alpha_1x + \alpha_0 \\
+&= \frac{\alpha_n}{\beta_k} x^{n-k} (\beta_k x^k) + \alpha_{n-1}x^{n-1} + \cdots + \alpha_1x + \alpha_0 \\
+&= \frac{\alpha_n}{\beta_k} x^{n-k} \Bigl( B(x) - \beta_{k-1}x^{k-1} - \cdots - \beta_0  \Bigr) + \alpha_{n-1}x^{n-1} + \cdots + \alpha_1x + \alpha_0 \\
+&=  \frac{\alpha_n}{\beta_k}x^{n-k} B(x) + \widetilde{A}(x),
+\end{align*}$$
 где $\mathrm{deg}(\widetilde{A}(x)) = n-1.$ Но тогда по предположению индукции мы можем найти такие $\widetilde{Q}(x)$ и ${R}(x)$, что
 $$
 \widetilde{A}(x) = \widetilde{Q}(x)B(x) + {R}(x),
 $$
 и $\mathrm{deg}((x))< \mathrm{deg}(B(x))$. Тогда получаем
-$$\begin{eqnarray}
-A(x) &=& \frac{\alpha_n}{\beta_k}x^{n-k} B(x) + \widetilde{A}(x) \\
-&=& \frac{\alpha_n}{\beta_k}x^{n-k} B(x) + \widetilde{Q}(x)B(x) + {R}(x)\\
-&=& Q(x) B(x) + R(x),
-\end{eqnarray}$$
+$$\begin{align*}
+A(x) &= \frac{\alpha_n}{\beta_k}x^{n-k} B(x) + \widetilde{A}(x) \\
+&= \frac{\alpha_n}{\beta_k}x^{n-k} B(x) + \widetilde{Q}(x)B(x) + {R}(x)\\
+&= Q(x) B(x) + R(x),
+\end{align*}$$
 где $Q(x): = \frac{\alpha_n}{\beta_k}x^{n-k} + \widetilde{Q}(x)$, чем доказательство существования $Q(x)$ и $R(x)$ закончено.
 
 (4) Докажем теперь единственность. Предположим, что
@@ -120,12 +120,12 @@ $$
 Далее, рассмотрим теперь $P(x)$ как полином в множестве $\mathbb{C}[x]$, это возможно, потому что $\mathbb{R} \subset \mathbb{C}$. Тогда по основной теореме алгебры существует комплексное число $\zeta = \alpha + \beta \sqrt{-1}$, что $P(z) =0$. Тогда по теореме Безу $P(x)$ делится на $(x- \alpha - \beta \sqrt{-1})$.
 
 Пусть $P(x) = \alpha_nx^n + \cdots + \alpha_1 x + \alpha_0$, тогда если $P(\zeta) =0$, где $\zeta \in \mathbb{C}$, то получаем
-$$\begin{eqnarray}
-P(\overline{\zeta}) &=&  \alpha_n {\overline{\zeta}}^n + \cdots + \alpha_1 \overline{\zeta} + \alpha_0 \\
-&=& \overline{\alpha_n \zeta^n} + \cdots + \overline{\alpha_1 \zeta} + \overline{\alpha_0} \\
-&=& \overline{\alpha_nx^n + \cdots + \alpha_1 x + \alpha_0} \\
-&=& \overline{P(\zeta)} = 0.
-\end{eqnarray}$$
+$$\begin{align*}
+P(\overline{\zeta}) &=  \alpha_n {\overline{\zeta}}^n + \cdots + \alpha_1 \overline{\zeta} + \alpha_0 \\
+&= \overline{\alpha_n \zeta^n} + \cdots + \overline{\alpha_1 \zeta} + \overline{\alpha_0} \\
+&= \overline{\alpha_nx^n + \cdots + \alpha_1 x + \alpha_0} \\
+&= \overline{P(\zeta)} = 0.
+\end{align*}$$
 
 Это означает, что $\overline{\zeta}$ тоже является корнем уравнения $P(x) = 0$, тогда по теореме Безу $P(x)$ делится на $x - \overline{\zeta} = x - (\alpha -\beta \sqrt{-1})$.
 
@@ -233,10 +233,10 @@ P(x) - (Bx +C)\widehat{Q}(x) = (x^2 + bx + c) \widehat{P}(x).
 $$
 
 Поступим следующим образом. Разделим полиномы $P(x)$, $\widehat{Q}(x)$ на $x^2 + bx + c$ с остатком;
-$$\begin{eqnarray}
-P(x) &=& F(x)(x^2 + bx + c) + \alpha x + \beta, \\
-\widehat{Q}(x) &=& H(x)(x^2 + bx + c) + \gamma x + \delta.
-\end{eqnarray}$$
+$$\begin{align*}
+P(x) &= F(x)(x^2 + bx + c) + \alpha x + \beta, \\
+\widehat{Q}(x) &= H(x)(x^2 + bx + c) + \gamma x + \delta.
+\end{align*}$$
 
 Тогда, подставляя в предыдущее равенство, получаем
 $$
@@ -254,10 +254,10 @@ $$
 ```
 
 Итак, имеем
-$$\begin{eqnarray}
-R(x) &=& \alpha x + \beta  - (Bx + C) (\gamma x +\delta )  \\
-&=& - \gamma B x^2 + (\alpha - \delta B - \gamma C)x + (\beta - \delta C).
-\end{eqnarray}$$
+$$\begin{align*}
+R(x) &= \alpha x + \beta  - (Bx + C) (\gamma x +\delta )  \\
+&= - \gamma B x^2 + (\alpha - \delta B - \gamma C)x + (\beta - \delta C).
+\end{align*}$$
 
 Разделив теперь $R(x)$ на $x^2 + bx +c $ на $x^2 + bx +c$, мы получим в остатке следующее выражение:
 
@@ -298,7 +298,7 @@ $$
 :::
 
 :::{prf:lemma}
-:name: int_of_(x-a)^{-k}
+:name: int_of_x-a-k
 $$
 \int \frac{A}{(x-\alpha)^k} \mathrm{d}x = \begin{cases}
 A \ln|x-\alpha| + C, & k =1,\\
@@ -316,7 +316,7 @@ $$
 Чтобы научится интегрировать форму $\dfrac{Ax + B}{(x^2 + ax + b)^n} \mathrm{d}x$, нам нужно сначала научится интегрировать форму $\dfrac{\mathrm{d}x}{(x^2 + \alpha^2)^n}.$
 
 :::{prf:lemma}
-:name: int_of_x^2+a^2
+:name: int_of_x2+a2
 Для каждого $n\ge 1$ рассмотрим форму
 $$
 \omega_n: = \frac{\mathrm{d}x}{(x^2 + \alpha^2)^n},
@@ -332,10 +332,10 @@ $$
 :class: dropdown
 :nonumber:
 (1) Так как $(\arctan(y))' = \frac{1}{y^2 + 1}$, то
-$$\begin{eqnarray}
-\int \omega_1 &=& \int \frac{\mathrm{d}x}{x^2 + \alpha^2}  = \ \frac{\mathrm{d}x}{\alpha^2\cdot\left (\left( \frac{x^2}{\alpha^2} \right) + 1\right)}\\
-&=& \frac{1}{\alpha^2} \int \frac{\alpha \cdot\mathrm{d}\left(\frac{x}{\alpha}\right)}{\left( \frac{x^2}{\alpha^2} \right) + 1} = \frac{1}{\alpha} \int \frac{ \mathrm{d}\left(\frac{x}{\alpha}\right)}{\left( \frac{x}{\alpha} \right)^2 + 1} = \frac{1}{\alpha} \cdot \arctan\left( \frac{x}{\alpha}\right) + C.
-\end{eqnarray}$$
+$$\begin{align*}
+\int \omega_1 &= \int \frac{\mathrm{d}x}{x^2 + \alpha^2}  = \ \frac{\mathrm{d}x}{\alpha^2\cdot\left (\left( \frac{x^2}{\alpha^2} \right) + 1\right)}\\
+&= \frac{1}{\alpha^2} \int \frac{\alpha \cdot\mathrm{d}\left(\frac{x}{\alpha}\right)}{\left( \frac{x^2}{\alpha^2} \right) + 1} = \frac{1}{\alpha} \int \frac{ \mathrm{d}\left(\frac{x}{\alpha}\right)}{\left( \frac{x}{\alpha} \right)^2 + 1} = \frac{1}{\alpha} \cdot \arctan\left( \frac{x}{\alpha}\right) + C.
+\end{align*}$$
 
 (2) Пусть теперь $n \ge 1$, будем интегрировать $\omega_n$ по частям, **т.е.** воспользуемся правилом
 $$
@@ -348,13 +348,13 @@ $$
 $$
 
 Тогда
-$$\begin{eqnarray}
-\int \omega_n &=& \int \frac{\mathrm{d}x}{(x^2 + \alpha^2)^n} = \frac{x}{(x^2 + \alpha^2)^n} + 2n \cdot \int \frac{x^2}{(x^2 + \alpha^2)^{n+1}}\mathrm{d}x \\
-&=& \frac{x}{(x^2 + \alpha^2)^n} + 2n \cdot \int \frac{(x^2+\alpha^2) - \alpha^2}{(x^2 + \alpha^2)^{n+1}}\mathrm{d}x \\
-&=& \frac{x}{(x^2 + \alpha^2)^n} + 2n \cdot \left( \int \frac{(x^2+\alpha^2)}{(x^2 + \alpha^2)^{n+1}}\mathrm{d}x - \alpha^2 \int  \frac{\mathrm{d}x}{(x^2 + \alpha^2)^{n+1}}\right) \\
-&=& \frac{x}{(x^2 + \alpha^2)^n} + 2n \cdot \left( \int \frac{\mathrm{d}x}{(x^2 + \alpha^2)^{n}} - \alpha^2 \int  \frac{\mathrm{d}x}{(x^2 + \alpha^2)^{n+1}}\right) \\
-&=&\frac{x}{(x^2 + \alpha^2)^n} + 2n\cdot \int \omega_n  - 2n\alpha^2 \int \omega_{n+1},
-\end{eqnarray}$$
+$$\begin{align*}
+\int \omega_n &= \int \frac{\mathrm{d}x}{(x^2 + \alpha^2)^n} = \frac{x}{(x^2 + \alpha^2)^n} + 2n \cdot \int \frac{x^2}{(x^2 + \alpha^2)^{n+1}}\mathrm{d}x \\
+&= \frac{x}{(x^2 + \alpha^2)^n} + 2n \cdot \int \frac{(x^2+\alpha^2) - \alpha^2}{(x^2 + \alpha^2)^{n+1}}\mathrm{d}x \\
+&= \frac{x}{(x^2 + \alpha^2)^n} + 2n \cdot \left( \int \frac{(x^2+\alpha^2)}{(x^2 + \alpha^2)^{n+1}}\mathrm{d}x - \alpha^2 \int  \frac{\mathrm{d}x}{(x^2 + \alpha^2)^{n+1}}\right) \\
+&= \frac{x}{(x^2 + \alpha^2)^n} + 2n \cdot \left( \int \frac{\mathrm{d}x}{(x^2 + \alpha^2)^{n}} - \alpha^2 \int  \frac{\mathrm{d}x}{(x^2 + \alpha^2)^{n+1}}\right) \\
+&=\frac{x}{(x^2 + \alpha^2)^n} + 2n\cdot \int \omega_n  - 2n\alpha^2 \int \omega_{n+1},
+\end{align*}$$
 **т.е.** мы получили рекуррентное соотношение 
 $$
 \int \omega_n = \frac{x}{(x^2 + \alpha^2)^n} + 2n\cdot \int \omega_n  - 2n\alpha^2 \int \omega_{n+1},
@@ -384,19 +384,19 @@ $$
 y:= x+ \frac{a}{2},
 $$
 находим
-$$\begin{eqnarray}
-\mathrm{d}y &=& \left( x+ \frac{a}{2}\right)' \mathrm{d}x = \mathrm{d}x,\\
-x^2 + ax + b &=& \left(x+ \frac{a}{2} \right)^2 + \left(b - \frac{a^2}{4} \right) = y^2 + c^2, \\
+$$\begin{align*}
+\mathrm{d}y &= \left( x+ \frac{a}{2}\right)' \mathrm{d}x = \mathrm{d}x,\\
+x^2 + ax + b &= \left(x+ \frac{a}{2} \right)^2 + \left(b - \frac{a^2}{4} \right) = y^2 + c^2, \\
 Ax + B &= & Ay + \left(B - \frac{Aa}{2} \right).
-\end{eqnarray}$$
+\end{align*}$$
 
 Рассмотрим два случая.
 
 (1) $n = 1$, тогда получаем
-$$\begin{eqnarray}
-\int \frac{Ax + B}{x^2 + ax + b}\mathrm{d}x = \int \frac{Ax + \left( B - \frac{Aa}{2} \right)}{y^2 + c^2}\mathrm{d}y &=& \frac{A}{2} \int \frac{2y\mathrm{d}y}{y^2 + c^2} + \left( B - \frac{Aa}{2} \right) \int \frac{\mathrm{d}y}{y^2 + c^2} \\
-&=& \frac{A}{2} \ln(y^2 + c^2) + \frac{1}{c} \cdot \left( B - \frac{Aa}{2} \right)\arctan\left(\frac{y}{c}\right) + C,
-\end{eqnarray}$$
+$$\begin{align*}
+\int \frac{Ax + B}{x^2 + ax + b}\mathrm{d}x = \int \frac{Ax + \left( B - \frac{Aa}{2} \right)}{y^2 + c^2}\mathrm{d}y &= \frac{A}{2} \int \frac{2y\mathrm{d}y}{y^2 + c^2} + \left( B - \frac{Aa}{2} \right) \int \frac{\mathrm{d}y}{y^2 + c^2} \\
+&= \frac{A}{2} \ln(y^2 + c^2) + \frac{1}{c} \cdot \left( B - \frac{Aa}{2} \right)\arctan\left(\frac{y}{c}\right) + C,
+\end{align*}$$
 или, возвращаясь к $x$ и подставляя вместо $c$ его значение:
 $$
 \int \frac{Ax + B}{x^2 + ax + b)}\mathrm{d}x =  \frac{A}{2}\ln(x^2 + ax + b) + \frac{2B-Aa}{\sqrt{4b-a^2}}\arctan\left( \frac{2x+a}{\sqrt{4b-a^2}} \right) + C.
@@ -407,7 +407,7 @@ $$
 \int \frac{Ax + B}{(x^2 + ax + b)^n}\mathrm{d}x = \int \frac{Ax + \left( B - \frac{Aa}{2} \right)}{(y^2 + c^2)^n}\mathrm{d}y = \frac{A}{2} \int \frac{2y\mathrm{d}y}{(y^2 + c^2)^n} + \left( B - \frac{Aa}{2} \right) \int \frac{\mathrm{d}y}{(y^2 + c^2)^n}.
 $$
 
-Видим, что второй интеграл это интеграл от формы $\omega$ который найден в лемме [](#int_of_x^2+a^2), первый же интеграл легко берётся с помощью замены $t:=y^2 + c^2 $, тогда $\mathrm{d}t = (y^2 + c^2)'\mathrm{d}y = 2y\mathrm{d}y$, следовательно $y\mathrm{d}y = \frac{1}{2}\mathrm{d}t$, и мы получаем
+Видим, что второй интеграл это интеграл от формы $\omega$ который найден в лемме [](#int_of_x2+a2), первый же интеграл легко берётся с помощью замены $t:=y^2 + c^2 $, тогда $\mathrm{d}t = (y^2 + c^2)'\mathrm{d}y = 2y\mathrm{d}y$, следовательно $y\mathrm{d}y = \frac{1}{2}\mathrm{d}t$, и мы получаем
 $$
 \int \frac{2y\mathrm{d}y}{(y^2 + c^2)^n} = \int \frac{\mathrm{d}t}{t^n} = - \frac{1}{n-1}\cdot \frac{1}{t^{n-1}} +C.
 $$
@@ -415,6 +415,7 @@ $$
 :::
 
 :::{prf:theorem}
+:label: int_of_rational
 Интеграл от формы вида $\frac{P(x)}{Q(x)}$ выражается через рациональные функции и функции $\ln, \arctan.$ 
 :::
 
@@ -426,7 +427,7 @@ $$
 \int \frac{P(x)}{Q(x)}\mathrm{d}x = \int B(x)\mathrm{d}x + \int \frac{R(x)}{Q(x)}\mathrm{d}x.
 $$
 
-Первый интеграл находится легко, так как это интеграл от полинома, а во втором интеграле присутствует уже правильная дробь. Но согласно теореме [](#decomp_of_fraction) каждая правильная дробь представляется в виде суммы простых, тогда из лемм [](#int_of_(x-a)^{-k)}, [](#int_of_prime) вытекает утверждение теоремы.    
+Первый интеграл находится легко, так как это интеграл от полинома, а во втором интеграле присутствует уже правильная дробь. Но согласно теореме [](#decomp_of_fraction) каждая правильная дробь представляется в виде суммы простых, тогда из лемм [](#int_of_x-a-k), [](#int_of_prime) вытекает утверждение теоремы.    
 :::
 
 

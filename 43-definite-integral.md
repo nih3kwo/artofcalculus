@@ -1,50 +1,10 @@
-# Определённый интеграл
-
-Понятие определённого интеграла восходит ещё к Архимеду. Мы рассмотрим неформальное введение, где объясним суть проблемы.
-
-## Неформальное введение
-
-Пусть дана функция $f: \mathbb{R} \to \mathbb{R}^1$, которая непрерывна на отрезке $[a,b]$. Будем писать $y  = f(x)$ и будем считать, что функция на этом отрезке принимает только положительные значения. Рассмотрим фигуру $ABCD$ (см. рис.[](#int_a_b)), ограниченную кривой $y=f(x)$, двумя ординатами $x = a$, $x =b$ и отрезком оси $Ox.$ Подобные фигуры называются **криволинейными трапециями**.
-
-Рассмотрим теперь задачу о нахождении площади плоской криволинейной трапеции $ABCD$ (см. рис.[](#int_a_b))
-
-```{figure} ./int_a_b1.jpg
-Площадь фигуры $ABCD$ примерно равна сумме площадей разноцветных прямоугольников, и чем их больше, тем точнее будет ответ.
-```
-
-Разделим основание $AB$ нашей фигуры произвольным образом на части и проведём ординаты, соответствующие точкам деления; тогда криволинейная трапеция разобьётся на ряд полосок. 
-
-Заменим теперь приближённо каждую полоску некоторым прямоугольником, основание которого то же, что и у полоски, а высота совпадает с одной из ординат полоски. Таким образом, криволинейная фигура заменится некоторой ступенчатой фигурой, составленной из отдельных прямоугольников. 
-
-Обозначим абсциссы точек деления через
-$$
-x_0 : = a < x_1 < x_2 < \cdots < x_i < x_{i+1} < \cdots < x_n =:b.
-$$
-
-Будем нумеровать прямоугольники числами $0,1,2,\ldots, n-1$ и пусть $S_i$ — площадь $i$-го прямоугольника. Ясно, что $S_i = y_i \Delta x_i$, где $\Delta x_i: = x_{i+1} - x_i.$
-
-Тогда приближённое значение площади криволинейной трапеции $S_{ABCD}$ равно
-$$
-S_{ABCD} \approx \sum_{k = 0}^{n-1} y_k \Delta x_k.
-$$
-
-Тогда можно предположить, что при убывании всех $\Delta x_i$ к нулю мы будем получать более точное значение, т.е. другими словами мы хотим сказать, что точное значение площади это следующий предел
-$$
-S_{ABCD} = \lim_{\substack{\Delta x_1 \to 0 \\ \vdots \\ \Delta x_{n-1} \to 0}} \sum_{k = 0}^{n-1} y_k \Delta x_k.
-$$
-
-Для обозначения предела такой суммы вида и был Лейбницем введён символ интеграла, т.е.
-$$
-\int_a^b f(x) \mathrm{d}x : = \lim_{\substack{\Delta x_1 \to 0 \\ \vdots \\ \Delta x_{n-1} \to 0}} \sum_{k = 0}^{n-1} y_k \Delta x_k.
-$$
-
-## Интеграл ступенчатой функции
+# Интеграл ступенчатой функции
 
 Предыдущее "определение" интеграла имеет очень много недостатков. Например, мы пользовались интуитивным пониманием площади криволинейной трапеции. 
 
 Здесь мы дадим строгое определение интеграла.
 
-### Разбиение промежутка
+## Разбиение промежутка
 
 Напомним, что под промежутком мы понимаем подмножество прямой $\mathbb{R}$ одного из видов; $[a,b]$, $[(a,b]$, $[a,b)$, $(a,b)$, при этом мы считаем, что $|a|,|b| < \infty.$ Промежуток мы будем обозначать буквами $I$ или $J$, а под **длиной промежутка** будем понимать выражение, $b-a$ и если $I$ один из рассмотренных промежутков, то будем писать $|I|: = b-a.$
 
@@ -121,9 +81,33 @@ $$
 (4) Осталось рассмотреть случай, когда $b \notin I$, но тогда $I$ это либо $(a,b)$ либо $[a,b)$ и существует один из элементов множества $\lambda(I)$ который имеет вид либо $(c,b)$ или же $[c,b)$. Это означает, что вид множества $I \setminus B$ может принять одно из четырёх значений $[a,c]$, $(a,c)$, $(a,c]$, $[a,c)$ когда $c >a$ или же это точка или пустое множество. Остальная часть рассуждения продолжается как выше. 
 :::
 
-### Ступенчатые функции
+Эту теорему легко обобщить следующим образом.
+:::{prf:lemma}
+:name: additive_of_a-lenght
+Пусть $\alpha: I \to \mathbb{R}$ — непрерывная функция, а $I$ — ограниченный промежуток одного из вида $(a,b), [a,b], (a,b], [a,b)$, тогда положим
+$$
+\alpha(I): = \alpha(b) - \alpha(a).
+$$
+Тогда для любого разбиения $\lambda(I)$ имеем
+$$
+\alpha(I) = \sum_{A \in \lambda(I)}\alpha(A).
+$$
+:::
 
-Сейчас мы опишем класс функций, которые ``очень просты'' для интегрирования\footnote{Отметим, что эти функции также ещё называются **кусочно-постоянными**, в англоязычной литературе они так и называются, **piecewise constant functions.**}, а потом с помощью их мы уже определим интеграл в общем виде.  
+:::{prf:proof} Набросок доказательства
+:class: dropdown
+:nonumber:
+Рассуждения такие же как и в предыдущей лемме, но нужно использовать очевидное наблюдение, если $B  = [c,b] \subseteq I = [a,b]$, то $I\setminus B = [a,c)$ и тогда
+$$\begin{align*}
+\alpha(B) + \alpha(I \setminus B) &= \alpha(b) - \alpha (c) + \alpha (c) + \alpha(a) \\
+&= \alpha(b) -\alpha(a) \\
+&= \alpha(I).
+\end{align*}$$
+:::
+
+## Ступенчатые функции
+
+Сейчас мы опишем класс функций, которые ``очень просты'' для интегрирования[^ref43-1], а потом с помощью их мы уже определим интеграл в общем виде.  
 
 :::{prf:definition}
 Пусть $A \subseteq \mathbb{R}$, и пусть дана функция $f: A \to \mathbb{R}$. Говорят, что $f$ **постоянная функция**, если существует такое $\alpha \in \mathbb{R}$, что $f(x) = \alpha$ для всех $x \in A$. Если $B \subseteq A$, то говорят, что $f$ **постоянная на $B$**, если существует такое $\beta \in \mathbb{R}$, что $f(y) = \beta$ для всех $y \in B.$
@@ -139,7 +123,7 @@ $$
 :::
 
 :::{prf:example}
-:name: int_[1,6]=10
+:name: int_1,6=10
 Пусть $I = [1,6]$ и определим функцию $f: [1,6]: \to \mathbb{R}$ следующим образом
 $$
 f(x) = \begin{cases}
@@ -199,25 +183,163 @@ $$\begin{align*}
 :::
 
 
+В связи с этим уместно ввести следующее важное для дальнейшего определение.
+
+:::{prf:definition}
+**Характеристической функцией** некоторого множества $A \subseteq X$ называется функция $\chi_A: X\to \{0,1\}$ определённая следующим образом
+$$
+\chi_A(x): = \begin{cases}
+1 & x \in A, \\
+0 & x \notin A.
+\end{cases}
+$$
+:::
+
+:::{prf:remark}
+Таким образом, если $f: I \to \mathbb{R}$ — ступенчатая функция на промежутке $I$ и пусть $\lambda(I)$ — соответствующее разбиение промежутка $I$, тогда мы можем записать
+$$
+f =\sum_{A \in \lambda(I)} f(A) \cdot \chi_A.
+$$
+:::
+
+:::{warning}
+Из определения следует, что $\chi_{\varnothing} = 0$, так как не существует такого $x$ чтобы $x \in \varnothing.$
+:::
+
+
 :::{prf:lemma}
+:name: chi_A+chi_B
+Пусть $A$, $B$ два подмножества множества $X$, тогда 
+$$\begin{align*}
+\chi_{A \cup B} = \chi_A + \chi_B - \chi_{A\cap B},\\
+\chi_{A \cap B} = \chi_A \cdot \chi_B,\\
+\chi_{A^c} = 1 - \chi_A.
+\end{align*}$$
+:::
+
+:::{prf:proof}
+:class: dropdown
+:nonumber: 
+
+(1) Пусть $x \in A\cap B$, то $x\in A$, $\chi_B$, **т.е.,** $\chi_A(x) = \chi_B(x) = 1$. Если $x \notin A \cup B$, то $x\notin A$, $x\notin B$ и тогда $\chi_A(x) = \chi_B(x) = 0$. В любом из этих случаев имеем $\chi_{A \cap B}(x) = \chi_A(x) \cdot \chi_B(x).$ 
+
+(2) Пусть $x \in A^c$, тогда $x\notin A$, тогда **т.е.,** $\chi_{A^c}=1$, $\chi_A(x) = 0$. Если $x \notin A^c$, то $x \in A$, **т.е.,** $\chi_{A^c}=0$, $\chi_A(x) = 1$, что и доказывает формулу $\chi_{A^c} = 1 - \chi_A.$
+
+(3) Наконец, так как $(A \cup B)^c = A^c \cap A^c$, то используя результаты выше, получаем
+$$\begin{align*}
+\chi_{A \cup B} &= 1 - \chi_{(A\cup B)^c} \\
+&= 1 - \chi_{A^c \cap B^c} \\
+&= 1- \chi_{A^c} \cdot \chi_{B^c} \\
+&= 1 - (1- \chi_A)(1-\chi_B) \\
+&= 1 - (1-\chi_B - \chi_A + \chi_{A}\cdot \chi_B) \\
+&= 1 - 1 + \chi_A + \chi_B - \chi_{A \cap B} \\
+&=\chi_A + \chi_B - \chi_{A \cap B}.
+\end{align*}$$
+:::
+
+
+:::{prf:example}
+
+Вернёмся к примеру [](#int_1,6=10), имеем $I = [1,6]$ и функцию $f: [1,6]: \to \mathbb{R}$;
+$$
+f(x) = \begin{cases}
+\,7, & 1 \le x < 3 \\
+\,4, & x = 3 \\
+\,5, & 3 < x <6 \\
+\,2, & x = 6.
+\end{cases}
+$$
+Как мы уже видели, $f$ — ступенчатая относительно разбиений
+\begin{align*}
+&  \lambda(I) := \Bigl\{[1,3), \{3\}, (3,6), \{6\} \Bigr\},\\
+&  \lambda'(I) : = \Bigl\{\varnothing, [1,2), \{2\}, (2,3), \{3\}, (3,5), [5,6),\{6\} \Bigr\}.
+\end{align*}
+
+Тогда получаем, что
+$$
+f = 7 \cdot \chi_{[1,3)} + 4 \cdot \chi_{\{3\}} + 5 \cdot \chi_{(3,6)} + 2 \cdot \chi_{\{6\}},  
+$$
+а также
+$$
+f = \alpha \cdot \chi_{\varnothing} + 7 \cdot \chi_{[1,2)} + 7 \cdot \chi_{\{2\}} + 7 \cdot \chi_{(2,3)} + 4 \cdot \chi_{\{3\}} + 5 \cdot \chi_{(3,5)} + 5 \cdot \chi_{[5,6)} + 2 \cdot \chi_{\{6\}},
+$$
+где $\alpha \in \mathbb{R}$ — произвольное число, но так как $\chi_\varnothing = 0$, то всё корректно.
+:::
+
+:::{prf:proposition}
+:name: beautefull
+Пусть имеем две ступенчатые функции $f,g:I \to \mathbb{R}$ и пусть $\lambda_f(I) = \cup_{p=1}^n A_p$, $\lambda_g(I) = \cup_{q=1}^m B_q$ — разбиения промежутка $I$ такие, что $f$, $g$ — ступенчаты относительно $\lambda_f(I)$ и $\lambda_g(I)$ соответственно. Тогда $\lambda(I): = \cup_{p=1}^n \cup_{q=1}^m A_p \cap B_q$ — разбиение промежутка $I$, и более того каждая из функций $f,g$ ступенчата относительно него[^ref43-2] и
+\begin{align*}
+& f =  \sum_{p=1}^n\sum_{q=1}^m f(A_p) \cdot \chi_{A_p}\cdot \chi_{B_q}\\
+& g=  \sum_{p=1}^n\sum_{q=1}^m g(B_q) \cdot \chi_{A_p} \cdot \chi_{B_q}.
+\end{align*}
+:::
+
+:::{prf:proof}
+:class: dropdown
+:nonumber: 
+
+Покажем, что это разбиение. Так как $I = \cup_{p=1}^n A_p = \cup_{q= 1}B_q$, то
+$$
+\cup_{p=1}^n \cup_{q=1}^m A_p \cap B_q  = \left( \cup_{p=1}^n A \right) \cap \left( \cup_{q=1}^m B_q \right) = I \cap I = I,
+$$
+в силу того, что $A_p \cap A_{p'} = \varnothing$ и $B_q \cap B_{q'} = \varnothing$, то $(A_p \cap B_q) \cap (A_{p'}\cap B_{q'}) = \varnothing$, $1\le p \le n$, $1\le q \le m$. Поэтому $\lambda(I)$ — разбиение промежутка $I$.
+
+
+Далее, так как $\lambda_f(I)$, $\lambda_g(I)$ разбиения, то для любых $1\le p \le n$, $1\le q \le m$, имеем
+$$
+A_p = \cup_{q=1}^m (A_p \cap B_q), \qquad B_q = \cup_{p=1}^n (A_p \cap B_q).
+$$
+
+Наконец, так как $\chi_\varnothing = \varnothing$, и пользуясь леммой [](#chi_A+chi_B), получаем
+$$\begin{align*}
+f &= \sum_{p=1}^n f(A_p) \cdot \chi_{A_p} \\
+&= \sum_{p=1}^n\sum_{q=1}^m f(A_p) \cdot \chi_{ \cup_{q=1}^m (A_p \cap B_q)} \\
+&= \sum_{q=1}^m f(A_p) \cdot \left(\chi_{A_p \cap B_1} + \cdots + \chi_{A_p \cap B_m} \right) \\
+&= \sum_{p=1}^n\sum_{q=1}^m f(A_p) \cdot \chi_{A_p \cap B_q}.
+\end{align*}$$
+
+Аналогично доказывается формула для функции $g.$
+
+:::
+
+
+:::{prf:corollary}
+:name: cor_for_sum
 Пусть $I \subsetneq \mathbb{R}$ — промежуток и пусть $f,g:I \to \mathbb{R}$ — ступенчатые функции на нём. Тогда функции
 $$
 f\pm g, \quad \max\{f,g\}, \quad f\cdot g
 $$
-тоже ступенчатые на $I$. Если $g(x) \ne 0$ при $x \in I$, то $\frac{f}{g}$ тоже ступенчатая функция на $I.$
+тоже ступенчатые на $I$. Если $g(x) \ne 0$ при $x \in I$, то $\frac{f}{g}$ тоже ступенчатая функция на $I.$    
 :::
+
+
 :::{prf:proof}
 :class: dropdown
 :nonumber:
-Доказательство сразу вытекает из определения ступенчатой функции и сводится к простой проверке.
+
+Пусть $\lambda_f(I)  =  \cup_{p=1}^n A_p$, $\lambda_g(I) =  \cup_{q=1}^m B_q$ — разбиения промежутка $I$ относительно которых $f$, $g$ — ступенчаты, соответственно. Согласно предложению [](#beautefull),
+\begin{align*}
+& f =  \sum_{p=1}^n\sum_{q=1}^m f(A_p) \cdot \chi_{A_p}\cdot \chi_{B_q}\\
+& g=  \sum_{p=1}^n\sum_{q=1}^m g(B_q) \cdot \chi_{A_p} \cdot \chi_{B_q}.
+\end{align*}
+
+Тогда, получаем
+$$\begin{align*}
+f \pm g &= \sum_{p=1}^n\sum_{q=1}^m (f(A_p) \pm g(B)q) \cdot \chi_{A_p}\cdot \chi_{B_q} \\
+\max\{f ,g\} &= \sum_{p=1}^n\sum_{q=1}^m \max\{f(A_p), g(B)q)\} \cdot \chi_{A_p}\cdot \chi_{B_q},\\
+f \cdot g &= \sum_{p=1}^n\sum_{q=1}^m (f(A_p) \cdot g(B)q) \cdot \chi_{A_p}\cdot \chi_{B_q},\\
+\frac{f}{ g} &= \sum_{p=1}^n\sum_{q=1}^m \left(\frac{f(A_p)}{ g(B_q)}\right) \cdot \chi_{A_p}\cdot \chi_{B_q},\qquad g \ne 0,
+\end{align*}$$
+что и требовалось доказать.
 :::
 
-### Интеграл от ступенчатой функции на промежутке
+## Интеграл от ступенчатой функции на промежутке
 
 Итак, у нас всё готово, чтобы ввести следующее важное определение.
 
-(def413)=
 :::{prf:definition}
+:label: int_of_p.c_on_I
 Пусть $I \subsetneq \mathbb{R}$ — промежуток, $\lambda(I)$ — разбиение промежутка $I$ и пусть $f:I \to \mathbb{R}$ — ступенчатая функция относительно этого разбиения, **т.е.,** $f = \sum_{A \in \lambda(I)}f(A) \cdot \chi_A$. Определим **интеграл на промежутке $I$** ступенчатой функции $f:I \to \mathbb{R}$ относительно разбиения $\lambda(I)$ следующим образом
 $$
 \int_{\lambda(I)}f: =  \sum_{A \in \lambda(I)} f(A)\cdot |A|
@@ -244,7 +366,7 @@ $$
 
 
 :::{prf:example}
-:name: int_[1,4]=10
+:name: int_1,4=10
 Пусть $f: [1,4] \to \mathbb{R}$ определена следующим образом
 $$
 f(x)  = \begin{cases}
@@ -255,16 +377,16 @@ f(x)  = \begin{cases}
 $$
 и пусть $\lambda(I) = \{ [1,3), \{3\}, (3,4] \}$, тогда
 $$\begin{align*}
-\int_{\lambda(I)} f  &=& \alpha_{[1,3)}\cdot | [1,3) | + \alpha_{\{3\}}\cdot |\{3\}| + \alpha_{(3,4]} \cdot | (3,4] | \\
-&=& 2 \cdot 2 + 4 \cdot 0 + 6 \cdot 1 \\
-&=& 10.
+\int_{\lambda(I)} f  &= \alpha_{[1,3)}\cdot | [1,3) | + \alpha_{\{3\}}\cdot |\{3\}| + \alpha_{(3,4]} \cdot | (3,4] | \\
+&= 2 \cdot 2 + 4 \cdot 0 + 6 \cdot 1 \\
+&= 10.
 \end{align*}$$
 
 С другой стороны, рассмотрим такое разбиение $\lambda'(I) = \{ \varnothing, [1,2), [2,3), \{3\}, (3,4] \}$, нетрудно видеть, что оно тоньше разбиения $\lambda(I)$. Находим
 $$\begin{align*}
-\int_{\lambda'(I)}f &=&\alpha_\varnothing \cdot |\varnothing| + \alpha_{[1,2)} \cdot | [1,2) | + \alpha_{[2,3)} \cdot |[2,3)| + \alpha_{\{3\}}\cdot |\{3\}| + \alpha_{(3,4]} \cdot | (3,4] | \\
-&=& \alpha_\varnothing \cdot 0 + 2 \cdot 1 + 2 \cdot 1 + 4 \cdot 0 + 6 \cdot 1 \\
-&=& 10.
+\int_{\lambda'(I)}f &=\alpha_\varnothing \cdot |\varnothing| + \alpha_{[1,2)} \cdot | [1,2) | + \alpha_{[2,3)} \cdot |[2,3)| + \alpha_{\{3\}}\cdot |\{3\}| + \alpha_{(3,4]} \cdot | (3,4] | \\
+&= \alpha_\varnothing \cdot 0 + 2 \cdot 1 + 2 \cdot 1 + 4 \cdot 0 + 6 \cdot 1 \\
+&= 10.
 \end{align*}$$
 
 :::
@@ -295,10 +417,10 @@ $$
 
 Таким образом, имеем
 $$\begin{align*}
-\int_{\lambda'(I)}f &=& \Bigl(f(A_{11}') \cdot \left| A'_{11} \right| + \cdots + f(A_{1\ell_1})\cdot \left|A'_{i\ell_1}\right|\Bigr) + \cdots + \Bigl(f(A_{11}') \left|A_{11}'\right| + \cdots + f(A_{1\ell_1})\cdot \left|A'_{i\ell_1}\right| \Bigr) \\
-&=& f(A_1) \cdot \left( \left| A'_{11}  \right| + \cdots + \left| A'_{1\ell_1} \right| \right) + \cdots + f(A_n) \cdot \left( \left| A'_{n1}  \right| + \cdots + \left| A'_{n\ell_n} \right| \right) \\
-&=& f(A_1) |A_1| + \cdots + f(A_n)\cdot |A_n| \\
-&=& \int_{\lambda(I)}f.
+\int_{\lambda'(I)}f &= \Bigl(f(A_{11}') \cdot \left| A'_{11} \right| + \cdots + f(A_{1\ell_1})\cdot \left|A'_{i\ell_1}\right|\Bigr) + \cdots + \Bigl(f(A_{11}') \left|A_{11}'\right| + \cdots + f(A_{1\ell_1})\cdot \left|A'_{i\ell_1}\right| \Bigr) \\
+&= f(A_1) \cdot \left( \left| A'_{11}  \right| + \cdots + \left| A'_{1\ell_1} \right| \right) + \cdots + f(A_n) \cdot \left( \left| A'_{n1}  \right| + \cdots + \left| A'_{n\ell_n} \right| \right) \\
+&= f(A_1) |A_1| + \cdots + f(A_n)\cdot |A_n| \\
+&= \int_{\lambda(I)}f.
 \end{align*}$$
 :::
 
@@ -306,6 +428,7 @@ $$\begin{align*}
 Таким образом, мы можем ввести следующее определение, которое будем использовать в дальнейшем.
 
 :::{prf:definition}
+:label: int_of_p.c
 Пусть $I \subsetneq \mathbb{R}$ — промежуток, $f:I \to \mathbb{R}$ — ступенчатая функция на нём. Определим **интеграл на промежутке $I$** ступенчатой функции $f:I \to \mathbb{R}$ следующим образом
 $$
 \int_If: =  \int_{\lambda(I)}f,
@@ -315,7 +438,7 @@ $$
 
 
 :::{prf:example}
-Вернёмся к примеру [](#int_[1,4]=10). Пусть $f: [1,4] \to \mathbb{R}$ определена следующим образом
+Вернёмся к примеру [](#int_1,4=10). Пусть $f: [1,4] \to \mathbb{R}$ определена следующим образом
 $$
 f(x)  = \begin{cases}
 \, 2 & 1 \le x <3 \\
@@ -325,9 +448,9 @@ f(x)  = \begin{cases}
 $$
 и пусть $\lambda(I) = \{ [1,3), \{3\}, (3,4] \}$, тогда
 $$\begin{align*}
-\int_{\lambda(I)} f  &=& \alpha_{[1,3)}\cdot | [1,3) | + \alpha_{\{3\}}\cdot |\{3\}| + \alpha_{(3,4]} \cdot | (3,4] | \\
-&=& 2 \cdot 2 + 4 \cdot 0 + 6 \cdot 1 \\
-&=& 10.
+\int_{\lambda(I)} f  &= \alpha_{[1,3)}\cdot | [1,3) | + \alpha_{\{3\}}\cdot |\{3\}| + \alpha_{(3,4]} \cdot | (3,4] | \\
+&= 2 \cdot 2 + 4 \cdot 0 + 6 \cdot 1 \\
+&= 10.
 \end{align*}$$
 
 Тогда
@@ -383,16 +506,16 @@ $$
 
 (1) Согласно следствию [](#cor_for_sum), $f\pm g = \sum_{p=1}^n\sum_{q=1}^m (f(A_p) \pm g(B_q)) \cdot \chi_{A_p\cap B_q}$, и тогда пользуясь замечанием [](#int_via_chi),
 $$\begin{align*}
-\int_I (f\pm g) &=& \sum_{p=1}^n\sum_{q=1}^m (f(A_p) \pm g(B_q)) \cdot \int_I \chi_{A_p \cap B_q} \\
-&=&\sum_{p=1}^n\sum_{q=1}^m f(A_p) \cdot \int_I \chi_{A_p \cap B_q} \pm \sum_{p=1}^n\sum_{q=1}^m g(B_q) \cdot \int_I \chi_{A_p \cap B_q} \\
-&=& \int_I f \pm \int_I g.
+\int_I (f\pm g) &= \sum_{p=1}^n\sum_{q=1}^m (f(A_p) \pm g(B_q)) \cdot \int_I \chi_{A_p \cap B_q} \\
+&=\sum_{p=1}^n\sum_{q=1}^m f(A_p) \cdot \int_I \chi_{A_p \cap B_q} \pm \sum_{p=1}^n\sum_{q=1}^m g(B_q) \cdot \int_I \chi_{A_p \cap B_q} \\
+&= \int_I f \pm \int_I g.
 \end{align*}$$
 
 (2) Если $f(x) \ge g(x)$ для всех $x\in I$, то для любых $p,q$ таких, что $A_p \cap B_q \ne \varnothing$, имеем $f(A_p) \ge g(B_q)$. Тогда, согласно замечанию [](#int_via_chi),
 $$\begin{align*}
 \int_I f &:=&  \sum_{p=1}^n\sum_{q=1}^m f(A_p) \cdot \int_I \chi_{A_p \cap B_q} = \sum_{p=1}^n\sum_{q=1}^m f(A_p) \cdot |A_p \cap B_q| \\
 &\ge & \sum_{p=1}^n\sum_{q=1}^m g(A_p) \cdot |A_p \cap B_q| \\
-&=& \sum_{p=1}^n\sum_{q=1}^m f(A_p) \cdot \int \chi_{A_p \cap B_q} \\
+&= \sum_{p=1}^n\sum_{q=1}^m f(A_p) \cdot \int \chi_{A_p \cap B_q} \\
 &=:& \int_I g.
 \end{align*}$$
 
@@ -411,9 +534,9 @@ $$
 $$
 тогда согласно Замечанию [](#int_via_chi),
 $$\begin{align*}
-\int_J \varphi &=& \sum_{A \in \lambda(I)} f(A) \int_J \chi_A + \varphi(J\setminus I) \int_J \chi_{J \setminus I}   \\
-&=& \sum_{A \in \lambda(I)} f(A) \cdot |A| + 0 \cdot |J \setminus I|\\
-&=& \int_I f.
+\int_J \varphi &= \sum_{A \in \lambda(I)} f(A) \int_J \chi_A + \varphi(J\setminus I) \int_J \chi_{J \setminus I}   \\
+&= \sum_{A \in \lambda(I)} f(A) \cdot |A| + 0 \cdot |J \setminus I|\\
+&= \int_I f.
 \end{align*}$$
 
 (5) Пусть $\lambda(A): = \cup_{p=1}^n A_p$, $\lambda(B) : = \cup_{q=1}^m B_q$ — разбиения промежутков $A,B$ соответственно. Тогда $\lambda : = \lambda(A) \cup \lambda(B)$ разбиение промежутка $I.$ 
@@ -424,9 +547,12 @@ f = \sum_{C \in \lambda(I)} f(C) \cdot \chi_C = \sum_{p=1}^n f(A_p)\cdot \chi_{A
 $$
 тогда согласно замечанию [](#int_via_chi),
 $$\begin{align*}
-\int_I f &=& \sum_{C \in \lambda(I)} f(C) \cdot \int_I \chi_C \\
-&=& \sum_{C \in \lambda(I)} f(C) \cdot |C| \\
-&=& \sum_{p=1}^n f(A_p) \cdot |A_p| + \sum_{q=1}^m f(B_q)\cdot |B_q| \\
-&=& \int_A f|_A + \int_B f|_B.
+\int_I f &= \sum_{C \in \lambda(I)} f(C) \cdot \int_I \chi_C \\
+&= \sum_{C \in \lambda(I)} f(C) \cdot |C| \\
+&= \sum_{p=1}^n f(A_p) \cdot |A_p| + \sum_{q=1}^m f(B_q)\cdot |B_q| \\
+&= \int_A f|_A + \int_B f|_B.
 \end{align*}$$
 :::
+
+[^ref43-1]: Отметим, что эти функции также ещё называются **кусочно-постоянными**, в англоязычной литературе они так и называются, **piecewise constant functions.**
+[^ref43-2]: Этому простому и элегантному наблюдению я обязан одной очень красивой девушке!

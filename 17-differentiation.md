@@ -55,6 +55,7 @@ b & d
 
 
 :::{prf:definition}
+:label: diff_of_map(function)
 Пусть $\mathbb{R}^n$, $\mathbb{R}^m$ — векторные пространства с евклидовой нормой $||?||$, $\mathscr{U} \subseteq \mathbb{R}^n$ — открытое подмножество. Говорят, что отображение $F: \mathscr{U} \to \mathbb{R}^m$ **дифференцируемо** в точке $\m{x} \in \mathbb{R}^n$, если существует такое
 линейное отображение (зависящее от точки $\m{x}$) $\mathrm{d}F_{\mathbb{x}}:\mathbb{R}^n \to \mathbb{R}^m$, что
 $$
@@ -294,6 +295,7 @@ $$
 ```
 
 :::{prf:theorem}
+:label: ariph_for_der
 Если функции $f(x), g(x)$ дифференцируемы в точке $x_0$, то:
 
 1. $(f+g)'(x_0) = f'(x_0) + g'(x_0)$;

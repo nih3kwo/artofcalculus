@@ -72,19 +72,19 @@ $$
 :class: dropdown
 :nonumber:
 
-Согласно ([](#df=f'dx)), а также правилу Лейбница (Теорема [](#ariph_for_der) 2), имеем 
-$$\begin{eqnarray}
-\mathrm{d}(uv) &=& (uv)' \mathrm{d}x \\
-&=& u'v \mathrm{d}x + uv'\mathrm{d}x \\
-&=& v \bigl( u'\mathrm{d}x\bigr) + u \bigl( v'\mathrm{d}x \bigr) \\
-&=& v \mathrm{d}u + u \mathrm{d}v.
-\end{eqnarray}$$
+Согласно ([](#dffdx)), а также правилу Лейбница (Теорема [](#ariph_for_der) 2), имеем 
+$$\begin{align*}
+\mathrm{d}(uv) &= (uv)' \mathrm{d}x \\
+&= u'v \mathrm{d}x + uv'\mathrm{d}x \\
+&= v \bigl( u'\mathrm{d}x\bigr) + u \bigl( v'\mathrm{d}x \bigr) \\
+&= v \mathrm{d}u + u \mathrm{d}v.
+\end{align*}$$
 Таким образом, $u\mathrm{d}v = \mathrm{d}(uv) - v \mathrm{d}u$. Тогда, используя линейность интеграла (Предложение [](#linearity_of_int)) и Лемму [](#intdF=F), получаем
-$$\begin{eqnarray}
-\int u \mathrm{d}v &=& \int \Bigl(  \mathrm{d}(uv) - v \mathrm{d}u \Bigr) \\
-&=& \int \mathrm{d}(uv) - \int v \mathrm{d}u \\
-&=& uv - \int v \mathrm{d}u,
-\end{eqnarray}$$
+$$\begin{align*}
+\int u \mathrm{d}v &= \int \Bigl(  \mathrm{d}(uv) - v \mathrm{d}u \Bigr) \\
+&= \int \mathrm{d}(uv) - \int v \mathrm{d}u \\
+&= uv - \int v \mathrm{d}u,
+\end{align*}$$
 что и требовалось доказать.    
 :::
 
@@ -106,11 +106,11 @@ $$
 \int \ln(x) \mathrm{d}x =  \ln(x)\cdot x - \int x \mathrm{d}(\ln (x)),
 $$
 так как $\mathrm{d}(\ln(x)) = (\ln(x))'\mathrm{d}x = \frac{1}{x}\mathrm{d}x$, то получаем
-$$\begin{eqnarray}
-\int \ln(x) \mathrm{d}x &=& \ln(x) \cdot x - \int \frac{x}{x}\mathrm{d}x \\
-&=& x \ln(x) - \int \mathrm{d}x \\
-&=& x\ln(x) - x + C.   
-\end{eqnarray}$$
+$$\begin{align*}
+\int \ln(x) \mathrm{d}x &= \ln(x) \cdot x - \int \frac{x}{x}\mathrm{d}x \\
+&= x \ln(x) - \int \mathrm{d}x \\
+&= x\ln(x) - x + C.   
+\end{align*}$$
 2. Рассмотрим форму $\arctan(x) \mathrm{d}x$, полагая $u = \arctan(x)$, $v = x$, получаем
 $$
 \int \arctan(x) \mathrm{d}x = \arctan(x) \cdot x  - \int x \mathrm{d}(\arctan(x)),
@@ -120,21 +120,21 @@ $$
 \mathrm{d}(\arctan(x)) = (\arctan(x))'\mathrm{d}x = \frac{\mathrm{d}x}{1+ x^2},
 $$
 то получаем
-$$\begin{eqnarray}
-\int \arctan(x) \mathrm{d}x &=& x \arctan(x) - \int \frac{x\mathrm{d}x}{1+x^2} \\
-&=& x \arctan(x) - \frac{1}{2} \int \frac{\mathrm{d}(x^2)}{1+x^2} \\
-&=& x \arctan(x) - \frac{1}{2} \int \frac{\mathrm{d}(x^2+1)}{1+x^2}\\
-&=& x \arctan(x) - \frac{1}{2} \ln(1+x^2) + C.
-\end{eqnarray}$$
+$$\begin{align*}
+\int \arctan(x) \mathrm{d}x &= x \arctan(x) - \int \frac{x\mathrm{d}x}{1+x^2} \\
+&= x \arctan(x) - \frac{1}{2} \int \frac{\mathrm{d}(x^2)}{1+x^2} \\
+&= x \arctan(x) - \frac{1}{2} \int \frac{\mathrm{d}(x^2+1)}{1+x^2}\\
+&= x \arctan(x) - \frac{1}{2} \ln(1+x^2) + C.
+\end{align*}$$
 3. Рассмотрим форму $\omega = x^2 \sin(x) \mathrm{d}x$. Если мы теперь просто положим, что $u = x^2 \sin(x)$, а $v = x$, то, во-первых, мы находим
 $$
 \mathrm{d}u = u'\mathrm{d}x = (x^2 \sin(x))'\mathrm{d}x = 2x \sin(x) \mathrm{d}x + x^2 \cos(x) \mathrm{d}x,
 $$
 и тогда мы получаем
-$$\begin{eqnarray}
-\int x^2 \sin(x) \mathrm{d}x &=& x^3 \sin(x) - \int x \bigl( 2x \sin(x) +x^2 \cos(x)  \bigr)\mathrm{d}x    \\
-&=& x^3 \sin(x) - 2 \int x^2 \sin(x) \mathrm{d}x - \int x^3 \cos(x)  \mathrm{d}x
-\end{eqnarray}$$
+$$\begin{align*}
+\int x^2 \sin(x) \mathrm{d}x &= x^3 \sin(x) - \int x \bigl( 2x \sin(x) +x^2 \cos(x)  \bigr)\mathrm{d}x    \\
+&= x^3 \sin(x) - 2 \int x^2 \sin(x) \mathrm{d}x - \int x^3 \cos(x)  \mathrm{d}x
+\end{align*}$$
 откуда
 $$
 \int x^2 \sin(x) \mathrm{d}x = \frac{x^3}{3}\sin(x) -  \int x^3 \cos(x)  \mathrm{d}x.
@@ -147,11 +147,11 @@ $$
 \omega = x^2 \sin(x) \mathrm{d}x = x \mathrm{d}(-\cos (x)),
 $$
 тогда, если положить, что $u = x$, а $v = - \cos(x)$, то получаем
-$$\begin{eqnarray}
-\int \omega &=& \int u \mathrm{d}(v) = uv - \int v \mathrm{d}u \\
-&=& x (- \cos(x)) - \int (-\cos(x))\mathrm{d}x \\
-&=& - x \cos(x) + \int \cos(x) \mathrm{d}x \\
-&=& - x \cos(x) + \sin(x) +C.
-\end{eqnarray}$$
+$$\begin{align*}
+\int \omega &= \int u \mathrm{d}(v) = uv - \int v \mathrm{d}u \\
+&= x (- \cos(x)) - \int (-\cos(x))\mathrm{d}x \\
+&= - x \cos(x) + \int \cos(x) \mathrm{d}x \\
+&= - x \cos(x) + \sin(x) +C.
+\end{align*}$$
 
 :::

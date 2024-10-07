@@ -46,9 +46,9 @@ f(\m{a} + \m{h}) =f(\m{a}) + \nabla_\m{a}(f)(\m{h}) + \frac{1}{2} \m{h}^\top \m{
 $$
 по условию $\nabla_\m{a}(f)(\m{h}) = 0$, запишем это в следующем виде:
 $$\begin{align*}
-f(\m{a} + \m{h}) &=& f(\m{a}) +  \frac{1}{2} \m{h}^\top \m{H}_\m{a}(f) \m{h} + \alpha(\m{h}) \| \m{h}\|^2 \\
-&=& f(\m{a}) + \|\m{h}\|^2 \left( \frac{1}{2}\frac{\m{h}^\top}{\|\m{h} \|} \m{H}_\m{a}(f) \frac{\m{h}}{\|\m{h} \|} + \alpha(\m{h}) \right) \\
-&=&f(\m{a}) + \|\m{h}\|^2\left( \frac{1}{2} (\mathrm{d}^2f)_\m{a}\left(\frac{\m{h}} {\|\m{h}\|}\right) + \alpha(\m{h}) \right).
+f(\m{a} + \m{h}) &= f(\m{a}) +  \frac{1}{2} \m{h}^\top \m{H}_\m{a}(f) \m{h} + \alpha(\m{h}) \| \m{h}\|^2 \\
+&= f(\m{a}) + \|\m{h}\|^2 \left( \frac{1}{2}\frac{\m{h}^\top}{\|\m{h} \|} \m{H}_\m{a}(f) \frac{\m{h}}{\|\m{h} \|} + \alpha(\m{h}) \right) \\
+&=f(\m{a}) + \|\m{h}\|^2\left( \frac{1}{2} (\mathrm{d}^2f)_\m{a}\left(\frac{\m{h}} {\|\m{h}\|}\right) + \alpha(\m{h}) \right).
 \end{align*}$$
 
 Так как $(\mathrm{d}^2)_\m{a}(\m{h}) = \frac{1}{2} \m{h}^\top \m{H}_\m{a}(f) \m{h}$ — полином от переменных $h_1, \ldots, h_n$, то это непрерывная функция. С другой стороны, $\frac{\m{h}}{\| \m{h}\|}$ принадлежит единичной сфере $S^{n-1}: = \{\m{x} \in \mathbb{R}^n\, :\, \|\m{x}\| = 1\}$, тогда, согласно теореме [](#general_Weistrass), $(\mathrm{d}^2f)_\m{a}(\m{h})$ принимает максимальное и минимальное значение на сфере $S^{n-1}.$
@@ -60,9 +60,9 @@ $$
 
 Тогда
 
-$$
+$$\begin{align*}
 f(\m{a} + \m{h}) = f(\m{a}) + \| \m{h}\|^2 \left( \frac{1}{2} (\mathrm{d}^2f)_\m{a}\left(\frac{\m{h}} {\|\m{h}\|}\right) + \alpha(\m{h}) \right) \\
-\ge  f(\m{a}) + \| \m{h}\|^2 \left( \frac{m}{2} +\alpha(\m{h})\right),
+\ge  f(\m{a}) + \| \m{h}\|^2 \left( \frac{m}{2} +\alpha(\m{h})\right)\end{align*}
 $$
 
 так как $\lim_{\m{h} \to \m{0}_n} \alpha(\m{h}) = 0$, то существует такая окрестность $\mathscr{V}$ точки $\m{0}_n$, что $|\alpha(\m{h})|< \frac{m}{4}$, тогда для любого $\m{h} \in \mathscr{V}$ получаем
@@ -75,8 +75,8 @@ $$
 
 (3) Пусть существуют такие $\m{u}, \m{v} \in \mathscr{U}(\m{a})$, что $(\m{d}^2f)_\m{a}(\m{u}) >0$, $(\m{d}^2f)_\m{a}(\m{v}) <0$. Тогда имеем
 $$\begin{align*}
-f(\m{a} + t \m{u}) &=& f(\m{a}) + \frac{1}{2} (\mathrm{d}^2_\m{a}f)(t\m{u}) + \alpha(t \m{u})\| t \m{u}\|^2 \\
-&=& f(\m{a}) + t^2 \left( \frac{1}{2} (\mathrm{d}^2_\m{a}f)(\m{u}) + \alpha(t \m{u})\| \m{u}\|^2 \right),
+f(\m{a} + t \m{u}) &= f(\m{a}) + \frac{1}{2} (\mathrm{d}^2_\m{a}f)(t\m{u}) + \alpha(t \m{u})\| t \m{u}\|^2 \\
+&= f(\m{a}) + t^2 \left( \frac{1}{2} (\mathrm{d}^2_\m{a}f)(\m{u}) + \alpha(t \m{u})\| \m{u}\|^2 \right),
 \end{align*}$$
 аналогично, получаем
 $$

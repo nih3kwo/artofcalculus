@@ -31,27 +31,27 @@ $$
 :class: dropdown
 :nonumber:
 Воспользовавшись леммой [](#almost_for_series), мы можем считать, что $|a_n| \ge |a_{n+1}|$ для всех $n$. Для удобства положим, что первый элемент ряда — это $a_0$, **т.е.** $n \ge 0$. Рассмотрим частичную сумму $\mathsf{S}_{2n+1}$, имеем
-$$\begin{eqnarray}
+$$\begin{align*}
 \mathsf{S}_{2n+1} &=& |a_0| - |a_1| + |a_2| - |a_3| + |a_4| + \cdots  + |a_{2n}| - |a_{2n+1}| \\
 &=& |a_0| - \bigl(|a_1| - |a_2|\bigr) - \bigl(|a_3| - |a_4|\bigr) - \cdots - \bigl(|a_{2n-1}|-  |a_{2n}|\bigr) - |a_{2n+1}|,
-\end{eqnarray}$$
+\end{align*}$$
 так как $|a_n| \ge |a_{n+1}|$, то каждая скобка положительна, это значит, что $\mathsf{S}_{2n+1} \le |a_0|$, **т.е.** последовательность $(\mathsf{S}_{2n+1})$ ограничена сверху.
 
 С другой стороны, мы можем записать
-$$\begin{eqnarray}
+$$\begin{align*}
 \mathsf{S}_{2n+1} &=& |a_0| - |a_1| + |a_2| - |a_3| + \cdots  + |a_{2n-2}| - |a_{2n-1}| + |a_{2n}| - |a_{2n+1}| \\
 &=& \bigl(|a_0| - |a_1| \bigr) + \bigl(|a_2|-|a_3| \bigr) + \cdots + \bigl( |a_{2n-2}| - |a_{2n-1}|\bigr)+ \bigl(|a_{2n}| - |a_{2n+1}|\bigr) \\
 &=& \mathsf{S}_{2n-1} + \bigl(|a_{2n}| - |a_{2n+1}|\bigr),
-\end{eqnarray}$$
+\end{align*}$$
 и так как $|a_{2n}| \ge |a_{2n+1}|$, то $\mathsf{S}_{2n+1} \ge \mathsf{S}_{2n-1}$, **т.е.** она не убывает.
 
 Итак, последовательность $(\mathsf{S}_{2n+1})$ ограничена сверху и не убывает, тогда по теореме Вейерштрасса [](#Weierstrass) у неё есть предел $\lim\limits_{n \to \infty}\mathsf{S}_{2n+1} = \mathsf{S} \le |a_0|.$
 
 Наконец, мы также можем записать
-$$\begin{eqnarray}
+$$\begin{align*}
 \mathsf{S}_{2n+1} &=& |a_0| - |a_1| + |a_2| - |a_3| +  |a_{2n}| - |a_{2n+1}| \\
 &=& \mathsf{S}_{2n}  - |a_{2n+1}|,
-\end{eqnarray}$$
+\end{align*}$$
 так как $\lim\limits_{n \to \infty}\mathsf{S}_{2n+1} = \mathsf{S}$ и по условию $\lim\limits_{n\to \infty} |a_{2n+1}| = 0$, то по теореме [](#a+b,ca,ab)
 $$
 \lim_{n\to \infty}\mathsf{S}_{2n}  = \lim_{n\to \infty} \left( \mathsf{S}_{2n+1} + |a_{2n+1}| \right) = \mathsf{S} + 0 = \mathsf{S}.
