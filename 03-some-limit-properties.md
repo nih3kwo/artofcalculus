@@ -20,9 +20,12 @@
 (2) Возьмём какое-нибудь число $\varepsilon>0$ и положим $\varepsilon':= \frac{\varepsilon}{2}$, тогда, согласно определению предела, у нас есть номера $N,M$ такие, что неравенства $|a_n - a|< \varepsilon'$ и $|b_m - b|<\varepsilon'$ выполнены для всех $n>N$, $m>M$. Пусть $K:=\max{N,M}$, $k>K$.
 
 Имеем
+
 $$
- |(a_k + b_k) - (a+b)| = |(a_k-a) + (b_k-b)|\le |a_k-a| + |b_k-b| < \varepsilon' + \varepsilon' = \varepsilon,
+\begin{align*}|(a_k + b_k) - (a+b)| &= |(a_k-a) + (b_k-b)|\\&\le |a_k-a| + |b_k-b| \\&< \varepsilon' + \varepsilon' = \varepsilon,
+\end{align*}
 $$
+
 что и означает, что для любого $\varepsilon>0$ мы нашли номер $K$ такой, что для всех $k>K$ имеет место неравенство $|(a_k + b_k) - (a+b)|< \varepsilon$, что и доказывает требуемое.
 
 (3) Заметим, что 
