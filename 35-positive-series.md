@@ -151,7 +151,7 @@ $$
 
 Если $q>1$, то возьмём $\varepsilon >0$ такое, что $q-\varepsilon >1$. Но
 $$
-\frac{x_{n+1}}{x_n} < q - \varepsilon
+\frac{x_{n+1}}{x_n} > q - \varepsilon
 $$
 при каких-то $n \ge N$, поэтому для $N\le n_0 < n$ получаем
 $$
