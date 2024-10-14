@@ -16,6 +16,10 @@ parts:
       - file: 35-positive-series
       - file: 36-alternating-series
       - file: 37-absolute-and-conditional-convergence
+  - caption: Топология вещественной прямой
+    chapters:
+      - file: 46-real-line-topology-intro
+      - file: 47-real-line-topology
   - caption: Метрические пространства
     chapters:
       - file: 07-mappings
@@ -63,5 +67,8 @@ parts:
   - caption: Коллоквиумы
     chapters:
       - file: 97-colloquium-1
+  - caption: Архив
+    chapters: 
       - file: 99-colloquium-3
       - file: 98-colloquium-4
+      - file: 95-version-history
