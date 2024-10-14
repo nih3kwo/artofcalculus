@@ -8,7 +8,7 @@
 * $\lim_{n\to \infty}(a_n + c) = a+c$ и $\lim_{n\to \infty}(ca_n) = ca$ для любого числа $c\in \mathbb{R};$
 * $\lim_{n\to \infty}(a_n +b_n) = a+b;$
 * $\lim_{n\to \infty}(a_nb_n) = ab;$
-* если $a\ne 0$ и $a_n \ne 0$ для всех $n\in \mathbb{N}$, то $\lim_{n\to \infty}\frac{1}{a_n} = \frac{1}{a}.$
+* если $a\ne 0$ и $a_n \ne 0$ для всех $n\in \mathbb{N}$, то $\lim_{n\to \infty}\frac{a_n}{b_n} = \frac{a_n}{b_n}.$
 :::
 :::{prf:proof}
 :class: dropdown
