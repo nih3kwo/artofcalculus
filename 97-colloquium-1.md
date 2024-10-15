@@ -38,7 +38,7 @@
 1. $\lim_{n\to \infty}(a_n + c) = a+c$ и $\lim_{n\to \infty}(ca_n) = ca$ для любого числа $c\in \mathbb{R};$
 2. $\lim_{n\to \infty}(a_n +b_n) = a+b;$
 3. $\lim_{n\to \infty}(a_nb_n) = ab;$
-4. если $a\ne 0$ и $a_n \ne 0$ для всех $n\in \mathbb{N}$, то $\lim_{n\to \infty}\frac{1}{a_n} = \frac{1}{a}.$
+4. если $b\ne 0$ и $b_n \ne 0$ для всех $n\in \mathbb{N}$, то $\lim_{n\to \infty}\frac{a_n}{b_n} = \frac{a}{b}.$
 ```
 
 7. Пусть даны такие последовательности $(a_n), (b_n), (c_n)$, что $a_n<b_n<c_n$ для всех $n$, $\lim_{n \to \infty} a_n = \lim_{n \to \infty} c_n = a$, тогда $\lim_{n \to \infty} b_n = a.$ [Докажите.](#squeezy)
