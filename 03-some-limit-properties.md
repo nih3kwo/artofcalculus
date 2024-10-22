@@ -17,7 +17,7 @@
 
 Пусть теперь $a'_n: = ca_n$, $n\in \mathbb{N}$. Ясно, что если $c =0$, то мы получаем постоянную последовательность $\{0,0,...\ldots,\}$ и мы уже знаем, что она сходится к $0.$ Пусть $c \ne 0.$ Так как $\lim_{n\to \infty}a_n = a$, то для любого $\varepsilon>0$ есть такой номер $N$, что $|a_n - a|<\varepsilon$ для всех $n>N$. Значит, если мы рассмотрим $\varepsilon':=\frac{\varepsilon}{|c|}$, то и для такого $\varepsilon'$ мы тоже знаем такой номер $N'$, что $|a_n - a|< \varepsilon'$. Умножив обе части этого неравенства на $|c|$, мы получаем $|c||a_n - a| <|c|\varepsilon'$, что равносильно неравенству $|a_n' - ca| < \varepsilon$, что и доказывает требуемое.
 
-(2) Возьмём какое-нибудь число $\varepsilon>0$ и положим $\varepsilon':= \frac{\varepsilon}{2}$, тогда, согласно определению предела, у нас есть номера $N,M$ такие, что неравенства $|a_n - a|< \varepsilon'$ и $|b_m - b|<\varepsilon'$ выполнены для всех $n>N$, $m>M$. Пусть $K:=\max{N,M}$, $k>K$.
+(2) Возьмём какое-нибудь число $\varepsilon>0$ и положим $\varepsilon':= \frac{\varepsilon}{2}$, тогда, согласно определению предела, у нас есть номера $N,M$ такие, что неравенства $|a_n - a|< \varepsilon'$ и $|b_m - b|<\varepsilon'$ выполнены для всех $n>N$, $m>M$. Пусть $K:=\max\{N,M\}$, $k>K$.
 
 Имеем
 
@@ -40,7 +40,7 @@ $$\begin{align*}
  \lim_{n\to \infty}(a_nb_n - ab) &=& \lim_{n\to \infty}\Bigl( (a_n-a)(b_n-b) + a(b_n -b) + b(a_n -a) \Bigr) \\
 &=& \lim_{n\to \infty} (a_n-a)(b_n-b) + a \lim_{n\to \infty}(b_n -b) + b \lim_{n\to \infty}(a_n -a),
 \end{align*}$$
-по [](#lim(a_n-a)=0), $\lim_{n\to \infty}(b_n -b) =0$, $\lim_{n\to \infty}(a_n -a)=0$, значит, $\lim_{n\to \infty}(a_nb_n - ab) = \lim_{n \to \infty}(a_n-a)(b_n-b).$ Покажем, что этот предел равен нулю. Так как $\lim_{n\to \infty} a_n =a$ и $\lim_{n\to \infty}b_n =b$, то для любого $\varepsilon>0$, есть номера $N,M$ такие, что $|a_n - a| <\varepsilon$ и $|b_m -b| < \varepsilon$ для всех $n >N$, $m>M$. Пусть теперь $\varepsilon':=\sqrt{\varepsilon},$ тогда и для такого числа мы тоже знаем номера $N',M'$ такие, что $|a_n - a| <\varepsilon'$ и $|b_m -b| < \varepsilon'$ для всех $n >N'$, $m>M'$. Пусть $K:= \max{N',M'}$, тогда для $k>K$ мы получаем
+по [](#lim(a_n-a)=0), $\lim_{n\to \infty}(b_n -b) =0$, $\lim_{n\to \infty}(a_n -a)=0$, значит, $\lim_{n\to \infty}(a_nb_n - ab) = \lim_{n \to \infty}(a_n-a)(b_n-b).$ Покажем, что этот предел равен нулю. Так как $\lim_{n\to \infty} a_n =a$ и $\lim_{n\to \infty}b_n =b$, то для любого $\varepsilon>0$, есть номера $N,M$ такие, что $|a_n - a| <\varepsilon$ и $|b_m -b| < \varepsilon$ для всех $n >N$, $m>M$. Пусть теперь $\varepsilon':=\sqrt{\varepsilon},$ тогда и для такого числа мы тоже знаем номера $N',M'$ такие, что $|a_n - a| <\varepsilon'$ и $|b_m -b| < \varepsilon'$ для всех $n >N'$, $m>M'$. Пусть $K:= \max\{N',M'\}$, тогда для $k>K$ мы получаем
 $$
  |(a_k-a)(b_k-b)| = |a_k -a||b_k - b| < \varepsilon' \cdot \varepsilon' = \varepsilon, 
 $$
@@ -52,7 +52,7 @@ $$
 
 Далее, так как $\lim_{n\to \infty} b_n =b$, то по определению предела для любого $\varepsilon>0$ найдётся такой номер $N$, что для всех $n>N$ выполнено $|b_n - b|<\varepsilon.$
 
-Пусть $M: = \max{N_0, N}$, тогда для любого $m>M$, получаем
+Пусть $M: = \max\{N_0, N\}$, тогда для любого $m>M$, получаем
 $$
 \left| \frac{1}{b_m} - \frac{1}{b} \right| = \frac{|b_m-b|}{b_mb},
 $$

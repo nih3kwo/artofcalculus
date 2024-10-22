@@ -3,7 +3,7 @@
 Мы начнём с рассмотрения подмножеств на числовой прямой $\mathbb{R}^1$. Напомним, что пределом последовательности $(a_n)$ называется число $a \in \mathbb{R}$, для которого верно следующее: для любого $\varepsilon >0$ найдётся такое $N$, что все $x_{N+1}, x_{N+2}, \ldots,$ принадлежат интервалу $(a -\varepsilon, a+\varepsilon).$
 
 :::{prf:definition}
-Пусть $A \subseteq \mathbb{R}$. Точка $x \in \mathbb{R}$ называется **предельной точкой** для множества $A$, если для любого $\varepsilon >0$, $A\setminus \{x\} \cap (a-\varepsilon, a+\varepsilon) \ne \varnothing.$ Если $A \cap (x-\varepsilon, x+\varepsilon) \ne \varnothing$, то точка $x$ называется **точкой прикосновения** множества $A.$
+Пусть $A \subseteq \mathbb{R}$. Точка $x \in \mathbb{R}$ называется **предельной точкой** для множества $A$, если для любого $\varepsilon >0$, $A\setminus \{x\} \cap (x-\varepsilon, x+\varepsilon) \ne \varnothing.$ Если $A \cap (x-\varepsilon, x+\varepsilon) \ne \varnothing$, то точка $x$ называется **точкой прикосновения** множества $A.$
 :::
 
 :::{prf:remark}

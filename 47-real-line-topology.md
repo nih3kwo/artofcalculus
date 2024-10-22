@@ -39,7 +39,7 @@ $$
 На зелёном интервале с центром в точке $c$ мы рассматриваем произвольную синюю точку $x$ и окружаем её синей окрестностью так, чтобы она целиком была в зелёном интервале.
 ```
 
-Далее, используя неравенство треугольника\footnote{$|a+b|\le |a| + |b|.$}, получаем
+Далее, используя неравенство треугольника[^ref47-1], получаем
 $$\begin{align*}
 |c-y| &=& |c+x-x-y| \\
 &=& |(c-x) + (x-y)| \\
@@ -65,7 +65,7 @@ $$\begin{align*}
 :::
 
 :::{warning}
-То рассуждение, которое было проведено в англоязычной среде, называют **a vacuous proof**. 
+То рассуждение, которое было проведено, в англоязычной среде называют **a vacuous proof**. 
 :::
 
 
@@ -79,7 +79,7 @@ $$\begin{align*}
 
 (1) Пусть $\mathscr{U} = \cup_{\alpha \in A}\mathscr{U}_\alpha$ и пусть $x \in \mathscr{U}$, тогда для какого-то $\alpha \in A$, $x \in \mathscr{U}_a$. Так как $\mathscr{U}_\alpha$ открыто, то найдётся такой $\varepsilon >0$, что $\mathscr{B}_\varepsilon(x) \subseteq \mathscr{U}_\alpha \subseteq \cup_{\alpha \in A}\mathscr{U}_\alpha$, что и доказывает открытость множества $\mathscr{U}.$
 
-(2) Достаточно доказать, что множество двух открытых множеств $\mathscr{U}_1, \mathscr{U}_2$ открыто, а затем провести индукцию.
+(2) Достаточно доказать, что пересечение двух открытых множеств $\mathscr{U}_1, \mathscr{U}_2$ открыто, а затем провести индукцию.
 
 Если $x \in \mathscr{U}_1 \cap \mathscr{U}_2$, то найдутся такие $\varepsilon_1, \varepsilon_2 >0$, что $B_{\varepsilon_1}(x) \subseteq \mathscr{U}_1$, $B_{\varepsilon_2}(x) \subseteq \mathscr{U}_2$. Тогда, если $\varepsilon: = \min(\varepsilon_1,\varepsilon_2)$, то $B_\varepsilon(x) \subseteq \mathscr{U}_1 \cap \mathscr{U}_2$, что и доказывает открытость пересечения.
 :::
@@ -142,3 +142,4 @@ $$
 (2) Пусть $F = \overline{F}$, тогда для любой точки $x \notin F$, можно всегда найти окрестность $\mathscr{W}(x)$ такую, что $\mathscr{W}(x) \cap F = \varnothing$. Пусть $\mathscr{U}:= \cup_{x E\setminus F} \mathscr{W}(x)$, тогда, $\mathscr{U}$ — открыто в $E$ и $F = E \setminus \mathscr{U}.$
 
 
+[^ref47-1]: $|a+b|\le |a| + |b|.$
