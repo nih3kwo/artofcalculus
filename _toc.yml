@@ -1,7 +1,7 @@
 format: jb-book
 root: README
 parts:
-  - caption: Действительные числа и последовательности
+  - caption: 1. Действительные числа и последовательности
     chapters:
       - file: 00-initial-knowledge
       - file: 01-real-numbers
@@ -10,16 +10,17 @@ parts:
       - file: 04-ascending-sequences-and-weierstrass-theorem
       - file: 05-fundamental-sequences-and-a-new-look-at-real-numbers
       - file: 06-subsequences-and-partial-limits
-  - caption: Начало теории рядов
+  - caption: 2. Начало теории рядов
     chapters: 
       - file: 34-number-series
       - file: 35-positive-series
       - file: 36-alternating-series
       - file: 37-absolute-and-conditional-convergence
-  - caption: Топология вещественной прямой
+  - caption: 3. Топология вещественной прямой
     chapters:
       - file: 46-real-line-topology-intro
-      - file: 47-real-line-topology
+      - file: 47-openness-and-closeness
+      - file: 48-compactness
   - caption: Метрические пространства
     chapters:
       - file: 07-mappings

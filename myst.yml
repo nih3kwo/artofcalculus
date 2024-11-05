@@ -15,6 +15,10 @@ project:
     '\m': '\mathbf'
     '\bigintss': '\int' 
     '\bigintsss': '\int'
+  numbering:
+    heading_2: true
+    heading_3: true
+    equation: false
 site:
   template: book-theme
   title: The Hitchhiker's Guide to the Calculus Galaxy
