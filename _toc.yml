@@ -14,7 +14,6 @@ parts:
     chapters: 
       - file: 34-number-series
       - file: 35-positive-series
-      - file: 36-alternating-series
       - file: 37-absolute-and-conditional-convergence
   - caption: 3. Топология вещественной прямой
     chapters:
