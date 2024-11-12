@@ -13,7 +13,7 @@ numbering:
 
 :::{prf:definition}
 :name: e-neigh_in_A
-Пусть $A \subseteq \mathbb{R}$ — непустое подмножество в $\mathbb{R}$, **$\varepsilon$-окрестность точки $a \in A$ в множестве $A$** называется множество вида $(a-\varepsilon, a+\varepsilon) \cap A$. Чтобы подчеркнуть, что рассматривается $\varepsilon$-окрестность в $A$, мы будем писать $\mathscr{B}_\varepsilon(a)|_A$. Таким образом, согласно определению,
+Пусть $A \subseteq \mathbb{R}$ — непустое подмножество в $\mathbb{R}$, **$\varepsilon$-окрестностью точки $a \in A$ в множестве $A$** называется множество вида $(a-\varepsilon, a+\varepsilon) \cap A$. Чтобы подчеркнуть, что рассматривается $\varepsilon$-окрестность в $A$, мы будем писать $\mathscr{B}_\varepsilon(a)|_A$. Таким образом, согласно определению,
 $$
 \mathscr{B}_\varepsilon(a)|_A: = \mathscr{B}_\varepsilon(a) \cap A.
 $$
