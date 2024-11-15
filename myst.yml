@@ -15,6 +15,17 @@ project:
     '\m': '\mathbf'
     '\bigintss': '\int' 
     '\bigintsss': '\int'
+    '\d': '\text{d}'
+    '\T': '\mathbb{T}'
+    '\ve': '\varepsilon'
+    '\RR': '\mathbb{R}'
+    '\ZZ': '\mathbb{Z}'
+    '\QQ': '\mathbb{Q}'
+    '\TT': '\mathbb{T}'
+    '\Su': '\overline{S}'
+    '\Sl': '\underline{S}'
+    '\Iu': '\overline{\mathcal{I}}'
+    '\Il': '\overline{\mathcal{I}}'
   numbering:
     heading_2: true
     heading_3: true

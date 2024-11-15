@@ -67,6 +67,17 @@ parts:
   - caption: Коллоквиумы
     chapters:
       - file: 97-colloquium-1
+  - caption: II курс
+    chapters:
+      - file: 200-introduction
+      - file: 201-multiple-integrals
+      - file: 202-multiple-integral-properties
+      - file: 203-topology-in-Rn
+      - file: 204-compactness
+      - file: 205-weierstrass
+      - file: 206-darbu-sums
+      - file: 207-darbu-criterion
+      - file: 208-functional-sequences
   - caption: Архив
     chapters: 
       - file: 99-colloquium-3
