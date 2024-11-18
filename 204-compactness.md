@@ -12,6 +12,7 @@ numbering:
 > Лекция 4, 08.10.2024
 
 ```{prf:theorem} Компактность замкнутого бруса
+:name: closed_block_compactness
 Замкнутый брус — компакт.
 ```
 
@@ -34,6 +35,7 @@ $$ A_{\alpha_0} \supset B_r(\m{a})\supset I_{N+1}\supset I_{N+2}\supset\ldots$$
 ```
 
 ```{prf:theorem} Критерий компактности в $\RR^n$
+:name: compactness-in-R-n-criterion
 $K$ — компакт в $\RR^n\iff K$ — замкнуто и ограничено.
 ```
 

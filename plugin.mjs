@@ -10,6 +10,7 @@ function span(value, style) {
 const styles = [
   { name: 'red', style: { color: '#D44C47', fontWeight: 'bold' } },
   { name: 'green', style: { color: '#448361', fontWeight: 'bold' } },
+  { name: 'cyan', style: { color: '#00FFFF', fontWeight: 'bold' } },
 ];
 
 const directives = [];

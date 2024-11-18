@@ -14,6 +14,7 @@ numbering:
 ## Теорема Вейерштрасса о непрерывной функции на компакте
 
 ```{prf:theorem} Теорема Вейерштрасса о непрерывности на компакте функции
+:name: weierstrass-continuous-function-on-compact
 $K\subset \RR^n$ — компакт, $f\colon K\mapsto\RR$
 
 $f\in C(K)\implies$ $f$ ограничена на $K$ и достигает своего наибольшего и наименьшего значения на $K$.
@@ -84,12 +85,14 @@ $$\left.\begin{align*}
 $M\subset\RR^n$ — множество.
 
 ```{prf:definition}
+:name: function_fluctuations_on_set
 **Колебанием** $f$ на множестве $M$ будем называть число $\omega(f, M)$:
 
 $$\omega(f, M):=\sup_{x,y\in M}|f(x)-f(y)|=\sup_{x\in M} f(x)-\inf_{y\in M} f(y)$$
 ```
 
 ```{prf:definition}
+:name: function_fluctuations_at_point
 **Колебанием** $f$ в точке $x_0\in M$ будем называть число $\omega(f, x_0)$:
 
 $$\omega(f, x_0):=\lim_{r\to 0^+}\omega(f,B^M_r(x_0)),$$
@@ -100,10 +103,12 @@ $$B^M_r(x_0)=B_r(x_0)\cap M$$
 ```
 
 ```{prf:definition} 
+:name: continuity_at_point
 $f\colon M\mapsto\RR$ **непрерывна** в $x_0\in M$, если $\forall\ve>0,\exists\delta>0,\forall x\in B^M_\delta(x_0)\cap M\hookrightarrow|f(x)-f(x_0)|<\ve$.
 ```
 
 ```{prf:theorem} О непрерывности колебаний в точке функции
+:name: fluctuation-continuity-at-point
 $x_0\in M\subset\RR^n$, $f\colon M\mapsto\RR$.
 
 $f$ — непрерывна в точке $x_0\iff\omega(f, x_0)=0$.
@@ -144,6 +149,7 @@ $$\begin{align*}|f(x)-f(x_0)|&\leq\sup_{x\in B^M_\delta(x_0)}|f(x)-f(x_0)|\\&\le
 ```
 
 ```{prf:definition}
+:name: almost_everywhere
 Если какое-то свойство не выполняется только на множестве меры нуль по Лебегу, то будем говорить, что оно выполняется **почти всюду**.
 ```
 
@@ -157,6 +163,7 @@ $\ZZ$ — счётное $\implies f$ имеет разрывы в не боле
 ```
 
 ```{prf:theorem} Критерий Лебега
+:name: Lebegue-criterion
 $I\subset\RR^n$ — замкнутый невырожденный брус, $f\colon I\mapsto\RR$.
 
 $f\in\mathcal{R}(I)\iff f$ — ограничена на $I$ и $f$ непрерывна почти всюду на $I$.
@@ -251,7 +258,8 @@ f(\xi_i^1) - f(\xi_i)^2 \ge \frac{1}{3k_0} \text{ (у нас там колеба
 ```
 
 ```{prf:definition}
-$\TT_1=\{I^1_k\}$ — разбиение $I$, $\TT_2=\{I^2_m\}$ — разбиение $I\implies$ пересечением $\TT_1\cap\TT_2$ будем называть множество всех брусов $\{I_{ij}\}$ таких, что $\forall I_{ij}$
+:name: intersection_of_two_decompositions
+$\TT_1=\{I^1_k\}$ — разбиение $I$, $\TT_2=\{I^2_m\}$ — разбиение $I\implies$ **пересечением** $\TT_1\cap\TT_2$ будем называть множество всех брусов $\{I_{ij}\}$ таких, что $\forall I_{ij}$
 
 1. $\exists k\colon I_{ij}$ входит в разбиение $I^1_k$
 2. $\exists m\colon I_{ij}$ входит в разбиение $I^2_k$
@@ -259,5 +267,6 @@ $\TT_1=\{I^1_k\}$ — разбиение $I$, $\TT_2=\{I^2_m\}$ — разбие
 ```
 
 ```{prf:definition}
+:name: decomposition_shredding
 Разбиение $\TT_1=\{I^1_k\}$ будем называть **измельчением** разбиения $\TT_2=\{I^2_m\}$, если $\forall k,\exists m\colon I^1_k$ входит в разбиение $I^2_m\implies\TT_1\cap\TT_2$ является измельчением $\TT_1$ и $\TT_2$.
 ```

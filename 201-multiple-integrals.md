@@ -14,6 +14,7 @@ numbering:
 ## Брус. Мера бруса
 
 ```{prf:definition}
+:name: bounded_block
 **Замкнутым брусом** (промежутком, координатным промежутком) в $\mathbb{R^n}$ будем называть множество 
 
 $$\begin{align*}I&=\{x\in \mathbb{R}^n|a_i\leq x\leq a_i,i=1,\dots, n\}\\&=[a_1, b_1]\times\dots\times[a_n,b_n]\end{align*}$$
@@ -27,12 +28,15 @@ $$I=\{a_1, b_1\}\times\dots\times\{a_n,b_n\}$$
 ```
 
 ```{prf:definition}
+:name: block_measure
 **Мерой бруса** будем называть его объём: 
 $$\mu(I)=|I|=\prod^n_{i=1}(b_i-a_i)$$
 ```
 
 ## Свойства меры бруса в $\mathbb{R}^n$
 
+```{prf:proposition}
+:name: block_measure_properties
 1. **Однородность** 
 
 $$\mu(I_{\lambda a,\lambda b})=\lambda^n\mu(I_{a,b}),\lambda\geq0$$
@@ -46,10 +50,12 @@ $$a=\{a_1,\dots,a_n\}, b=\{b_1,\dots,b_n\}$$
 3. **Монотонность**
 
 $I\subset\bigcup^k_{i=1}I_i$ — покрыт конечной системой брусов $\implies |I|<\sum^k_{i=1}|I_i|$
+```
 
 ## Разбиения
 
 ```{prf:definition}
+:name: block_decomposition
 $I$ — замкнутый невырожденный брус и $I=\bigcup_{i=1}^kI_i$, где $I_i$ попарно не имеет общих внутренних точек, тогда набор $\mathbb{T}=\{I_i\}^k_{i=1}$ будем называть **разбиением бруса** $I$.
 ```
 
@@ -62,6 +68,7 @@ $I$ — замкнутый невырожденный брус и $I=\bigcup_{i=
 ```
 
 ```{prf:definition}
+:name: diameter
 **Диаметром** произвольного ограниченного множества $M\subset \mathbb{R}^n$ будем называть число
 
 $$d(M)=\sup_{x,y\in M}\|x-y\|$$
@@ -86,16 +93,19 @@ $$\|x-y\|=\sqrt{\sum^n_{i=1}(x_i-y_i)^2}$$
 ```
 
 ```{prf:definition}
+:name: scale
 **Масштабом** разбиения $\mathbb{T}=\{I_i\}^k_{i=1}$ будем называть число $\lambda(\mathbb{T})=\Delta_{\mathbb{T}}=\displaystyle\max_{1\leq i\leq k}d(I_i)$.
 ```
 
 ```{prf:definition}
+:name: marked_points
 $\forall I_i$ выбраны точки $\xi_i\in I_i$
 
 Набор $\boldsymbol{\xi}=\{\xi_i\}^k_{i=1}$ будем называть **отмеченными точками**.
 ```
 
 ```{prf:definition}
+:name: marked_decomposition
 $(\mathbb{T},\boldsymbol{\xi})$ будем называть **размеченным разбиением**.
 ```
 
@@ -104,12 +114,14 @@ $(\mathbb{T},\boldsymbol{\xi})$ будем называть **размеченн
 $I$ — невырожденный замкнутый брус, $f\colon I\mapsto\mathbb{R}$ определена на $I$.
 
 ```{prf:definition}
+:name: riemann_integral_sum
 **Интегральной суммой Римана** функции $f$ на $(\mathbb{T},\boldsymbol{\xi})$ будем называть величину 
 
 $$\sigma(f,\mathbb{T},\boldsymbol{\xi}):=\sum^{k}_{i=1}f(\xi_i)|I_i|$$.
 ```
 
 ```{prf:definition}
+:name: integratable_function
 Будем говорить, что функция $f$ **интегрируема (по Риману)** на замкнутом брусе $I\ (f\colon I\mapsto\mathbb{R})$, если $\exists A\in\mathbb{R},\forall\varepsilon>0,\exists\delta>0,\forall(\mathbb{T},\boldsymbol{\xi})\colon \Delta_{\mathbb{T}}<\delta$ верно, что $|\sigma(f,\mathbb{T},\xi)-A|<\varepsilon$. Тогда
 
 $$A=\int\limits_I f(x)\d x=\underset{I}{\int\ldots\int} f(x_1,\ldots,x_n)\d x_1\dots \d x_n$$

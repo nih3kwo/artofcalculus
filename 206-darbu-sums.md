@@ -14,10 +14,12 @@ numbering:
 $$m_i=\inf_{I_i}(f),\quad M_i=\sup_{I_i}(f)$$
 
 ```{prf:definition}
+:name: darbu_sums
 Числа $\Sl(f,\TT)=\sum^k_{i=1}m_i|I_i|$ и $\Su(f,\TT)=\sum^k_{i=1}M_i|I_i|$ будем называть **нижней и верхней суммой Дарбу**, соответственно.
 ```
 
 ```{prf:theorem}
+:name: darbu-properties
 1. $\Sl(f,\TT)=\inf_{\xi}\sigma(f,\TT,\xi)\leq\sup_{\xi}\sigma(f,\TT,\xi)=\Su(f,\TT)$
 2. Пусть $\tilde\TT$ — измельчение разбиения $\TT$ тогда 
 
@@ -39,10 +41,12 @@ $$\Sl(f,\TT_1)\leq\Sl(f,\tilde\TT)\leq\Su(f,\tilde\TT)\leq\Su(f,\TT_2)$$
 ```
 
 ```{prf:definition}
+:name: darbu_integrals
 Числа $\overline{I}=\inf_{\TT}\Su(f,\TT)$ и $\underline{I}=\sup_{\TT}\Sl(f,\TT)$ будем называть верхним и нижним интегралами Дарбу, соответственно.
 ```
 
 ```{prf:theorem} (интеграл Дарбу как предел суммы Дарбу)
+:name: limit-of-darbu-sums-as-integral
 $I\subset \RR^n$ — замкнутый брус, $f\colon I\mapsto\RR^n$ — ограничена.
 
 Тогда $\overline{I}=\lim_{\Delta_\TT\to0}\Su(f,\TT)$ и $\underline{I}=\lim_{\Delta_\TT\to 0}\Sl(f,\TT)$
@@ -77,6 +81,7 @@ $$\begin{align*}|\underline{I}-\Sl(f,\TT_2)|&=|\underline{I}-\Sl(f,\TT_1\cap\TT_
 ```
 
 ```{prf:theorem} Критерий Дарбу интегрируемой функции по Риману
+:name: darbu-riemann-integration-criterion
 $I\subset\RR^k$ — замкнутый брус, $f\colon I\to\mathcal{R}$
 
 $f\in\mathcal{R}(I)\iff f$ — ограничена на $I$ и $\underline{\mathcal{I}}=\overline{\mathcal{I}}$

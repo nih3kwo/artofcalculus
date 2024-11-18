@@ -16,6 +16,7 @@ $$\{f_n(x)\}^\infty_{n=1}=\frac{x}{n},\quad x\in\RR$$
 ```
 
 ```{prf:definition}
+:name: fs_convergence_at_point
 $f_n\colon X\subset\RR\to\RR$
 
 Будем говорить, что последовательность функций $\{f_n(x)\}^\infty_{n=1}$ **сходится в точке $x_0\in X$**, если сходится числовая последовательность $\{f_n(x_0)\}^\infty_{n=1}$, т. е. 
@@ -23,19 +24,23 @@ $f_n\colon X\subset\RR\to\RR$
 $$\exists a_{x_0}\in\RR,\forall\ve>0,\exists N,\forall n>N,|f_n(x_0)-a_{x_0}|<\ve$$
 ```
 
-```{prf:definition} 
+```{prf:definition}
+:name: fs_convergence_set
 $f_n\colon X\mapsto\RR$
 
 Множество $D\subset X\subset\RR$ точек, в которых последовательность функций $\{f_n(x)\}^\infty_{n=1}$ сходится, будем называть **множеством сходимости последовательностей функций.**
 ```
 
 ```{prf:definition}
+:name: fs_limit_function
 $f_n\colon X\subset \RR\mapsto\RR$
 
 $D\subset X$ — множество сходящихся $\{f_n(x)\}$ и пусть $\forall x\in D,f_n(x)\to f(x)$ при $n\to\infty$, тогда $f(x)=\lim_{n\to\infty}f_n(x)$ будем называть **предельной функцией** последовательности функций $\{f_n(x)\}$
 ```
 
+
 ```{prf:definition}
+:name: fs_pointwise_convergence
 $D\subset\RR$ — множество
 
 $f,f_n\colon D\to\RR$$
@@ -104,6 +109,7 @@ $\forall n, f_n(x)$ — непрерывная функция на $D$, но $f(
 :::
 
 ```{prf:definition}
+:name: fs_uniform_convergence
 $D\subset\RR$, $f_n,f\colon D\to\RR$
 Будем говорить, что последовательность функций $\{f_1(x)\}$ сходится равномерно к функции $f(x)$ на $D$, если 
 
@@ -125,6 +131,7 @@ $f_n\overset{D}{\rightrightarrows}f\implies f_n\xrightarrow{D}f$
 ```
 
 ```{prf:theorem} $\lim-\sup$ критерий (супремальный)
+:name: supremal-criterion
 $$f_n\overset{D}{\rightrightarrows}f\lim_{n\to\infty}\sup_D|f_n(x)-f(x)|=0$$
 ```
 
@@ -144,8 +151,4 @@ $$\sup_D|f_n(x)-f(x)|\leq\frac{\ve}{2}<\ve$$
 $(\Leftarrow)$ ***Достаточность.*
 
 $\lim_{n\to\infty}\sup_D|f_n(x)-f(x)|=0\implies$ по определению $\lim\colon\forall\ve>0,\exists N,\forall n>N\hookrightarrow\sup_D|f_n(x)-f(x)|<\ve$, но знаем, что $|f_n(x)-f(x)|\leq\sup_D|f_n(x)-f(x)|\implies$ выполнено $\forall \ve>0,\exists N,\forall n>N,\forall x\in D\hookrightarrow|f_n(x)-f(x)|<\ve\implies f_n(x)\overset{D}\rightrightarrows f(x)$.
-```
-
-```{}
-
 ```

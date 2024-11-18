@@ -12,6 +12,7 @@ numbering:
 > Лекция 7, 05.11.2024
 
 ```{prf:definition}
+:name: feasible_set
 Множество $D\subset\RR^n$ называется **допустимым**, если 
 
 1. $D$ ограничено.
@@ -19,6 +20,7 @@ numbering:
 ```
 
 ```{prf:definition}
+:name: riemann_integral_on_feasible_set
 $D\subset\RR^n$ допустимое множество, $f\colon D\to\mathcal{R}$. Тогда **интегралом Римана** $f$ по $D$ будем называть число $\mathcal{I}$.
 
 $$\mathcal{I}=\int\limits_Df(\bar x)\d \bar x=\int\limits_{I\supset D}f\cdot \chi_D(\bar x)\d \bar x,$$
@@ -58,6 +60,7 @@ $\sigma(f\cdot\chi_D,\TT_1,\xi^1)=\sum_jf\chi_D(\xi^1_j)|I^1_j|=\sum_j f\cdot\ch
 ```
 
 ```{prf:theorem} Фубини
+:name: foubini
 $I_x\subset\RR^n,I_y\subset\RR^n, I_x\times I_y\subset \RR^{m+n}$ — замкнутые брусы.
 
 $f\colon I_x\times I_y\to\RR$

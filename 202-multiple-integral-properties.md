@@ -16,7 +16,7 @@ numbering:
 ### Линейность
 
 ```{prf:proposition} Линейность
-
+:name: linearity
 $$f,g\in\mathcal{R}(I)\implies\forall\alpha,\beta\in\mathbb{R}, (\alpha f+\beta g)\in\mathcal{R}(I)$$
 
 $$\int\limits_I(\alpha f+\beta g)\d x=\alpha\int\limits_I f\d x+\beta\int\limits_I g\d x$$
@@ -61,6 +61,7 @@ $$\int\limits_If\d x\leq\int\limits_Ig\d x$$
 ### Оценка интеграла (сверху)
 
 ```{prf:proposition} Оценка интеграла (сверху)
+:name: integral_upper_bound
 $$f\in\mathcal{R}(I)\implies\left|\int\limits_If\d x\right|\leq\sup_I|f|\cdot|I|$$
 ```
 
@@ -114,6 +115,7 @@ $$\sigma(f,\T,\xi)=\sum_{i\neq i_0}f(\xi_i)|I_i|+f(\xi_{i_0})|I_{i_0}|$$
 ## Мера по Лебегу
 
 ```{prf:definition}
+:name: null_measure
 Множество $M\subset \R^n$ будет называть множеством **меры нуль по Лебегу**, если $\forall \ve>0,\exists$ не более, чем счётный набор замкнутых брусков 
 
 $$\{I_i\}\colon V\subset\bigcup_i I_i$$
@@ -142,6 +144,7 @@ $|I|=(2d)^n<\ve$, если $d<\frac{\sqrt[n]{\ve}}{2}$
 ## Свойства множества меры нуль по Лебегу
 
 ```{prf:proposition} Корректность определения
+:name: null-measure-property-1
 1. Если $\{I_i\}$ — открытые бруски, то определение остаётся корректным.
 ```
 
@@ -190,6 +193,7 @@ $$M_k\subset\bigcup_i^k,\quad \sum|I_i^k|<\ve_k=\frac{\ve}{2^k},\forall \ve_k>0$
 $$M\subset\bigcup_{i,k}I_i^k,\quad \sum_{i,k}|I^k_i|<\sum^\infty_{k=1}\ve_k=\sum^\infty_{k=1}\frac{\ve}{2^k}=\ve\cdot\frac{1}{2}\cdot\frac{1}{\frac{1}{2}}=\ve$$
 ```
 
+(null-measure-property-2)=
 2. $M$ — множество меры нуль по лебегу, $L\subset M$ — подмножество $M\implies$ $L$ — множество меры нуль по Лебегу.
 
 ```{prf:proof}
@@ -198,6 +202,7 @@ $M$ — множество меры нуль
 $\forall\varepsilon >0,\exists$ не более чем счётное $\{I_i\}$: $L\subset M\subset \bigcup I_i, \quad |\sum|I_i|<\varepsilon|$
 ```
 
+(null-measure-property-3)=
 3. Не более чем счётное объединение множеств меры нуль по Лебегу является множеством меры нуль.
 
 ```{prf:proof}

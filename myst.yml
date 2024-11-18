@@ -36,7 +36,6 @@ site:
   options:
     favicon: images/favicon.ico
     logo: images/site_logo.png
-  nav: []
   actions:
     - title: Написать лектору
       url: https://t.me/the_Man_of_Spade
