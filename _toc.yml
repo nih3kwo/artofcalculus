@@ -20,6 +20,9 @@ parts:
       - file: 46-real-line-topology-intro
       - file: 47-openness-and-closeness
       - file: 48-compactness
+  - caption: 4. Непрерывные функции от одной переменной
+    chapters:
+      - file: 49-mappings
   - caption: Метрические пространства
     chapters:
       - file: 07-mappings
@@ -67,6 +70,7 @@ parts:
   - caption: Коллоквиумы
     chapters:
       - file: 97-colloquium-1
+      - file: 299-colloquium-2-1
   - caption: II курс
     chapters:
       - file: 200-introduction
@@ -80,6 +84,7 @@ parts:
       - file: 208-functional-sequences
   - caption: Архив
     chapters: 
+      - file: lab1
       - file: 99-colloquium-3
       - file: 98-colloquium-4
       - file: 95-version-history
