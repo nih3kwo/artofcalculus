@@ -1,3 +1,14 @@
+---
+authors:
+  - name: Alyona Zarodnyuk
+    affiliations:
+      - Higher School of Economics
+numbering:
+  enumerator: 9.%s
+---
+
+# Сходимость функциональных последовательностей
+
 ```{prf:theorem} Критерий Коши равномерной сходимости функциональной последовательности
 :name: Cauchy-convergence
 
@@ -32,6 +43,7 @@ $$\exists\ve_0>0,\forall N\colon\exists n=2N,m=4N,\exists x_0=2N, \left|\frac{2N
 :::
 
 ```{prf:theorem} О почленном переходе к пределу
+:name: itemwise-transition-to-limit
 $$\left.\begin{align*}
     &f_n,f\colon D\to\RR\\
     &x_0 \text{ — предел } D\\
@@ -105,6 +117,7 @@ $$\forall x\in D,\forall\ve>0,(\exists N,\forall n>N),\exists\delta>0,\forall x\
 ```
 
 ```{prf:theorem} Условие о неравномерной сходимости — разрыв в точке
+:name: non-uniform-convergence-break
 $$\left.\begin{align*}
     &f_n\in C([a, b))\\
     &f_n\in C((a, b))+\text{ разрыв в т. } a\\
@@ -137,5 +150,38 @@ $$\forall\ve>0,\exists N=\max\{N_1,N_2\},\forall n>N,\forall x\in[a, b)\hookrigh
 $$\begin{align*}
     f_n\in C([a, b))\\
     f_n\overset{[a, b)}\rightrightarrows f
-\end{align*}\implies но $$
+\end{align*}\implies$$
+
+но [по Теореме о непрерывности предельной фукнции](#continuity-of-limit-function): $f(x)\in c([a, b))$, но известно, что $f(x)$ имеет разрыв в точке $a\implies X$ и предположительно неверно, т. е. $f_n\overset{(a, b)}{\not\rightrightarrows} f$.
+```
+
+```{prf:example}
+Вспомним пример.
+
+$f_n(x)=x^k$ на
+
+$$\begin{align*}
+    D_1=[0, q],\quad 0<q<1\\
+    D_2=[0, 1)\\
+    D_3=[0, 1]
+\end{align*}$$
+
+Исследуем на равномерную сходимость
+
+1. $D_1$: Знаем, что $f_n(x)\xrightarrow{D_1}0$
+
+$$\sup_{D_1}|f_n(x)-0|=\sup_{D_1}|x^k|=q^n\xrightarrow{n\to\infty}0\implies f_n\overset{D_1}\rightrightarrows f$$
+
+2. $D_2$: $f_n(x)\xrightarrow{D_2} 0$
+
+$$\sup_{D_2}|x^n|=1\xrightarrow[n\to\infty]{}1\neq 0\implies f_n\overset{D_2}{\not\rightrightarrows} f$$
+
+3. $D_3$: $$f_n(x)\xrightarrow{D_3}\left[\begin{align*}
+    &0, \quad 0 < x < 1\\
+    &1, \quad x = 1
+\end{align*}\right.$$
+
+$$\sup_{D_3}|x^m-f(x)|=1\implies f_n\overset{D_3}{\not\rightrightarrows}f$$
+
+Поэтому понятно, почему нельзя было гарантировать, что из $f_n\in C[0, 1]\implies f\in C[0, 1]$
 ```

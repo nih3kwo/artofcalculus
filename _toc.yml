@@ -82,7 +82,7 @@ parts:
       - file: 206-darbu-sums
       - file: 207-darbu-criterion
       - file: 208-functional-sequences
-      - file: 209-lecture9
+      - file: 209-functional-sequences-convergence
   - caption: Архив
     chapters: 
       - file: lab1
