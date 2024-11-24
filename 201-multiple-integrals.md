@@ -17,7 +17,7 @@ numbering:
 :name: bounded_block
 **Замкнутым брусом** (промежутком, координатным промежутком) в $\mathbb{R^n}$ будем называть множество 
 
-$$\begin{align*}I&=\{x\in \mathbb{R}^n|a_i\leq x\leq a_i,i=1,\dots, n\}\\&=[a_1, b_1]\times\dots\times[a_n,b_n]\end{align*}$$
+$$\begin{align*}I&=\{x\in \mathbb{R}^n|a_i\leq x\leq b_i,i=1,\dots, n\}\\&=[a_1, b_1]\times\dots\times[a_n,b_n]\end{align*}$$
 ```
 
 ```{note} Замечание

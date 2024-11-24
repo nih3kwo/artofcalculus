@@ -21,6 +21,7 @@ project:
     '\RR': '\mathbb{R}'
     '\ZZ': '\mathbb{Z}'
     '\QQ': '\mathbb{Q}'
+    '\NN': '\mathbb{N}'
     '\TT': '\mathbb{T}'
     '\Su': '\overline{S}'
     '\Sl': '\underline{S}'
