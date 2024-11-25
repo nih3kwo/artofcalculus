@@ -50,7 +50,7 @@ $M=[0, 1)\cup\{3\}$
 ```
 
 ```{prf:definition}
-:name: limit_point
+:name: limit_point2
 $x_0 \in \R^n$ называется **предельной точкой** $M$, если $\forall\varepsilon >0, \overset{\circ}B_\varepsilon(x_0)\cap M\neq\varnothing$.
 ```
 

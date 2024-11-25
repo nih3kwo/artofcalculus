@@ -118,7 +118,7 @@ $$\sigma(f,\T,\xi)=\sum_{i\neq i_0}f(\xi_i)|I_i|+f(\xi_{i_0})|I_{i_0}|$$
 :name: null_measure
 Множество $M\subset \R^n$ будет называть множеством **меры нуль по Лебегу**, если $\forall \ve>0,\exists$ не более, чем счётный набор замкнутых брусков 
 
-$$\{I_i\}\colon V\subset\bigcup_i I_i$$
+$$\{I_i\}\colon M\subset\bigcup_i I_i$$
 
 и 
 

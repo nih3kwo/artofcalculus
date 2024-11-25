@@ -259,7 +259,7 @@ $$
 :::
 
 :::{prf:example}
-:name: [a,b]is_closed
+:name: abis_closed
 Рассмотрим множества $[a,b]$, $[a,+\infty)$ и $(-\infty, b]$.
 
 Имеем

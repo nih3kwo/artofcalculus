@@ -27,7 +27,7 @@ $$
 
 :::{prf:theorem}
 :name: open_in_K
-Для того, чтобы множество $\mathscr{U} \subseteq A$ было открыто в $A$, необходимо и достаточно, чтобы существовало такое открытое в $\mathbb{R}$ множество $\widetilde{\mathscr{U}} \subseteq \mathbb{R}$, что $\mathscr{U} = \widetilde{\mathscr{U}}\cap \mathbb{R}.$
+Для того, чтобы множество $\mathscr{U} \subseteq A$ было открыто в $A$, необходимо и достаточно, чтобы существовало такое открытое в $\mathbb{R}$ множество $\widetilde{\mathscr{U}} \subseteq \mathbb{R}$, что $\mathscr{U} = \widetilde{\mathscr{U}}\cap A.$
 :::
 
 :::{prf:proof}
@@ -44,7 +44,7 @@ $$
 где $\widetilde{\mathscr{U}}: = \cup_{x\in \mathscr{U}} \mathscr{B}_\varepsilon(x) \subseteq \mathbb{R}$. Согласно [](#interval_is_open), [](#union_and_cap_of_open), множество $\widetilde{\mathscr{U}}$ — открыто в $\mathbb{R}$, что и доказывает необходимость.
 
 
-(2) Пусть $\widetilde{\mathscr{U}}$ — открытое множество в $\mathbb{R}$, и пусть $x \in \mathscr{U} \cap A$. Так как $\widetilde{\mathscr{U}}$ — открыто в $\mathbb{R}$, то найдётся $\varepsilon$-окрестность $\mathscr{B}_\varepsilon(x) \subseteq \mathbb{R}$ такая, что $\mathscr{B}_\varepsilon(x) \subseteq \widetilde{\mathscr{U}}$. Тогда $A \cap \mathscr{B}_\varepsilon(x) \subseteq A \cup \widetilde{\mathscr{U}}$. Но согласно [](#e-neigh_in_A), $\mathscr{B}_\varepsilon(x)\cap A = : \mathscr{B}_\varepsilon(x)|_A$. Тогда включение $A \cap \mathscr{B}_\varepsilon(x) \subseteq A \cup \widetilde{\mathscr{U}}$ и означает, что $\widetilde{\mathscr{U}} \cap A$ открыто в $A$, ибо $x$ — произвольная точка в $\widetilde{\mathscr{U}} \cap A.$
+(2) Пусть $\widetilde{\mathscr{U}}$ — открытое множество в $\mathbb{R}$, и пусть $x \in \widetilde{\mathscr{U}} \cap A$. Так как $\widetilde{\mathscr{U}}$ — открыто в $\mathbb{R}$, то найдётся $\varepsilon$-окрестность $\mathscr{B}_\varepsilon(x) \subseteq \mathbb{R}$ такая, что $\mathscr{B}_\varepsilon(x) \subseteq \widetilde{\mathscr{U}}$. Тогда $A \cap \mathscr{B}_\varepsilon(x) \subseteq A \cup \widetilde{\mathscr{U}}$. Но согласно [](#e-neigh_in_A), $\mathscr{B}_\varepsilon(x)\cap A = : \mathscr{B}_\varepsilon(x)|_A$. Тогда включение $A \cap \mathscr{B}_\varepsilon(x) \subseteq A \cup \widetilde{\mathscr{U}}$ и означает, что $\widetilde{\mathscr{U}} \cap A$ открыто в $A$, ибо $x$ — произвольная точка в $\widetilde{\mathscr{U}} \cap A.$
 :::
 
 :::{prf:definition}
@@ -91,7 +91,7 @@ $$
 
 Пусть $X$ — произвольное непустое множество. Множество $(\mathscr{U}_\lambda)_{\lambda \in \Lambda}$ подмножеств множества $X$ называется его **покрытием**, если $X = \bigcup_{\lambda \in \Lambda} \mathscr{U}_\lambda$.    
 
-Если $X \subseteq Y$, то множество $(\mathscr{U}_\lambda)_{\lambda \in \Lambda}$ подмножеств множества $Y$ называется **покрытием** множества $X\subseteq Y$, если $X \subseteq \bigcup_{\lambda \in \Lambda} U_\lambda$.
+Если $X \subseteq Y$, то множество $(\mathscr{U}_\lambda)_{\lambda \in \Lambda}$ подмножеств множества $Y$ называется **покрытием** множества $X\subseteq Y$, если $X \subseteq \bigcup_{\lambda \in \Lambda} \mathscr{U}_\lambda$.
 
 Если $(\mathscr{U}_\lambda)_{\lambda \in \Lambda}$ — покрытие для $X$, то подпокрытием называют какие-то части этого покрытия, т.е. если существует такое $\Lambda' \subseteq \Lambda$, что $X = \bigcup_{\lambda \in \Lambda '}\mathscr{U}_{\lambda}$.
 :::
@@ -248,5 +248,5 @@ $$
 
 (1) Согласно [](#properties_of_compact_in_R) (1), мы получаем необходимость.
 
-(2) Если $K \subseteq \mathbb{R}$ ограничено и замкнуто, то это значит, что оно содержится в некотором отрезке $I$, который в силу [](#[a,b]is_compact) является компактным в $\mathbb{R}$. Далее, отрезок $I$ — замкнут (см. [](#[a,b]is_closed)), а так как $K = I \cap K$, то согласно [](#closed_in_A_if), $K$ — замкнут в $I$. Наконец, из [](#properties_of_compact_in_R) (3) вытекает утверждение. 
+(2) Если $K \subseteq \mathbb{R}$ ограничено и замкнуто, то это значит, что оно содержится в некотором отрезке $I$, который в силу [](#[a,b]is_compact) является компактным в $\mathbb{R}$. Далее, отрезок $I$ — замкнут (см. [](#abis_closed)), а так как $K = I \cap K$, то согласно [](#closed_in_A_if), $K$ — замкнут в $I$. Наконец, из [](#properties_of_compact_in_R) (3) вытекает утверждение. 
 :::
