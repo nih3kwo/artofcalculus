@@ -83,6 +83,7 @@ parts:
       - file: 207-darbu-criterion
       - file: 208-functional-sequences
       - file: 209-functional-sequences-convergence
+      - file: 210-convergence
   - caption: Архив
     chapters: 
       - file: lab1

@@ -82,6 +82,7 @@ $$\Sl(f,\TT_{x,y})\leq\Sl(g(x),\TT^x)\leq\Su(g,\TT^x)\leq\Su(f,\TT_{xy})\\\impli
 ```
 
 ```{prf:theorem} (замена переменных в критерии интегрирования)
+:name: variable-replacement
 
 $M_1,M_2\subset\RR^n$ — открытые множества
 
