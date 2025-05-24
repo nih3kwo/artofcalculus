@@ -367,7 +367,7 @@ $$
 0 < \alpha - \left( \sum_{i=1}^{p_{k+1}} x_i^+-  \sum_{j=1}^{q_{k+1}}x_j^- \right) \le x_{q_{k+1}}^-.
 $$
 
-А тогда, согласно [](#conditional_convergence_and_x_n), $\lim_{k \to \infty}x_{p_k+1}^+ = 0$, то по [лемме о зажатой последовательности](#squeezy)) и [](#lim(a_n-a)=0) получаем, что
+А тогда, согласно [](#conditional_convergence_and_x_n), $\lim_{k \to \infty}x_{q_{k+1}}^- = 0$, то по [лемме о зажатой последовательности](#squeezy)) и [](#lim(a_n-a)=0) получаем, что
 
 (S_kk1a)=
 \begin{equation}

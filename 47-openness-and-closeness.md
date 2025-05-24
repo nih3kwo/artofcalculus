@@ -154,7 +154,7 @@ $$\begin{align*}
 $$
 \widetilde{\mathscr{U}}:=\bigcup_{x\in \mathscr{U}}\mathscr{V}_x,
 $$
-и покажем, что $\widetilde{\mathscr{U}} = \mathscr{U}$. Пусть $y\in \widetilde{\mathscr{U}}$, тогда существует хотя бы один $\mathscr{V}_x$, что $y \in \mathscr{V}_x$, но так как $\mathscr{V}_x \subseteq \mathscr{U}$, то $y \in \mathscr{U}$, поэтому $\widetilde{\mathscr{U}} \subseteq \mathscr{U}.$ Пусть теперь $x \in \mathscr{U}$, но тогда, согласно условию, существует такой $\mathscr{V}_x$, что $x \in \mathscr{U}_x \subseteq \mathscr{U}$, но тогда $x \in \widetilde{\mathscr{U}}$, потому что $\widetilde{\mathscr{U}} = \cup_{x \in \mathscr{U}}\mathscr{V}_x$, т.е. $\mathscr{U} \subseteq \widetilde{\mathscr{U}}$, а значит, $\mathscr{U} = \widetilde{\mathscr{U}}.$
+и покажем, что $\widetilde{\mathscr{U}} = \mathscr{U}$. Пусть $y\in \widetilde{\mathscr{U}}$, тогда существует хотя бы один $\mathscr{V}_x$, что $y \in \mathscr{V}_x$, но так как $\mathscr{V}_x \subseteq \mathscr{U}$, то $y \in \mathscr{U}$, поэтому $\widetilde{\mathscr{U}} \subseteq \mathscr{U}.$ Пусть теперь $x \in \mathscr{U}$, но тогда, согласно условию, существует такой $\mathscr{V}_x$, что $x \in \mathscr{V}_x \subseteq \mathscr{U}$, но тогда $x \in \widetilde{\mathscr{U}}$, потому что $\widetilde{\mathscr{U}} = \cup_{x \in \mathscr{U}}\mathscr{V}_x$, т.е. $\mathscr{U} \subseteq \widetilde{\mathscr{U}}$, а значит, $\mathscr{U} = \widetilde{\mathscr{U}}.$
 
 Так как, согласно условию, каждый $\mathscr{V}_x$ — открытое множество, то согласно [](#union_and_cap_of_open), $\mathscr{U}$ — открытое множество, что и требовалось доказать.
 :::
