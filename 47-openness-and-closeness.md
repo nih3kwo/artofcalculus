@@ -280,7 +280,7 @@ $$\begin{align*}
 :nonumber:
 Пусть $\{F_\alpha\}_{\alpha \in A}$ — какое-то семейство замкнутых множеств, тогда, согласно [](#def_of_closed), имеется семейство открытых множеств $\{\mathscr{U}_\alpha\}_{\alpha \in A}$, что $F_\alpha = \mathbb{R}\setminus \mathscr{U}_\alpha$ для любого $\alpha \in A.$
 
-Согласно ([](#dM1)), ([](#dM1)) получаем
+Согласно ([1](#axiom-of-choice_dM1)), ([2](#axiom-of-choice_dM2)) получаем
 $$\begin{align*}
 \bigcup_{i=1}^n F_i &=& \bigcup_{i=1}^n \mathbb{R} \setminus \mathscr{U}_i =  \mathbb{R} \setminus \bigcap_{i=1}^n\mathscr{U}_i, \\
 \bigcap_{\alpha \in A} F_\alpha &=& \bigcap_{\alpha \in A} \mathbb{R} \setminus \mathscr{U}_\alpha = \mathbb{R} \setminus \bigcup_{\alpha \in A} \mathscr{U}_\alpha,   
@@ -381,7 +381,7 @@ $$
 $$
 так как каждое $\mathscr{U}(x)$ открыто, то согласно [](#union_and_cap_of_open), $\mathscr{U}$ — открыто. 
 
-Покажем, что $F = \mathbb{R} \setminus \mathscr{U}$, согласно ([](#dM1))
+Покажем, что $F = \mathbb{R} \setminus \mathscr{U}$, согласно ([1](#axiom-of-choice_dM1))
 $$
 \mathbb{R} \setminus \mathscr{U} = \mathbb{R} \setminus \bigcup_{x \in \mathbb{R}\setminus F} \mathscr{U}(x) = \bigcap_{x \in \mathbb{R} \setminus F} \mathbb{R} \setminus \mathscr{U}(x).
 $$
